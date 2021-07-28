@@ -298,6 +298,15 @@ class TMInterface(object):
         self.__wait_for_server_response()
 
     '''
+    From discord. Call iface.respawn() in on_run_step().
+    '''
+    def respawn(self):
+        msg = Message(MessageType.C_RESPAWN)
+        msg.write_int32(0)
+        self.__send_message(msg)
+        self.__wait_for_server_response()
+
+    '''
     Prevents the game from stopping the simulation after a finished race.
 
     Calling this method in the on_checkpoint_count_changed will invalidate

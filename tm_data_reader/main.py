@@ -1,5 +1,5 @@
-from pygbx import Gbx, GbxType
-from pygbx.headers import ControlEntry, CGameCtnGhost
+#from pygbx import Gbx, GbxType
+#from pygbx.headers import ControlEntry, CGameCtnGhost
 from numpy import int32
 import matplotlib.pyplot as plt
 import sys
@@ -26,9 +26,9 @@ def process_inputs (fin, write_to):
         elif s[2] in ("up", "down"):
             l, r = map(int, s[0].split('-'))
             if s[2] == "up":
-                press_up[l//GAP_TIME : r//GAP_TIME+1] = [1] * (r//GAP_TIME+1 - l//GAP_TIME)
+                press_up[l//GAP_TIME : r//GAP_TIME] = [1] * (r//GAP_TIME - l//GAP_TIME)
             else:
-                press_down[l//GAP_TIME : r//GAP_TIME+1] = [1] * (r//GAP_TIME+1 - l//GAP_TIME)
+                press_down[l//GAP_TIME : r//GAP_TIME] = [1] * (r//GAP_TIME - l//GAP_TIME)
         cnt += 1
 
     for i in range(len(steer_times)):

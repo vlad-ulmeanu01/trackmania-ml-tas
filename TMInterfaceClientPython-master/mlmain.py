@@ -105,10 +105,10 @@ class MainClient(Client):
             return
 
 
-        iface.set_input_state(up = self.input_stack[self.input_stack_index][self.IND_PUSH_UP][prepared_act_index],
-                              down = self.input_stack[self.input_stack_index][self.IND_PUSH_DOWN][prepared_act_index],
-                              steer = self.input_stack[self.input_stack_index][self.IND_STEER][prepared_act_index])
-        
+        iface.set_input_state(up = self.input_stack[self.input_stack_index][0][self.IND_PUSH_UP][prepared_act_index],
+                              down = self.input_stack[self.input_stack_index][0][self.IND_PUSH_DOWN][prepared_act_index],
+                              steer = self.input_stack[self.input_stack_index][0][self.IND_STEER][prepared_act_index])
+
         pass
 
     def on_simulation_begin(self, iface):
@@ -144,7 +144,7 @@ class MainClient(Client):
         speed = state.get_display_speed()
 
         score = 0
-        score += 250 * (23730 - self.last_time_in_run_step)
+        score += 250 * (23720 - self.last_time_in_run_step)
         score += speed
 
         return score

@@ -191,13 +191,14 @@ class ML():
         #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.intervals = self.make_intervals(50)
-        self.curr_itv = 0 #indexul intervalului pe care se lucreaza momentan
+        self.interval_bounds = (28, 50) #se lucreaza pe intervalele [.., ..)
+        self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
         self.percentage_increase = 0.05 #dc procentajul este 0.4 se intra in calcul cu el 0.45
         self.kept_change = 0.15 #cat din schimbare chiar este facuta
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor
 
-        self.epoch_count = 0
+        self.epoch_count = 1
 
         pass
 
@@ -221,16 +222,20 @@ class ML():
         return percentages
 
     #inputs este un vector gen [[steer -> [], push_up -> [], push_down -> []], ... ]
+    #len(inputs) == LEFT_SHIFTS + RIGHT_SHIFTS + 1
+    #len(percentages) == in cate itv ai vrut tu sa spargi linia de timp
     #de obicei se apeleaza pentru reuniune de intervale
     def combine_inputs(self, inputs, percentages):
-        assert(len(percentages) == len(inputs))
-        n = len(inputs[0][0])
+        n = len(inputs[0][self.IND_STEER])
         sol = [[0] * n, [0] * n, [0] * n]
         for i in range(len(inputs)):
             for j in range(3):
                 assert(n == len(inputs[i][j]))
+                k = 0
                 for z in range(n):
-                    sol[j][z] += percentages[i] * inputs[i][j][z]
+                    while k + 1 < len(percentages) and self.intervals[k][0][1] < z:
+                        k += 1
+                    sol[j][z] += percentages[k] * inputs[i][j][z]
 
         for z in range(n):
             sol[self.IND_STEER][z] = max(-65536, min(65536, int(sol[self.IND_STEER][z])))
@@ -238,7 +243,7 @@ class ML():
         for j in (self.IND_PUSH_UP, self.IND_PUSH_DOWN):
             for z in range(n):
                 sol[j][z] = round(sol[j][z])
-                assert(sol[j][z] == 0 or sol[j][z] == 1)
+                assert(sol[j][z] in (0, 1))
 
         return sol
 
@@ -305,14 +310,14 @@ class ML():
                 for j in range(self.curr_itv + 1, len(self.intervals)):
                     percentages.append(copy.deepcopy(self.intervals[j][1]))
 
+                print(f"Finished epoch no. {self.epoch_count} on interval {self.curr_itv}!")
+
                 self.input_arrays = self.combine_inputs(self.input_arrays, percentages)
                 client.empty_stack()
-                self.curr_itv = (self.curr_itv + 1) % len(self.intervals)
                 self.have_current_run = False #trebuie sa recalculez scorul curent
-
                 self.epoch_count += 1
-                print(f"Finished epoch no. {self.epoch_count}!")
-
+                self.curr_itv = self.curr_itv+1 if self.curr_itv+1 < self.interval_bounds[1] else self.interval_bounds[0]
+                
                 pass
         else:
             #lasa clientul sa lucreze ce i-ai dat.

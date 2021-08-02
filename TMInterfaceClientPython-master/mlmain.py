@@ -193,7 +193,7 @@ class ML():
         self.intervals = self.make_intervals(50)
         self.interval_bounds = (28, 50) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.05 #dc procentajul este 0.4 se intra in calcul cu el 0.45
+        self.percentage_increase = 0.01 #dc procentajul este 0.4 se intra in calcul cu el 0.41
         self.kept_change = 0.15 #cat din schimbare chiar este facuta
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor
@@ -224,6 +224,7 @@ class ML():
     #inputs este un vector gen [[steer -> [], push_up -> [], push_down -> []], ... ]
     #len(inputs) == LEFT_SHIFTS + RIGHT_SHIFTS + 1
     #len(percentages) == in cate itv ai vrut tu sa spargi linia de timp
+    #percentages[k] = un vector cu LEFT_SHIFTS + RIGHT_SHIFTS + 1 procente
     #de obicei se apeleaza pentru reuniune de intervale
     def combine_inputs(self, inputs, percentages):
         n = len(inputs[0][self.IND_STEER])
@@ -235,7 +236,7 @@ class ML():
                 for z in range(n):
                     while k + 1 < len(percentages) and self.intervals[k][0][1] < z:
                         k += 1
-                    sol[j][z] += percentages[k] * inputs[i][j][z]
+                    sol[j][z] += percentages[k][i] * inputs[i][j][z]
 
         for z in range(n):
             sol[self.IND_STEER][z] = max(-65536, min(65536, int(sol[self.IND_STEER][z])))
@@ -249,8 +250,15 @@ class ML():
 
     def main_loop(self, client: MainClient):
         if not self.have_current_run:
-            if len(client.input_stack) == 0:
-                client.add_input_array_to_stack(self.input_arrays[0 + self.LEFT_SHIFTS])
+            if len(client.input_stack) == 0: #trebuie dat la client inputul actual
+                #client.add_input_array_to_stack(self.input_arrays[0 + self.LEFT_SHIFTS])
+                #trb sa bagi si aici self.combine_inputs VV
+                percentages = []
+                for j in range(len(self.intervals)):
+                    percentages.append(copy.deepcopy(self.intervals[j][1]))
+
+                client.add_input_array_to_stack(self.combine_inputs(self.input_arrays, percentages))
+                pass
             elif client.input_stack[0][1] != None: #a venit rezultatul
                 self.current_run_score = client.input_stack[0][1]
                 self.have_current_run = True
@@ -303,21 +311,17 @@ class ML():
                     local_perc[i + self.LEFT_SHIFTS] += self.kept_change * gradients[i + self.LEFT_SHIFTS]
 
                 local_perc = self.normalize_percentages(local_perc)
-                percentages = []
-                for j in range(self.curr_itv):
-                        percentages.append(copy.deepcopy(self.intervals[j][1]))
-                percentages.append(local_perc)
-                for j in range(self.curr_itv + 1, len(self.intervals)):
-                    percentages.append(copy.deepcopy(self.intervals[j][1]))
+                self.intervals[self.curr_itv][1] = copy.deepcopy(local_perc)
+                #!!! doar procentajele trebuie schimbate la sfarsitul reprizei
+                #input_arrays ramane LA FEL intotdeauna
 
                 print(f"Finished epoch no. {self.epoch_count} on interval {self.curr_itv}!")
 
-                self.input_arrays = self.combine_inputs(self.input_arrays, percentages)
                 client.empty_stack()
                 self.have_current_run = False #trebuie sa recalculez scorul curent
                 self.epoch_count += 1
                 self.curr_itv = self.curr_itv+1 if self.curr_itv+1 < self.interval_bounds[1] else self.interval_bounds[0]
-                
+
                 pass
         else:
             #lasa clientul sa lucreze ce i-ai dat.

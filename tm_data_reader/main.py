@@ -12,7 +12,8 @@ def process_inputs (fin, write_to):
     global GAP_TIME, CUTOFF_TIME, LEFT_SHIFTS, RIGHT_SHIFTS
 
     input_count = CUTOFF_TIME // GAP_TIME
-    steer_times, steer_values = [], []  
+    steer_times, steer_values = [], []
+    hard_turns = {}
     press_up = [0 for _ in range(input_count)]
     press_down = [0 for _ in range(input_count)]
     steer = [0 for _ in range(input_count)]
@@ -23,20 +24,27 @@ def process_inputs (fin, write_to):
         if s[1] == "steer":
             steer_times.append(int(s[0]))
             steer_values.append(int(s[2]))
-        elif s[2] in ("up", "down"):
+        elif s[2] in ("up", "down", "left", "right"):
             l, r = map(int, s[0].split('-'))
             if s[2] == "up":
                 press_up[l//GAP_TIME : r//GAP_TIME] = [1] * (r//GAP_TIME - l//GAP_TIME)
-            else:
+            elif s[2] == "down":
                 press_down[l//GAP_TIME : r//GAP_TIME] = [1] * (r//GAP_TIME - l//GAP_TIME)
+            else:
+                hard_turns[l] = s[2]
+                #inputul de 002372 are si press left care suprascrie (????) steer!!!!!!
         cnt += 1
 
     for i in range(len(steer_times)):
-        ub = input_count
+        ub = input_count #!! input_count depinde de CUTOFF_TIME
         if i < len(steer_times) - 1:
             ub = steer_times[i+1] // GAP_TIME
+        
+        if steer_times[i] in hard_turns:
+            steer_values[i] = -65536 if hard_turns[steer_times[i]] == "left" else 65536
+
         steer[steer_times[i]//GAP_TIME : ub] = [steer_values[i]] * (ub - steer_times[i]//GAP_TIME)
-    
+
     for shift in range(-LEFT_SHIFTS, RIGHT_SHIFTS + 1):
         fout = open(write_to + "input_" + str(shift) + ".txt", "w")
         for v in (steer, press_up, press_down):

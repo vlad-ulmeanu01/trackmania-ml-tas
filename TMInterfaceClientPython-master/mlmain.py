@@ -191,9 +191,9 @@ class ML():
         #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.intervals = self.make_intervals(50)
-        self.interval_bounds = (28, 50) #se lucreaza pe intervalele [.., ..)
+        self.interval_bounds = (28, 39) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.01 #dc procentajul este 0.4 se intra in calcul cu el 0.41
+        self.percentage_increase = 0.05 #dc procentajul este 0.4 se intra in calcul cu el 0.41
         self.kept_change = 0.15 #cat din schimbare chiar este facuta
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor

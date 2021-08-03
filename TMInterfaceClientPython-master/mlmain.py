@@ -191,9 +191,9 @@ class ML():
         #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.intervals = self.make_intervals(50)
-        self.interval_bounds = (28, 39) #se lucreaza pe intervalele [.., ..)
+        self.interval_bounds = (27, 41) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.05 #dc procentajul este 0.4 se intra in calcul cu el 0.41
+        self.percentage_increase = 0.08 #dc procentajul este 0.4 se intra in calcul cu el 0.48
         self.kept_change = 0.15 #cat din schimbare chiar este facuta
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor
@@ -304,12 +304,16 @@ class ML():
                 assert(len(self.changed_percentages) == self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1)
 
                 for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS + 1):
-                    diff = abs(local_perc[i + self.LEFT_SHIFTS] - self.changed_percentages[i + self.LEFT_SHIFTS])
-                    if diff == 0:
-                        gradients.append(0.0)
-                    else:
-                        gradients.append((scores[i + self.LEFT_SHIFTS] - self.current_run_score) / diff)
-                    gradients[-1] = max(-self.percentage_increase, min(self.percentage_increase, gradients[-1]))
+                    if self.strat == "A":
+                        diff = abs(local_perc[i + self.LEFT_SHIFTS] - self.changed_percentages[i + self.LEFT_SHIFTS])
+                        if diff == 0:
+                            gradients.append(0.0)
+                        else:
+                            gradients.append((scores[i + self.LEFT_SHIFTS] - self.current_run_score) / diff)
+
+                        gradients[-1] = max(-self.percentage_increase, min(self.percentage_increase, gradients[-1]))
+                    elif self.strat == "B":
+                        gradients.append(scores[i + self.LEFT_SHIFTS] - self.current_run_score)
 
                 if self.strat == "A":
                     for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS):
@@ -322,6 +326,7 @@ class ML():
 
                     if best_improvement[0] == None:
                         self.epochs_since_last_improvement += 1
+                        print(f"Currently {self.epochs_since_last_improvement} epochs with no improvement.")
                         if self.epochs_since_last_improvement == self.max_epochs_no_improvement:
                             if self.percentage_increase > 0.01:
                                 self.percentage_increase -= 0.01
@@ -332,7 +337,7 @@ class ML():
                             self.epochs_since_last_improvement = 0
                     else:
                         local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase
-                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]}; unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]} (score {scores[best_improvement[0] + self.LEFT_SHIFTS]}); unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
                     pass
                 else:
                     print(f"No known strat named {self.strat}!")

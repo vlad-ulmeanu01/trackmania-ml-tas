@@ -1,0 +1,109 @@
+PS C:\Users\Matei\Desktop\trackmania-ml-tas-needs-testing\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Registered to TMInterface0
+Remembered state at -1100!
+wrote to Processed-outputs/output_1627977620_23720.txt!
+wrote to Processed-outputs/output_1627977656_23760.txt!
+wrote to Processed-outputs/output_1627977661_23720.txt!
+Finished epoch no. 1 on interval 27!
+wrote to Processed-outputs/output_1627977701_23720.txt!
+wrote to Processed-outputs/output_1627977743_23720.txt!
+Finished epoch no. 2 on interval 28!
+wrote to Processed-outputs/output_1627977783_23720.txt!
+wrote to Processed-outputs/output_1627977809_23720.txt!
+wrote to Processed-outputs/output_1627977814_23720.txt!
+wrote to Processed-outputs/output_1627977818_23720.txt!
+wrote to Processed-outputs/output_1627977823_23720.txt!
+Improved interval no. 29 on pos. 1 with grad. 0.05; unnormalized new perc. 0.05!
+Finished epoch no. 3 on interval 29!
+wrote to Processed-outputs/output_1627977864_23720.txt!
+wrote to Processed-outputs/output_1627977905_23720.txt!
+wrote to Processed-outputs/output_1627977935_23790.txt!
+Finished epoch no. 4 on interval 30!
+wrote to Processed-outputs/output_1627977945_23720.txt!
+wrote to Processed-outputs/output_1627977987_23720.txt!
+wrote to Processed-outputs/output_1627977991_23730.txt!
+wrote to Processed-outputs/output_1627978021_23770.txt!
+Finished epoch no. 5 on interval 31!
+wrote to Processed-outputs/output_1627978026_23720.txt!
+wrote to Processed-outputs/output_1627978068_23720.txt!
+wrote to Processed-outputs/output_1627978072_23740.txt!
+wrote to Processed-outputs/output_1627978077_23740.txt!
+Finished epoch no. 6 on interval 32!
+wrote to Processed-outputs/output_1627978108_23720.txt!
+wrote to Processed-outputs/output_1627978124_23790.txt!
+wrote to Processed-outputs/output_1627978144_23810.txt!
+wrote to Processed-outputs/output_1627978148_23720.txt!
+wrote to Processed-outputs/output_1627978163_23730.txt!
+wrote to Processed-outputs/output_1627978178_23750.txt!
+Finished epoch no. 7 on interval 33!
+wrote to Processed-outputs/output_1627978188_23720.txt!
+wrote to Processed-outputs/output_1627978194_23790.txt!
+wrote to Processed-outputs/output_1627978204_23780.txt!
+wrote to Processed-outputs/output_1627978209_23780.txt!
+wrote to Processed-outputs/output_1627978214_23790.txt!
+wrote to Processed-outputs/output_1627978218_23890.txt!
+wrote to Processed-outputs/output_1627978223_23730.txt!
+wrote to Processed-outputs/output_1627978228_23720.txt!
+wrote to Processed-outputs/output_1627978238_23730.txt!
+wrote to Processed-outputs/output_1627978248_23730.txt!
+wrote to Processed-outputs/output_1627978253_23730.txt!
+wrote to Processed-outputs/output_1627978263_23730.txt!
+Finished epoch no. 8 on interval 34!
+wrote to Processed-outputs/output_1627978268_23720.txt!
+wrote to Processed-outputs/output_1627978274_23730.txt!
+wrote to Processed-outputs/output_1627978284_23730.txt!
+wrote to Processed-outputs/output_1627978289_23740.txt!
+wrote to Processed-outputs/output_1627978293_23730.txt!
+wrote to Processed-outputs/output_1627978298_23730.txt!
+wrote to Processed-outputs/output_1627978303_23730.txt!
+wrote to Processed-outputs/output_1627978308_23720.txt!
+wrote to Processed-outputs/output_1627978313_23740.txt!
+wrote to Processed-outputs/output_1627978318_23740.txt!
+wrote to Processed-outputs/output_1627978323_23740.txt!
+wrote to Processed-outputs/output_1627978328_23740.txt!
+wrote to Processed-outputs/output_1627978333_23740.txt!
+wrote to Processed-outputs/output_1627978338_23740.txt!
+wrote to Processed-outputs/output_1627978343_23740.txt!
+Finished epoch no. 9 on interval 35!
+wrote to Processed-outputs/output_1627978347_23720.txt!
+wrote to Processed-outputs/output_1627978353_23780.txt!
+wrote to Processed-outputs/output_1627978358_23750.txt!
+wrote to Processed-outputs/output_1627978383_23750.txt!
+wrote to Processed-outputs/output_1627978388_23720.txt!
+Finished epoch no. 10 on interval 36!
+wrote to Processed-outputs/output_1627978428_23720.txt!
+wrote to Processed-outputs/output_1627978434_23730.txt!
+wrote to Processed-outputs/output_1627978439_23730.txt!
+wrote to Processed-outputs/output_1627978444_23770.txt!
+wrote to Processed-outputs/output_1627978449_23730.txt!
+wrote to Processed-outputs/output_1627978454_23730.txt!
+wrote to Processed-outputs/output_1627978459_23730.txt!
+wrote to Processed-outputs/output_1627978464_23730.txt!
+wrote to Processed-outputs/output_1627978468_23720.txt!
+wrote to Processed-outputs/output_1627978474_23730.txt!
+wrote to Processed-outputs/output_1627978478_23720.txt!
+wrote to Processed-outputs/output_1627978483_23730.txt!
+wrote to Processed-outputs/output_1627978488_23730.txt!
+wrote to Processed-outputs/output_1627978493_23730.txt!
+wrote to Processed-outputs/output_1627978498_23730.txt!
+wrote to Processed-outputs/output_1627978502_23730.txt!
+Finished epoch no. 11 on interval 37!
+wrote to Processed-outputs/output_1627978507_23720.txt!
+wrote to Processed-outputs/output_1627978513_23730.txt!
+wrote to Processed-outputs/output_1627978518_23730.txt!
+wrote to Processed-outputs/output_1627978523_23730.txt!
+wrote to Processed-outputs/output_1627978527_23730.txt!
+wrote to Processed-outputs/output_1627978533_23730.txt!
+wrote to Processed-outputs/output_1627978537_23720.txt!
+wrote to Processed-outputs/output_1627978542_23730.txt!
+wrote to Processed-outputs/output_1627978547_23720.txt!
+wrote to Processed-outputs/output_1627978552_23730.txt!
+wrote to Processed-outputs/output_1627978557_23740.txt!
+wrote to Processed-outputs/output_1627978561_23740.txt!
+wrote to Processed-outputs/output_1627978566_23750.txt!
+wrote to Processed-outputs/output_1627978571_23760.txt!
+wrote to Processed-outputs/output_1627978576_23740.txt!
+wrote to Processed-outputs/output_1627978581_23760.txt!
+Finished epoch no. 12 on interval 38!
+wrote to Processed-outputs/output_1627978586_23720.txt!

@@ -199,6 +199,10 @@ class ML():
         #tarziu la calculul gradientilor
 
         self.epoch_count = 1
+        self.epochs_since_last_improvement = 0
+        self.max_epochs_no_improvement = self.interval_bounds[1] - self.interval_bounds[0]
+        #trb sa fac ceva daca am ?? reprize fara imbunatariri
+        self.strat = "B"
 
         pass
 
@@ -307,8 +311,32 @@ class ML():
                         gradients.append((scores[i + self.LEFT_SHIFTS] - self.current_run_score) / diff)
                     gradients[-1] = max(-self.percentage_increase, min(self.percentage_increase, gradients[-1]))
 
-                for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS):
-                    local_perc[i + self.LEFT_SHIFTS] += self.kept_change * gradients[i + self.LEFT_SHIFTS]
+                if self.strat == "A":
+                    for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS):
+                        local_perc[i + self.LEFT_SHIFTS] += self.kept_change * gradients[i + self.LEFT_SHIFTS]
+                elif self.strat == "B":
+                    best_improvement = (None, 0.0)
+                    for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS + 1):
+                        if gradients[i + self.LEFT_SHIFTS] > best_improvement[1]:
+                            best_improvement = (i, gradients[i + self.LEFT_SHIFTS])
+
+                    if best_improvement[0] == None:
+                        self.epochs_since_last_improvement += 1
+                        if self.epochs_since_last_improvement == self.max_epochs_no_improvement:
+                            if self.percentage_increase > 0.01:
+                                self.percentage_increase -= 0.01
+                            else:
+                                self.strat = "A"
+                                self.percentage_increase = 0.05
+                                print("Changed to strat A.")
+                            self.epochs_since_last_improvement = 0
+                    else:
+                        local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase
+                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]}; unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+                    pass
+                else:
+                    print(f"No known strat named {self.strat}!")
+                    assert(False)
 
                 local_perc = self.normalize_percentages(local_perc)
                 self.intervals[self.curr_itv][1] = copy.deepcopy(local_perc)

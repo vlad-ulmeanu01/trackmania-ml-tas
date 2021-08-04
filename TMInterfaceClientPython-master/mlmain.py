@@ -54,6 +54,7 @@ class MainClient(Client):
         self.processed_output_dir = "Processed-outputs/output_"
         
         self.last_time_in_run_step = 0
+        self.last_speed_in_run_step = 0
         self.time_to_remember_state, self.remembered_state = (-1100, -500), None
         self.did_race_finish = False
 
@@ -81,6 +82,7 @@ class MainClient(Client):
             return
 
         self.last_time_in_run_step = time
+        self.last_speed_in_run_step = iface.get_simulation_state().get_display_speed()
 
         if self.did_race_finish or time >= self.CUTOFF_TIME:
             self.did_race_finish = False
@@ -140,12 +142,9 @@ class MainClient(Client):
         pass
 
     def fitness_function (self, iface):
-        state = iface.get_simulation_state()
-        speed = state.get_display_speed()
-
         score = 0
         score += 250 * (23720 - self.last_time_in_run_step)
-        score += speed
+        score += self.last_speed_in_run_step
 
         return score
 
@@ -171,7 +170,13 @@ class MainClient(Client):
 class ML():
     def __init__(self):
         self.GAP_TIME, self.CUTOFF_TIME = 10, 25000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7 + 15
+
+        #processed_inputs e o combinatie de doesnt_end + does_end
+        #+1 pt lag dubios
+        #input_0 e 2372, input_15 e tasbad care nu termina
+        #input -7..-1 & 1 .. 7 sunt de la tasbad, restul de la 2372
+
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
 
         self.processed_input_dir = "../tm_data_reader/Processed-inputs/input_"
@@ -191,10 +196,12 @@ class ML():
         #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.intervals = self.make_intervals(50)
-        self.interval_bounds = (27, 41) #se lucreaza pe intervalele [.., ..)
+        self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.08 #dc procentajul este 0.4 se intra in calcul cu el 0.48
-        self.kept_change = 0.15 #cat din schimbare chiar este facuta
+        self.percentage_increase = 0.3 #dc procentajul este 0.4 se intra in calcul cu el 0.7
+        self.percentage_decrease_per_fix = 0.05 #se scade din self.percentage_increase dupa ?? reprize fara +
+        self.kept_change = 0.15 #cat din schimbare chiar este facuta (doar strat A)
+
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor
 
@@ -327,17 +334,21 @@ class ML():
                     if best_improvement[0] == None:
                         self.epochs_since_last_improvement += 1
                         print(f"Currently {self.epochs_since_last_improvement} epochs with no improvement.")
-                        if self.epochs_since_last_improvement == self.max_epochs_no_improvement:
-                            if self.percentage_increase > 0.01:
-                                self.percentage_increase -= 0.01
+                        if self.epochs_since_last_improvement % self.max_epochs_no_improvement == 0:
+                            if self.percentage_increase > self.percentage_decrease_per_fix:
+                                self.percentage_increase -= self.percentage_decrease_per_fix
+                                print(f"Changed percentage increase to {self.percentage_increase}.")
                             else:
                                 self.strat = "A"
-                                self.percentage_increase = 0.05
+                                self.percentage_increase = 2 * self.percentage_decrease_per_fix
                                 print("Changed to strat A.")
-                            self.epochs_since_last_improvement = 0
                     else:
                         local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase
-                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]} (score {scores[best_improvement[0] + self.LEFT_SHIFTS]}); unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]} (score {scores[best_improvement[0] + self.LEFT_SHIFTS]}, current run score {self.current_run_score}); unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+
+                        self.current_run_score = scores[best_improvement[0] + self.LEFT_SHIFTS]
+                        #actualizez aici scorul
+                        self.epochs_since_last_improvement = 0
                     pass
                 else:
                     print(f"No known strat named {self.strat}!")
@@ -351,9 +362,13 @@ class ML():
                 print(f"Finished epoch no. {self.epoch_count} on interval {self.curr_itv}!")
 
                 client.empty_stack()
-                self.have_current_run = False #trebuie sa recalculez scorul curent
                 self.epoch_count += 1
                 self.curr_itv = self.curr_itv+1 if self.curr_itv+1 < self.interval_bounds[1] else self.interval_bounds[0]
+
+                if self.strat == "A": #trebuie sa recalculez scorul curent
+                    self.have_current_run = False
+                elif self.strat == "B":
+                    pass #deja am actualizat current_run_score in else mai sus
 
                 pass
         else:

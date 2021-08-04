@@ -1,0 +1,11 @@
+0-5260 press up
+6200-9350 press up
+5380-6070 press down
+2380-2450 press left
+5260-7650 press left
+70-210 press right
+1090-1180 press right
+1920-1990 press right
+2550-3340 press right
+3680-5260 press right
+8280-8370 press right

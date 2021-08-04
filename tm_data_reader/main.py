@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import sys
 import os
 
-GAP_TIME, CUTOFF_TIME = 10, 25000 #ms
-LEFT_SHIFTS, RIGHT_SHIFTS = 7, 7
+GAP_TIME, CUTOFF_TIME = 10, 10000 #ms
+LEFT_SHIFTS, RIGHT_SHIFTS = 15, 15
 
 def process_inputs (fin, write_to):
     global GAP_TIME, CUTOFF_TIME, LEFT_SHIFTS, RIGHT_SHIFTS

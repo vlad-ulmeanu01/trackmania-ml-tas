@@ -196,8 +196,8 @@ class ML():
         #TAS_Training_Map_1
         self.CUTOFF_TIME = 10000
         self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
-        self.intervals = self.make_intervals(20)
-        self.interval_bounds = (0, 20) #se lucreaza pe intervalele [.., ..)
+        self.intervals = self.make_intervals(10)
+        self.interval_bounds = (0, 10) #se lucreaza pe intervalele [.., ..)
         #TAS_Training_Map_1
 
         #pentru fiecare interval [l, r] ai o combinatie de coeficienti
@@ -232,15 +232,24 @@ class ML():
 
         pass
 
-    def make_intervals(self, coef):
-        itv_starts = [x for x in range(0, self.CUTOFF_TIME // self.GAP_TIME, coef)]
+    def make_intervals(self, num_itv):
+        LG = self.CUTOFF_TIME // self.GAP_TIME
+
+        if LG % num_itv != 0:
+            print(f"(ML.make_intervals) Warning, {LG} is not divisible with {num_itv}.")
+
+        itv_starts = [x for x in range(0, LG, LG // num_itv)]
         intervals = []
         for i in range(len(itv_starts) - 1):
             intervals.append([(itv_starts[i], itv_starts[i+1] - 1),
                              [0.0] * self.LEFT_SHIFTS + [1.0] + [0.0] * self.RIGHT_SHIFTS])
+
+        intervals.append([(itv_starts[-1], LG-1), [0.0] * self.LEFT_SHIFTS + [1.0] + [0.0] * self.RIGHT_SHIFTS])
+
         return intervals
 
     def normalize_percentages(self, percentages):
+        percentages = copy.deepcopy(percentages) #!! lista nu se copiaza la return
         assert(len(percentages) == self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1)
         for i in range(len(percentages)):
             percentages[i] = max(0, percentages[i])
@@ -254,8 +263,8 @@ class ML():
     #inputs este un vector gen [[steer -> [], push_up -> [], push_down -> []], ... ]
     #len(inputs) == LEFT_SHIFTS + RIGHT_SHIFTS + 1
     #len(percentages) == in cate itv ai vrut tu sa spargi linia de timp
+    #percentages = un vector de vectori cu cum te-ai decis sa imparti procentele in fiecare interval acum
     #percentages[k] = un vector cu LEFT_SHIFTS + RIGHT_SHIFTS + 1 procente
-    #de obicei se apeleaza pentru reuniune de intervale
     def combine_inputs(self, inputs, percentages):
         n = len(inputs[0][self.IND_STEER])
         sol = [[0] * n, [0] * n, [0] * n]
@@ -274,7 +283,7 @@ class ML():
         for j in (self.IND_PUSH_UP, self.IND_PUSH_DOWN):
             for z in range(n):
                 sol[j][z] = round(sol[j][z])
-                assert(sol[j][z] in (0, 1))
+                sol[j][z] = max(0, min(1, sol[j][z]))
 
         return sol
 
@@ -313,7 +322,7 @@ class ML():
                     percentages = []
                     for j in range(self.curr_itv):
                         percentages.append(copy.deepcopy(self.intervals[j][1]))
-                    percentages.append(local_perc)
+                    percentages.append(local_perc) #?? daca nu merge da deepcopy si aici
                     for j in range(self.curr_itv + 1, len(self.intervals)):
                         percentages.append(copy.deepcopy(self.intervals[j][1]))
 
@@ -364,6 +373,7 @@ class ML():
                     else:
                         local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase
                         print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]} (score {scores[best_improvement[0] + self.LEFT_SHIFTS]}, current run score {self.current_run_score}); unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+                        print(f"Now local_perc is {local_perc}.")
 
                         self.current_run_score = scores[best_improvement[0] + self.LEFT_SHIFTS]
                         #actualizez aici scorul

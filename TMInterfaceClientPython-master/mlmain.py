@@ -48,8 +48,20 @@ def write_processed_output(g, sol, GAP_TIME):
 
 class MainClient(Client):
     def __init__(self):
-        self.GAP_TIME, self.CUTOFF_TIME = 10, 25000 #ms
+        self.GAP_TIME = 10 #ms
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
+        
+        '''
+        #A01
+        self.CUTOFF_TIME = 25000
+        self.HUMAN_TIME = 23720
+        #A01
+        '''
+
+        #TAS_Training_Map_1
+        self.CUTOFF_TIME = 10000
+        self.HUMAN_TIME = 9350
+        #TAS_Training_Map_1
 
         self.processed_output_dir = "Processed-outputs/output_"
         
@@ -143,7 +155,7 @@ class MainClient(Client):
 
     def fitness_function (self, iface):
         score = 0
-        score += 250 * (23720 - self.last_time_in_run_step)
+        score += 250 * (self.HUMAN_TIME - self.last_time_in_run_step)
         score += self.last_speed_in_run_step
 
         return score
@@ -169,15 +181,30 @@ class MainClient(Client):
 
 class ML():
     def __init__(self):
-        self.GAP_TIME, self.CUTOFF_TIME = 10, 25000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7 + 15
-
-        #processed_inputs e o combinatie de doesnt_end + does_end
-        #+1 pt lag dubios
-        #input_0 e 2372, input_15 e tasbad care nu termina
-        #input -7..-1 & 1 .. 7 sunt de la tasbad, restul de la 2372
-
+        self.GAP_TIME = 10
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
+
+        '''
+        #A01
+        self.CUTOFF_TIME = 25000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7 + 15 #processed_inputs e o combinatie de doesnt_end + does_end; +1 pt lag dubios; input_0 e 2372, input_15 e tasbad care nu termina; input -7..-1 & 1 .. 7 sunt de la tasbad, restul de la 2372
+        self.intervals = self.make_intervals(50)
+        self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
+        #A01
+        '''
+
+        #TAS_Training_Map_1
+        self.CUTOFF_TIME = 10000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
+        self.intervals = self.make_intervals(20)
+        self.interval_bounds = (0, 20) #se lucreaza pe intervalele [.., ..)
+        #TAS_Training_Map_1
+
+        #pentru fiecare interval [l, r] ai o combinatie de coeficienti
+        #self.intervals[i][0] = (l, r)
+        #self.intervals[i][1] = un vector cu coeficientii corespunzatori de lungime
+        #self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1
+        #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.processed_input_dir = "../tm_data_reader/Processed-inputs/input_"
         #presupunand ca fisierul din care se ruleaza e TMInterfaceClientPython-master/
@@ -189,14 +216,6 @@ class ML():
         self.have_current_run = False
         self.current_run_score = 0
 
-        #pentru fiecare interval [l, r] ai o combinatie de coeficienti
-        #self.intervals[i][0] = (l, r)
-        #self.intervals[i][1] = un vector cu coeficientii corespunzatori de lungime
-        #self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1
-        #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
-
-        self.intervals = self.make_intervals(50)
-        self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
         self.percentage_increase = 0.3 #dc procentajul este 0.4 se intra in calcul cu el 0.7
         self.percentage_decrease_per_fix = 0.05 #se scade din self.percentage_increase dupa ?? reprize fara +

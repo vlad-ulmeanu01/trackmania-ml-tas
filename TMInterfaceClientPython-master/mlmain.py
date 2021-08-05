@@ -60,7 +60,7 @@ class MainClient(Client):
 
         #TAS_Training_Map_1
         self.CUTOFF_TIME = 10000
-        self.HUMAN_TIME = 9350
+        self.HUMAN_TIME = 9310
         #TAS_Training_Map_1
 
         self.processed_output_dir = "Processed-outputs/output_"

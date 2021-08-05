@@ -260,6 +260,59 @@ class ML():
             percentages[i] *= x
         return percentages
 
+    #primesti un vector cu numere float in [0, 1]. Trebuie sa le treci pe toate in {0, 1}, dar nu vrei
+    #sa le rotunjesti asa. vrei:
+    #.. 0 0) 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 (1 1 1 ... => .. 0 0) 0 0 0 1 1 1 1 1 1 1 (1 1 1 ...
+    #selective_round apelat doar din combine inputs imediat mai jos
+    def selective_round(arr: list):
+        eps = 0.00001
+        parti_non_01 = [] #vector cu info despre perechi cu itv non01, gen[[l, r, vecin_st, vecin_dr]]
+        #sus ar fi [[3, 12, 0, 1]].
+
+        for i in range(len(arr)):
+            arr[i] = max(0, min(1, arr[i]))
+
+        i = 0
+        while i < len(arr):
+            while i < len(arr) and (arr[i] < eps or arr[i] > 1 - eps):
+                i += 1
+            if i < len(arr):
+                j = i
+                while j < len(arr) and arr[j] >= eps and arr[j] <= 1 - eps:
+                    j += 1
+                parti_non_01.append([i, j-1, None, None])
+                if i > 0:
+                    parti_non_01[-1][2] = round(arr[i-1])
+                if j < len(arr):
+                    parti_non_01[-1][3] = round(arr[j])
+                i = j
+
+        for l, r, lneigh, rneigh in parti_non_01:
+            if lneigh == rneigh:
+                for i in range(l, r+1):
+                    arr[i] = round(arr[i])
+                continue
+            elif lneigh == None and rneigh != None:
+                lneigh = 1 - rneigh
+            elif rneigh == None and lneigh != None:
+                rneigh = 1 - lneigh
+
+            avg = sum(arr[l:r+1]) / (r-l+1)
+            amt1 = max(0, min(r-l+1, round((r-l+1) * avg)))
+
+            if rneigh == 1:
+                for i in range(r, r-amt1, -1):
+                    arr[i] = 1
+                for i in range(r-amt1, l-1, -1):
+                    arr[i] = 0
+            else:
+                for i in range(l, l+amt1):
+                    arr[i] = 1
+                for i in range(l+amt1, r+1):
+                    arr[i] = 0
+
+        return arr
+
     #inputs este un vector gen [[steer -> [], push_up -> [], push_down -> []], ... ]
     #len(inputs) == LEFT_SHIFTS + RIGHT_SHIFTS + 1
     #len(percentages) == in cate itv ai vrut tu sa spargi linia de timp
@@ -281,9 +334,7 @@ class ML():
             sol[self.IND_STEER][z] = max(-65536, min(65536, int(sol[self.IND_STEER][z])))
 
         for j in (self.IND_PUSH_UP, self.IND_PUSH_DOWN):
-            for z in range(n):
-                sol[j][z] = round(sol[j][z])
-                sol[j][z] = max(0, min(1, sol[j][z]))
+            sol[j] = self.selective_round(sol[j])
 
         return sol
 

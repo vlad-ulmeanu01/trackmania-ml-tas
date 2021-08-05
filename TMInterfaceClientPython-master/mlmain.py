@@ -264,7 +264,7 @@ class ML():
     #sa le rotunjesti asa. vrei:
     #.. 0 0) 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 (1 1 1 ... => .. 0 0) 0 0 0 1 1 1 1 1 1 1 (1 1 1 ...
     #selective_round apelat doar din combine inputs imediat mai jos
-    def selective_round(arr: list):
+    def selective_round(self, arr: list):
         eps = 0.00001
         parti_non_01 = [] #vector cu info despre perechi cu itv non01, gen[[l, r, vecin_st, vecin_dr]]
         #sus ar fi [[3, 12, 0, 1]].
@@ -310,6 +310,9 @@ class ML():
                     arr[i] = 1
                 for i in range(l+amt1, r+1):
                     arr[i] = 0
+
+        for i in range(len(arr)):
+            arr[i] = round(arr[i])
 
         return arr
 

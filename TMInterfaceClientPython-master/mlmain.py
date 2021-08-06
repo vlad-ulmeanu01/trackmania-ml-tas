@@ -48,12 +48,30 @@ def write_processed_output(g, sol, GAP_TIME):
 
 class MainClient(Client):
     def __init__(self):
-        self.GAP_TIME, self.CUTOFF_TIME = 10, 25000 #ms
+        self.GAP_TIME = 10 #ms
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
+        
+        '''
+        #A01
+        self.CUTOFF_TIME = 25000
+        self.HUMAN_TIME = 23720
+        #A01
+        '''
+        '''
+        #TAS_Training_Map_1
+        self.CUTOFF_TIME = 10000
+        self.HUMAN_TIME = 9310
+        #TAS_Training_Map_1
+        '''
+        #StarStadiumA5
+        self.CUTOFF_TIME = 19000
+        self.HUMAN_TIME = 18090
+        #StarStadiumA5
 
         self.processed_output_dir = "Processed-outputs/output_"
         
         self.last_time_in_run_step = 0
+        self.last_speed_in_run_step = 0
         self.time_to_remember_state, self.remembered_state = (-1100, -500), None
         self.did_race_finish = False
 
@@ -81,6 +99,7 @@ class MainClient(Client):
             return
 
         self.last_time_in_run_step = time
+        self.last_speed_in_run_step = iface.get_simulation_state().get_display_speed()
 
         if self.did_race_finish or time >= self.CUTOFF_TIME:
             self.did_race_finish = False
@@ -140,12 +159,9 @@ class MainClient(Client):
         pass
 
     def fitness_function (self, iface):
-        state = iface.get_simulation_state()
-        speed = state.get_display_speed()
-
         score = 0
-        score += 250 * (23720 - self.last_time_in_run_step)
-        score += speed
+        score += 250 * (self.HUMAN_TIME - self.last_time_in_run_step)
+        score += self.last_speed_in_run_step
 
         return score
 
@@ -170,9 +186,37 @@ class MainClient(Client):
 
 class ML():
     def __init__(self):
-        self.GAP_TIME, self.CUTOFF_TIME = 10, 25000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7
+        self.GAP_TIME = 10
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
+
+        '''
+        #A01
+        self.CUTOFF_TIME = 25000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7 + 15 #processed_inputs e o combinatie de doesnt_end + does_end; +1 pt lag dubios; input_0 e 2372, input_15 e tasbad care nu termina; input -7..-1 & 1 .. 7 sunt de la tasbad, restul de la 2372
+        self.intervals = self.make_intervals(50)
+        self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
+        #A01
+        '''
+        '''
+        #TAS_Training_Map_1
+        self.CUTOFF_TIME = 10000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
+        self.intervals = self.make_intervals(10)
+        self.interval_bounds = (0, 10) #se lucreaza pe intervalele [.., ..)
+        #TAS_Training_Map_1
+        '''
+        #StarStadiumA5
+        self.CUTOFF_TIME = 19000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
+        self.intervals = self.make_intervals(20)
+        self.interval_bounds = (4, 20) #se lucreaza pe intervalele [.., ..)
+        #StarStadiumA5
+
+        #pentru fiecare interval [l, r] ai o combinatie de coeficienti
+        #self.intervals[i][0] = (l, r)
+        #self.intervals[i][1] = un vector cu coeficientii corespunzatori de lungime
+        #self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1
+        #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
 
         self.processed_input_dir = "../tm_data_reader/Processed-inputs/input_"
         #presupunand ca fisierul din care se ruleaza e TMInterfaceClientPython-master/
@@ -184,33 +228,40 @@ class ML():
         self.have_current_run = False
         self.current_run_score = 0
 
-        #pentru fiecare interval [l, r] ai o combinatie de coeficienti
-        #self.intervals[i][0] = (l, r)
-        #self.intervals[i][1] = un vector cu coeficientii corespunzatori de lungime
-        #self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1
-        #TODO fa posibil splitul unui interval in 2 cu o probabilitate aleatoare
-
-        self.intervals = self.make_intervals(50)
-        self.interval_bounds = (28, 39) #se lucreaza pe intervalele [.., ..)
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.05 #dc procentajul este 0.4 se intra in calcul cu el 0.41
-        self.kept_change = 0.15 #cat din schimbare chiar este facuta
+        self.percentage_increase = 0.3 #dc procentajul este 0.4 se intra in calcul cu el 0.7
+        self.percentage_increase_per_fix = 0.1 #se aduna la self.percentage_increase dupa ?? reprize fara +
+        self.kept_change = 0.15 #cat din schimbare chiar este facuta (doar strat A)
+
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
         #tarziu la calculul gradientilor
 
         self.epoch_count = 1
+        self.epochs_since_last_improvement = 0
+        self.max_epochs_no_improvement = self.interval_bounds[1] - self.interval_bounds[0]
+        #trb sa fac ceva daca am ?? reprize fara imbunatariri
+        self.strat = "B"
 
         pass
 
-    def make_intervals(self, coef):
-        itv_starts = [x for x in range(0, self.CUTOFF_TIME // self.GAP_TIME, coef)]
+    def make_intervals(self, num_itv):
+        LG = self.CUTOFF_TIME // self.GAP_TIME
+
+        if LG % num_itv != 0:
+            print(f"(ML.make_intervals) Warning, {LG} is not divisible with {num_itv}.")
+
+        itv_starts = [x for x in range(0, LG, LG // num_itv)]
         intervals = []
         for i in range(len(itv_starts) - 1):
             intervals.append([(itv_starts[i], itv_starts[i+1] - 1),
                              [0.0] * self.LEFT_SHIFTS + [1.0] + [0.0] * self.RIGHT_SHIFTS])
+
+        intervals.append([(itv_starts[-1], LG-1), [0.0] * self.LEFT_SHIFTS + [1.0] + [0.0] * self.RIGHT_SHIFTS])
+
         return intervals
 
     def normalize_percentages(self, percentages):
+        percentages = copy.deepcopy(percentages) #!! lista nu se copiaza la return
         assert(len(percentages) == self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1)
         for i in range(len(percentages)):
             percentages[i] = max(0, percentages[i])
@@ -221,11 +272,67 @@ class ML():
             percentages[i] *= x
         return percentages
 
+    #primesti un vector cu numere float in [0, 1]. Trebuie sa le treci pe toate in {0, 1}, dar nu vrei
+    #sa le rotunjesti asa. vrei:
+    #.. 0 0) 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 (1 1 1 ... => .. 0 0) 0 0 0 1 1 1 1 1 1 1 (1 1 1 ...
+    #selective_round apelat doar din combine inputs imediat mai jos
+    def selective_round(self, arr: list):
+        eps = 0.00001
+        parti_non_01 = [] #vector cu info despre perechi cu itv non01, gen[[l, r, vecin_st, vecin_dr]]
+        #sus ar fi [[3, 12, 0, 1]].
+
+        for i in range(len(arr)):
+            arr[i] = max(0, min(1, arr[i]))
+
+        i = 0
+        while i < len(arr):
+            while i < len(arr) and (arr[i] < eps or arr[i] > 1 - eps):
+                i += 1
+            if i < len(arr):
+                j = i
+                while j < len(arr) and arr[j] >= eps and arr[j] <= 1 - eps:
+                    j += 1
+                parti_non_01.append([i, j-1, None, None])
+                if i > 0:
+                    parti_non_01[-1][2] = round(arr[i-1])
+                if j < len(arr):
+                    parti_non_01[-1][3] = round(arr[j])
+                i = j
+
+        for l, r, lneigh, rneigh in parti_non_01:
+            if lneigh == rneigh:
+                for i in range(l, r+1):
+                    arr[i] = round(arr[i])
+                continue
+            elif lneigh == None and rneigh != None:
+                lneigh = 1 - rneigh
+            elif rneigh == None and lneigh != None:
+                rneigh = 1 - lneigh
+
+            avg = sum(arr[l:r+1]) / (r-l+1)
+            amt1 = max(0, min(r-l+1, round((r-l+1) * avg)))
+
+            if rneigh == 1:
+                for i in range(r, r-amt1, -1):
+                    arr[i] = 1
+                for i in range(r-amt1, l-1, -1):
+                    arr[i] = 0
+            else:
+                for i in range(l, l+amt1):
+                    arr[i] = 1
+                for i in range(l+amt1, r+1):
+                    arr[i] = 0
+
+        for i in range(len(arr)):
+            arr[i] = round(arr[i])
+
+        return arr
+
     #inputs este un vector gen [[steer -> [], push_up -> [], push_down -> []], ... ]
     #len(inputs) == LEFT_SHIFTS + RIGHT_SHIFTS + 1
     #len(percentages) == in cate itv ai vrut tu sa spargi linia de timp
+    #percentages = un vector de vectori cu cum te-ai decis sa imparti procentele in fiecare interval acum
     #percentages[k] = un vector cu LEFT_SHIFTS + RIGHT_SHIFTS + 1 procente
-    #de obicei se apeleaza pentru reuniune de intervale
     def combine_inputs(self, inputs, percentages):
         n = len(inputs[0][self.IND_STEER])
         sol = [[0] * n, [0] * n, [0] * n]
@@ -242,9 +349,7 @@ class ML():
             sol[self.IND_STEER][z] = max(-65536, min(65536, int(sol[self.IND_STEER][z])))
 
         for j in (self.IND_PUSH_UP, self.IND_PUSH_DOWN):
-            for z in range(n):
-                sol[j][z] = round(sol[j][z])
-                assert(sol[j][z] in (0, 1))
+            sol[j] = self.selective_round(sol[j])
 
         return sol
 
@@ -283,7 +388,7 @@ class ML():
                     percentages = []
                     for j in range(self.curr_itv):
                         percentages.append(copy.deepcopy(self.intervals[j][1]))
-                    percentages.append(local_perc)
+                    percentages.append(local_perc) #?? daca nu merge da deepcopy si aici
                     for j in range(self.curr_itv + 1, len(self.intervals)):
                         percentages.append(copy.deepcopy(self.intervals[j][1]))
 
@@ -300,15 +405,49 @@ class ML():
                 assert(len(self.changed_percentages) == self.LEFT_SHIFTS + self.RIGHT_SHIFTS + 1)
 
                 for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS + 1):
-                    diff = abs(local_perc[i + self.LEFT_SHIFTS] - self.changed_percentages[i + self.LEFT_SHIFTS])
-                    if diff == 0:
-                        gradients.append(0.0)
-                    else:
-                        gradients.append((scores[i + self.LEFT_SHIFTS] - self.current_run_score) / diff)
-                    gradients[-1] = max(-self.percentage_increase, min(self.percentage_increase, gradients[-1]))
+                    if self.strat == "A":
+                        diff = abs(local_perc[i + self.LEFT_SHIFTS] - self.changed_percentages[i + self.LEFT_SHIFTS])
+                        if diff == 0:
+                            gradients.append(0.0)
+                        else:
+                            gradients.append((scores[i + self.LEFT_SHIFTS] - self.current_run_score) / diff)
 
-                for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS):
-                    local_perc[i + self.LEFT_SHIFTS] += self.kept_change * gradients[i + self.LEFT_SHIFTS]
+                        gradients[-1] = max(-self.percentage_increase, min(self.percentage_increase, gradients[-1]))
+                    elif self.strat == "B":
+                        gradients.append(scores[i + self.LEFT_SHIFTS] - self.current_run_score)
+
+                if self.strat == "A":
+                    for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS):
+                        local_perc[i + self.LEFT_SHIFTS] += self.kept_change * gradients[i + self.LEFT_SHIFTS]
+                elif self.strat == "B":
+                    best_improvement = (None, 0.0)
+                    for i in range(-self.LEFT_SHIFTS, self.RIGHT_SHIFTS + 1):
+                        if gradients[i + self.LEFT_SHIFTS] > best_improvement[1]:
+                            best_improvement = (i, gradients[i + self.LEFT_SHIFTS])
+
+                    if best_improvement[0] == None:
+                        self.epochs_since_last_improvement += 1
+                        print(f"Currently {self.epochs_since_last_improvement} epochs with no improvement.")
+                        if self.epochs_since_last_improvement % self.max_epochs_no_improvement == 0:
+                            if self.percentage_increase < 1:
+                                self.percentage_increase += self.percentage_increase_per_fix
+                                print(f"Changed percentage increase to {self.percentage_increase}.")
+                            else:
+                                self.strat = "A"
+                                self.percentage_increase = 2 * self.percentage_increase_per_fix
+                                print("Changed to strat A.")
+                    else:
+                        local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase
+                        print(f"Improved interval no. {self.curr_itv} on pos. {best_improvement[0]} with grad. {best_improvement[1]} (score {scores[best_improvement[0] + self.LEFT_SHIFTS]}, current run score {self.current_run_score}); unnormalized new perc. {local_perc[best_improvement[0] + self.LEFT_SHIFTS]}!")
+                        print(f"Now local_perc is {local_perc}.")
+
+                        self.current_run_score = scores[best_improvement[0] + self.LEFT_SHIFTS]
+                        #actualizez aici scorul
+                        self.epochs_since_last_improvement = 0
+                    pass
+                else:
+                    print(f"No known strat named {self.strat}!")
+                    assert(False)
 
                 local_perc = self.normalize_percentages(local_perc)
                 self.intervals[self.curr_itv][1] = copy.deepcopy(local_perc)
@@ -318,9 +457,13 @@ class ML():
                 print(f"Finished epoch no. {self.epoch_count} on interval {self.curr_itv}!")
 
                 client.empty_stack()
-                self.have_current_run = False #trebuie sa recalculez scorul curent
                 self.epoch_count += 1
                 self.curr_itv = self.curr_itv+1 if self.curr_itv+1 < self.interval_bounds[1] else self.interval_bounds[0]
+
+                if self.strat == "A": #trebuie sa recalculez scorul curent
+                    self.have_current_run = False
+                elif self.strat == "B":
+                    pass #deja am actualizat current_run_score in else mai sus
 
                 pass
         else:

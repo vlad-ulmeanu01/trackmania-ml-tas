@@ -57,11 +57,16 @@ class MainClient(Client):
         self.HUMAN_TIME = 23720
         #A01
         '''
-
+        '''
         #TAS_Training_Map_1
         self.CUTOFF_TIME = 10000
         self.HUMAN_TIME = 9310
         #TAS_Training_Map_1
+        '''
+        #StarStadiumA5
+        self.CUTOFF_TIME = 19000
+        self.HUMAN_TIME = 18090
+        #StarStadiumA5
 
         self.processed_output_dir = "Processed-outputs/output_"
         
@@ -192,13 +197,20 @@ class ML():
         self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
         #A01
         '''
-
+        '''
         #TAS_Training_Map_1
         self.CUTOFF_TIME = 10000
         self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
         self.intervals = self.make_intervals(10)
         self.interval_bounds = (0, 10) #se lucreaza pe intervalele [.., ..)
         #TAS_Training_Map_1
+        '''
+        #StarStadiumA5
+        self.CUTOFF_TIME = 19000
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
+        self.intervals = self.make_intervals(20)
+        self.interval_bounds = (0, 20) #se lucreaza pe intervalele [.., ..)
+        #StarStadiumA5
 
         #pentru fiecare interval [l, r] ai o combinatie de coeficienti
         #self.intervals[i][0] = (l, r)
@@ -218,7 +230,7 @@ class ML():
 
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
         self.percentage_increase = 0.3 #dc procentajul este 0.4 se intra in calcul cu el 0.7
-        self.percentage_decrease_per_fix = 0.05 #se scade din self.percentage_increase dupa ?? reprize fara +
+        self.percentage_increase_per_fix = 0.1 #se aduna la self.percentage_increase dupa ?? reprize fara +
         self.kept_change = 0.15 #cat din schimbare chiar este facuta (doar strat A)
 
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
@@ -417,12 +429,12 @@ class ML():
                         self.epochs_since_last_improvement += 1
                         print(f"Currently {self.epochs_since_last_improvement} epochs with no improvement.")
                         if self.epochs_since_last_improvement % self.max_epochs_no_improvement == 0:
-                            if self.percentage_increase > self.percentage_decrease_per_fix:
-                                self.percentage_increase -= self.percentage_decrease_per_fix
+                            if self.percentage_increase < 1:
+                                self.percentage_increase += self.percentage_increase_per_fix
                                 print(f"Changed percentage increase to {self.percentage_increase}.")
                             else:
                                 self.strat = "A"
-                                self.percentage_increase = 2 * self.percentage_decrease_per_fix
+                                self.percentage_increase = 2 * self.percentage_increase_per_fix
                                 print("Changed to strat A.")
                     else:
                         local_perc[best_improvement[0] + self.LEFT_SHIFTS] += self.percentage_increase

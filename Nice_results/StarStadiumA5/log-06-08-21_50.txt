@@ -1,0 +1,912 @@
+PS C:\Users\Matei\Desktop\tm-ml-tas\trackmania-ml-tas-needs-testing\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Registered to TMInterface0
+Remembered state at -1100!
+wrote to Processed-outputs/output_1628249692_18100.txt!
+PS C:\Users\Matei\Desktop\tm-ml-tas\trackmania-ml-tas-needs-testing\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Registered to TMInterface0
+Remembered state at -1100!
+wrote to Processed-outputs/output_1628249739_18090.txt!
+PS C:\Users\Matei\Desktop\tm-ml-tas\trackmania-ml-tas-needs-testing\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Registered to TMInterface0
+Remembered state at -1100!
+wrote to Processed-outputs/output_1628249846_18090.txt!
+wrote to Processed-outputs/output_1628249919_18090.txt!
+wrote to Processed-outputs/output_1628249994_18090.txt!
+wrote to Processed-outputs/output_1628250107_18070.txt!
+wrote to Processed-outputs/output_1628250144_18090.txt!
+wrote to Processed-outputs/output_1628250162_18090.txt!
+Improved interval no. 4 on pos. 2 with grad. 5000 (score 5514, current run score 514); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 1 on interval 4!
+wrote to Processed-outputs/output_1628250730_18070.txt!
+Improved interval no. 5 on pos. 0 with grad. 2 (score 5516, current run score 5514); unnormalized new perc. 1.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 2 on interval 5!
+wrote to Processed-outputs/output_1628251108_18060.txt!
+wrote to Processed-outputs/output_1628251126_18060.txt!
+wrote to Processed-outputs/output_1628251144_18060.txt!
+wrote to Processed-outputs/output_1628251162_18070.txt!
+wrote to Processed-outputs/output_1628251180_18070.txt!
+wrote to Processed-outputs/output_1628251199_18070.txt!
+wrote to Processed-outputs/output_1628251217_18070.txt!
+wrote to Processed-outputs/output_1628251235_18080.txt!
+wrote to Processed-outputs/output_1628251253_18070.txt!
+wrote to Processed-outputs/output_1628251271_18070.txt!
+wrote to Processed-outputs/output_1628251289_18080.txt!
+wrote to Processed-outputs/output_1628251307_18070.txt!
+wrote to Processed-outputs/output_1628251325_18080.txt!
+wrote to Processed-outputs/output_1628251344_18090.txt!
+wrote to Processed-outputs/output_1628251362_18090.txt!
+wrote to Processed-outputs/output_1628251380_18100.txt!
+Improved interval no. 6 on pos. 9 with grad. 2500 (score 8016, current run score 5516); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 3 on interval 6!
+wrote to Processed-outputs/output_1628251796_18050.txt!
+wrote to Processed-outputs/output_1628251814_18060.txt!
+wrote to Processed-outputs/output_1628251833_18060.txt!
+wrote to Processed-outputs/output_1628251851_18060.txt!
+wrote to Processed-outputs/output_1628251869_18060.txt!
+wrote to Processed-outputs/output_1628251887_18060.txt!
+wrote to Processed-outputs/output_1628251905_18060.txt!
+wrote to Processed-outputs/output_1628251923_18060.txt!
+wrote to Processed-outputs/output_1628251941_18060.txt!
+wrote to Processed-outputs/output_1628251960_18060.txt!
+wrote to Processed-outputs/output_1628251978_18060.txt!
+wrote to Processed-outputs/output_1628251996_18060.txt!
+wrote to Processed-outputs/output_1628252014_18060.txt!
+wrote to Processed-outputs/output_1628252032_18060.txt!
+wrote to Processed-outputs/output_1628252050_18060.txt!
+wrote to Processed-outputs/output_1628252068_18060.txt!
+wrote to Processed-outputs/output_1628252087_18060.txt!
+wrote to Processed-outputs/output_1628252105_18060.txt!
+wrote to Processed-outputs/output_1628252123_18060.txt!
+wrote to Processed-outputs/output_1628252141_18060.txt!
+wrote to Processed-outputs/output_1628252159_18060.txt!
+Improved interval no. 7 on pos. 5 with grad. 2500 (score 10516, current run score 8016); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].       
+Finished epoch no. 4 on interval 7!
+wrote to Processed-outputs/output_1628252422_18060.txt!
+wrote to Processed-outputs/output_1628252440_18060.txt!
+wrote to Processed-outputs/output_1628252458_18050.txt!
+Currently 1 epochs with no improvement.
+Finished epoch no. 5 on interval 8!
+wrote to Processed-outputs/output_1628252760_18060.txt!
+wrote to Processed-outputs/output_1628252778_18060.txt!
+wrote to Processed-outputs/output_1628252796_18060.txt!
+wrote to Processed-outputs/output_1628252814_18050.txt!
+wrote to Processed-outputs/output_1628252833_18050.txt!
+wrote to Processed-outputs/output_1628252851_18050.txt!
+wrote to Processed-outputs/output_1628252869_18050.txt!
+wrote to Processed-outputs/output_1628252887_18050.txt!
+wrote to Processed-outputs/output_1628252905_18050.txt!
+wrote to Processed-outputs/output_1628252923_18050.txt!
+wrote to Processed-outputs/output_1628252941_18050.txt!
+wrote to Processed-outputs/output_1628252960_18050.txt!
+wrote to Processed-outputs/output_1628252978_18050.txt!
+wrote to Processed-outputs/output_1628252996_18050.txt!
+wrote to Processed-outputs/output_1628253014_18050.txt!
+wrote to Processed-outputs/output_1628253032_18050.txt!
+wrote to Processed-outputs/output_1628253050_18050.txt!
+wrote to Processed-outputs/output_1628253068_18050.txt!
+wrote to Processed-outputs/output_1628253086_18050.txt!
+wrote to Processed-outputs/output_1628253105_18050.txt!
+wrote to Processed-outputs/output_1628253123_18050.txt!
+wrote to Processed-outputs/output_1628253141_18050.txt!
+wrote to Processed-outputs/output_1628253159_18050.txt!
+wrote to Processed-outputs/output_1628253177_18050.txt!
+wrote to Processed-outputs/output_1628253195_18050.txt!
+wrote to Processed-outputs/output_1628253213_18050.txt!
+wrote to Processed-outputs/output_1628253232_18050.txt!
+wrote to Processed-outputs/output_1628253250_18050.txt!
+wrote to Processed-outputs/output_1628253268_18050.txt!
+wrote to Processed-outputs/output_1628253286_18050.txt!
+wrote to Processed-outputs/output_1628253304_18050.txt!
+Currently 2 epochs with no improvement.
+Finished epoch no. 6 on interval 9!
+wrote to Processed-outputs/output_1628253318_18050.txt!
+wrote to Processed-outputs/output_1628253337_18050.txt!
+wrote to Processed-outputs/output_1628253355_18050.txt!
+wrote to Processed-outputs/output_1628253373_18050.txt!
+wrote to Processed-outputs/output_1628253391_18050.txt!
+wrote to Processed-outputs/output_1628253409_18050.txt!
+wrote to Processed-outputs/output_1628253427_18050.txt!
+wrote to Processed-outputs/output_1628253445_18050.txt!
+wrote to Processed-outputs/output_1628253463_18050.txt!
+wrote to Processed-outputs/output_1628253482_18050.txt!
+wrote to Processed-outputs/output_1628253500_18050.txt!
+wrote to Processed-outputs/output_1628253518_18050.txt!
+wrote to Processed-outputs/output_1628253536_18050.txt!
+wrote to Processed-outputs/output_1628253554_18050.txt!
+wrote to Processed-outputs/output_1628253572_18050.txt!
+wrote to Processed-outputs/output_1628253590_18050.txt!
+wrote to Processed-outputs/output_1628253609_18050.txt!
+wrote to Processed-outputs/output_1628253627_18050.txt!
+wrote to Processed-outputs/output_1628253645_18050.txt!
+wrote to Processed-outputs/output_1628253663_18050.txt!
+wrote to Processed-outputs/output_1628253681_18050.txt!
+wrote to Processed-outputs/output_1628253699_18050.txt!
+wrote to Processed-outputs/output_1628253717_18050.txt!
+wrote to Processed-outputs/output_1628253736_18050.txt!
+wrote to Processed-outputs/output_1628253754_18050.txt!
+wrote to Processed-outputs/output_1628253772_18050.txt!
+wrote to Processed-outputs/output_1628253790_18050.txt!
+wrote to Processed-outputs/output_1628253808_18050.txt!
+wrote to Processed-outputs/output_1628253826_18050.txt!
+wrote to Processed-outputs/output_1628253845_18050.txt!
+wrote to Processed-outputs/output_1628253863_18050.txt!
+Currently 3 epochs with no improvement.
+Finished epoch no. 7 on interval 10!
+wrote to Processed-outputs/output_1628253877_18050.txt!
+wrote to Processed-outputs/output_1628253895_18050.txt!
+wrote to Processed-outputs/output_1628253914_18050.txt!
+wrote to Processed-outputs/output_1628253932_18050.txt!
+wrote to Processed-outputs/output_1628253950_18050.txt!
+wrote to Processed-outputs/output_1628253968_18050.txt!
+wrote to Processed-outputs/output_1628253986_18050.txt!
+wrote to Processed-outputs/output_1628254004_18050.txt!
+wrote to Processed-outputs/output_1628254022_18050.txt!
+wrote to Processed-outputs/output_1628254041_18050.txt!
+wrote to Processed-outputs/output_1628254059_18050.txt!
+wrote to Processed-outputs/output_1628254077_18050.txt!
+wrote to Processed-outputs/output_1628254095_18050.txt!
+wrote to Processed-outputs/output_1628254113_18050.txt!
+wrote to Processed-outputs/output_1628254131_18050.txt!
+wrote to Processed-outputs/output_1628254149_18050.txt!
+wrote to Processed-outputs/output_1628254167_18050.txt!
+wrote to Processed-outputs/output_1628254186_18050.txt!
+wrote to Processed-outputs/output_1628254204_18050.txt!
+wrote to Processed-outputs/output_1628254222_18050.txt!
+wrote to Processed-outputs/output_1628254240_18050.txt!
+wrote to Processed-outputs/output_1628254258_18050.txt!
+wrote to Processed-outputs/output_1628254276_18050.txt!
+wrote to Processed-outputs/output_1628254294_18050.txt!
+wrote to Processed-outputs/output_1628254313_18050.txt!
+wrote to Processed-outputs/output_1628254331_18050.txt!
+wrote to Processed-outputs/output_1628254349_18050.txt!
+wrote to Processed-outputs/output_1628254367_18050.txt!
+wrote to Processed-outputs/output_1628254385_18050.txt!
+wrote to Processed-outputs/output_1628254403_18050.txt!
+wrote to Processed-outputs/output_1628254421_18050.txt!
+Currently 4 epochs with no improvement.
+Finished epoch no. 8 on interval 11!
+wrote to Processed-outputs/output_1628254435_18050.txt!
+wrote to Processed-outputs/output_1628254454_18050.txt!
+wrote to Processed-outputs/output_1628254472_18050.txt!
+wrote to Processed-outputs/output_1628254490_18050.txt!
+wrote to Processed-outputs/output_1628254508_18050.txt!
+wrote to Processed-outputs/output_1628254526_18050.txt!
+wrote to Processed-outputs/output_1628254544_18050.txt!
+wrote to Processed-outputs/output_1628254562_18050.txt!
+wrote to Processed-outputs/output_1628254581_18050.txt!
+wrote to Processed-outputs/output_1628254599_18050.txt!
+wrote to Processed-outputs/output_1628254617_18050.txt!
+wrote to Processed-outputs/output_1628254635_18050.txt!
+wrote to Processed-outputs/output_1628254653_18050.txt!
+wrote to Processed-outputs/output_1628254671_18050.txt!
+wrote to Processed-outputs/output_1628254689_18050.txt!
+wrote to Processed-outputs/output_1628254708_18050.txt!
+wrote to Processed-outputs/output_1628254726_18050.txt!
+wrote to Processed-outputs/output_1628254744_18050.txt!
+wrote to Processed-outputs/output_1628254762_18050.txt!
+wrote to Processed-outputs/output_1628254780_18050.txt!
+wrote to Processed-outputs/output_1628254798_18050.txt!
+wrote to Processed-outputs/output_1628254816_18050.txt!
+wrote to Processed-outputs/output_1628254835_18050.txt!
+wrote to Processed-outputs/output_1628254853_18050.txt!
+wrote to Processed-outputs/output_1628254871_18050.txt!
+wrote to Processed-outputs/output_1628254889_18050.txt!
+wrote to Processed-outputs/output_1628254907_18050.txt!
+wrote to Processed-outputs/output_1628254925_18050.txt!
+wrote to Processed-outputs/output_1628254943_18050.txt!
+wrote to Processed-outputs/output_1628254961_18050.txt!
+wrote to Processed-outputs/output_1628254980_18050.txt!
+Currently 5 epochs with no improvement.
+Finished epoch no. 9 on interval 12!
+wrote to Processed-outputs/output_1628255281_18050.txt!
+Currently 6 epochs with no improvement.
+Finished epoch no. 10 on interval 13!
+wrote to Processed-outputs/output_1628255621_18190.txt!
+wrote to Processed-outputs/output_1628255639_18160.txt!
+wrote to Processed-outputs/output_1628255658_18120.txt!
+wrote to Processed-outputs/output_1628255676_18120.txt!
+wrote to Processed-outputs/output_1628255694_18110.txt!
+wrote to Processed-outputs/output_1628255713_18100.txt!
+wrote to Processed-outputs/output_1628255731_18090.txt!
+wrote to Processed-outputs/output_1628255749_18080.txt!
+wrote to Processed-outputs/output_1628255767_18070.txt!
+wrote to Processed-outputs/output_1628255785_18070.txt!
+wrote to Processed-outputs/output_1628255803_18060.txt!
+wrote to Processed-outputs/output_1628255821_18060.txt!
+wrote to Processed-outputs/output_1628255840_18060.txt!
+wrote to Processed-outputs/output_1628255858_18050.txt!
+Currently 7 epochs with no improvement.
+Finished epoch no. 11 on interval 14!
+wrote to Processed-outputs/output_1628256352_18880.txt!
+wrote to Processed-outputs/output_1628256371_18860.txt!
+wrote to Processed-outputs/output_1628256409_18050.txt!
+wrote to Processed-outputs/output_1628256427_18050.txt!
+wrote to Processed-outputs/output_1628256445_18050.txt!
+wrote to Processed-outputs/output_1628256503_18890.txt!
+wrote to Processed-outputs/output_1628256522_18900.txt!
+wrote to Processed-outputs/output_1628256579_18940.txt!
+wrote to Processed-outputs/output_1628256598_18940.txt!
+wrote to Processed-outputs/output_1628256618_18940.txt!
+wrote to Processed-outputs/output_1628256637_18940.txt!
+wrote to Processed-outputs/output_1628256656_18940.txt!
+wrote to Processed-outputs/output_1628256675_18940.txt!
+wrote to Processed-outputs/output_1628256694_18940.txt!
+wrote to Processed-outputs/output_1628256713_18940.txt!
+wrote to Processed-outputs/output_1628256733_18940.txt!
+Currently 8 epochs with no improvement.
+Finished epoch no. 12 on interval 15!
+wrote to Processed-outputs/output_1628256747_18050.txt!
+wrote to Processed-outputs/output_1628256765_18050.txt!
+wrote to Processed-outputs/output_1628256783_18050.txt!
+wrote to Processed-outputs/output_1628256801_18050.txt!
+wrote to Processed-outputs/output_1628256819_18050.txt!
+wrote to Processed-outputs/output_1628256837_18050.txt!
+wrote to Processed-outputs/output_1628256856_18050.txt!
+wrote to Processed-outputs/output_1628256874_18050.txt!
+wrote to Processed-outputs/output_1628256892_18050.txt!
+wrote to Processed-outputs/output_1628256910_18050.txt!
+wrote to Processed-outputs/output_1628256928_18050.txt!
+wrote to Processed-outputs/output_1628256946_18050.txt!
+wrote to Processed-outputs/output_1628256964_18050.txt!
+wrote to Processed-outputs/output_1628256982_18050.txt!
+wrote to Processed-outputs/output_1628257001_18050.txt!
+wrote to Processed-outputs/output_1628257019_18050.txt!
+wrote to Processed-outputs/output_1628257037_18050.txt!
+wrote to Processed-outputs/output_1628257055_18050.txt!
+wrote to Processed-outputs/output_1628257073_18050.txt!
+wrote to Processed-outputs/output_1628257091_18050.txt!
+wrote to Processed-outputs/output_1628257109_18050.txt!
+wrote to Processed-outputs/output_1628257128_18050.txt!
+wrote to Processed-outputs/output_1628257146_18050.txt!
+wrote to Processed-outputs/output_1628257164_18050.txt!
+wrote to Processed-outputs/output_1628257182_18050.txt!
+wrote to Processed-outputs/output_1628257200_18050.txt!
+wrote to Processed-outputs/output_1628257218_18050.txt!
+wrote to Processed-outputs/output_1628257236_18050.txt!
+wrote to Processed-outputs/output_1628257255_18050.txt!
+wrote to Processed-outputs/output_1628257273_18050.txt!
+wrote to Processed-outputs/output_1628257291_18050.txt!
+Currently 9 epochs with no improvement.
+Finished epoch no. 13 on interval 16!
+wrote to Processed-outputs/output_1628257305_18050.txt!
+wrote to Processed-outputs/output_1628257323_18050.txt!
+wrote to Processed-outputs/output_1628257341_18050.txt!
+wrote to Processed-outputs/output_1628257360_18050.txt!
+wrote to Processed-outputs/output_1628257378_18050.txt!
+wrote to Processed-outputs/output_1628257396_18050.txt!
+wrote to Processed-outputs/output_1628257414_18050.txt!
+wrote to Processed-outputs/output_1628257432_18050.txt!
+wrote to Processed-outputs/output_1628257450_18050.txt!
+wrote to Processed-outputs/output_1628257468_18050.txt!
+wrote to Processed-outputs/output_1628257486_18050.txt!
+wrote to Processed-outputs/output_1628257505_18050.txt!
+wrote to Processed-outputs/output_1628257523_18050.txt!
+wrote to Processed-outputs/output_1628257541_18050.txt!
+wrote to Processed-outputs/output_1628257559_18050.txt!
+wrote to Processed-outputs/output_1628257577_18050.txt!
+wrote to Processed-outputs/output_1628257595_18050.txt!
+wrote to Processed-outputs/output_1628257613_18050.txt!
+wrote to Processed-outputs/output_1628257632_18050.txt!
+wrote to Processed-outputs/output_1628257650_18050.txt!
+wrote to Processed-outputs/output_1628257668_18050.txt!
+wrote to Processed-outputs/output_1628257686_18050.txt!
+wrote to Processed-outputs/output_1628257704_18050.txt!
+wrote to Processed-outputs/output_1628257722_18050.txt!
+wrote to Processed-outputs/output_1628257740_18050.txt!
+wrote to Processed-outputs/output_1628257759_18050.txt!
+wrote to Processed-outputs/output_1628257777_18050.txt!
+wrote to Processed-outputs/output_1628257795_18050.txt!
+wrote to Processed-outputs/output_1628257813_18050.txt!
+wrote to Processed-outputs/output_1628257831_18050.txt!
+wrote to Processed-outputs/output_1628257849_18050.txt!
+Currently 10 epochs with no improvement.
+Finished epoch no. 14 on interval 17!
+wrote to Processed-outputs/output_1628257863_18050.txt!
+wrote to Processed-outputs/output_1628257882_18050.txt!
+wrote to Processed-outputs/output_1628257900_18050.txt!
+wrote to Processed-outputs/output_1628257918_18050.txt!
+wrote to Processed-outputs/output_1628257936_18050.txt!
+wrote to Processed-outputs/output_1628257954_18050.txt!
+wrote to Processed-outputs/output_1628257972_18050.txt!
+wrote to Processed-outputs/output_1628257990_18050.txt!
+wrote to Processed-outputs/output_1628258009_18050.txt!
+wrote to Processed-outputs/output_1628258027_18050.txt!
+wrote to Processed-outputs/output_1628258045_18050.txt!
+wrote to Processed-outputs/output_1628258063_18050.txt!
+wrote to Processed-outputs/output_1628258081_18050.txt!
+wrote to Processed-outputs/output_1628258099_18050.txt!
+wrote to Processed-outputs/output_1628258117_18050.txt!
+wrote to Processed-outputs/output_1628258136_18050.txt!
+wrote to Processed-outputs/output_1628258154_18050.txt!
+wrote to Processed-outputs/output_1628258172_18050.txt!
+wrote to Processed-outputs/output_1628258190_18050.txt!
+wrote to Processed-outputs/output_1628258208_18050.txt!
+wrote to Processed-outputs/output_1628258226_18050.txt!
+wrote to Processed-outputs/output_1628258244_18050.txt!
+wrote to Processed-outputs/output_1628258263_18050.txt!
+wrote to Processed-outputs/output_1628258281_18050.txt!
+wrote to Processed-outputs/output_1628258299_18050.txt!
+wrote to Processed-outputs/output_1628258317_18050.txt!
+wrote to Processed-outputs/output_1628258335_18050.txt!
+wrote to Processed-outputs/output_1628258353_18050.txt!
+wrote to Processed-outputs/output_1628258371_18050.txt!
+wrote to Processed-outputs/output_1628258390_18050.txt!
+wrote to Processed-outputs/output_1628258408_18050.txt!
+Currently 11 epochs with no improvement.
+Finished epoch no. 15 on interval 18!
+wrote to Processed-outputs/output_1628258422_18050.txt!
+wrote to Processed-outputs/output_1628258440_18050.txt!
+wrote to Processed-outputs/output_1628258458_18050.txt!
+wrote to Processed-outputs/output_1628258476_18050.txt!
+wrote to Processed-outputs/output_1628258494_18050.txt!
+wrote to Processed-outputs/output_1628258513_18050.txt!
+wrote to Processed-outputs/output_1628258531_18050.txt!
+wrote to Processed-outputs/output_1628258549_18050.txt!
+wrote to Processed-outputs/output_1628258567_18050.txt!
+wrote to Processed-outputs/output_1628258585_18050.txt!
+wrote to Processed-outputs/output_1628258603_18050.txt!
+wrote to Processed-outputs/output_1628258621_18050.txt!
+wrote to Processed-outputs/output_1628258640_18050.txt!
+wrote to Processed-outputs/output_1628258658_18050.txt!
+wrote to Processed-outputs/output_1628258676_18050.txt!
+wrote to Processed-outputs/output_1628258694_18050.txt!
+wrote to Processed-outputs/output_1628258712_18050.txt!
+wrote to Processed-outputs/output_1628258730_18050.txt!
+wrote to Processed-outputs/output_1628258748_18050.txt!
+wrote to Processed-outputs/output_1628258766_18050.txt!
+wrote to Processed-outputs/output_1628258785_18050.txt!
+wrote to Processed-outputs/output_1628258803_18050.txt!
+wrote to Processed-outputs/output_1628258821_18050.txt!
+wrote to Processed-outputs/output_1628258839_18050.txt!
+wrote to Processed-outputs/output_1628258857_18050.txt!
+wrote to Processed-outputs/output_1628258875_18050.txt!
+wrote to Processed-outputs/output_1628258893_18050.txt!
+wrote to Processed-outputs/output_1628258912_18050.txt!
+wrote to Processed-outputs/output_1628258930_18050.txt!
+wrote to Processed-outputs/output_1628258948_18050.txt!
+wrote to Processed-outputs/output_1628258966_18050.txt!
+Currently 12 epochs with no improvement.
+Finished epoch no. 16 on interval 19!
+wrote to Processed-outputs/output_1628259248_18070.txt!
+wrote to Processed-outputs/output_1628259285_18070.txt!
+Currently 13 epochs with no improvement.
+Finished epoch no. 17 on interval 4!
+wrote to Processed-outputs/output_1628259836_18050.txt!
+wrote to Processed-outputs/output_1628259854_18050.txt!
+Currently 14 epochs with no improvement.
+Finished epoch no. 18 on interval 5!
+wrote to Processed-outputs/output_1628260366_18060.txt!
+wrote to Processed-outputs/output_1628260384_18060.txt!
+wrote to Processed-outputs/output_1628260403_18060.txt!
+wrote to Processed-outputs/output_1628260421_18060.txt!
+wrote to Processed-outputs/output_1628260439_18060.txt!
+wrote to Processed-outputs/output_1628260457_18060.txt!
+wrote to Processed-outputs/output_1628260475_18070.txt!
+wrote to Processed-outputs/output_1628260493_18070.txt!
+wrote to Processed-outputs/output_1628260511_18080.txt!
+wrote to Processed-outputs/output_1628260530_18080.txt!
+wrote to Processed-outputs/output_1628260548_18080.txt!
+wrote to Processed-outputs/output_1628260566_18090.txt!
+wrote to Processed-outputs/output_1628260584_18090.txt!
+wrote to Processed-outputs/output_1628260602_18090.txt!
+Currently 15 epochs with no improvement.
+Finished epoch no. 19 on interval 6!
+wrote to Processed-outputs/output_1628260999_18050.txt!
+wrote to Processed-outputs/output_1628261018_18060.txt!
+wrote to Processed-outputs/output_1628261036_18060.txt!
+wrote to Processed-outputs/output_1628261054_18060.txt!
+wrote to Processed-outputs/output_1628261072_18060.txt!
+wrote to Processed-outputs/output_1628261090_18060.txt!
+wrote to Processed-outputs/output_1628261108_18060.txt!
+wrote to Processed-outputs/output_1628261126_18060.txt!
+wrote to Processed-outputs/output_1628261144_18060.txt!
+wrote to Processed-outputs/output_1628261162_18060.txt!
+wrote to Processed-outputs/output_1628261181_18060.txt!
+wrote to Processed-outputs/output_1628261199_18060.txt!
+wrote to Processed-outputs/output_1628261217_18060.txt!
+wrote to Processed-outputs/output_1628261235_18060.txt!
+wrote to Processed-outputs/output_1628261253_18060.txt!
+wrote to Processed-outputs/output_1628261271_18060.txt!
+wrote to Processed-outputs/output_1628261289_18060.txt!
+Currently 16 epochs with no improvement.
+Changed percentage increase to 0.4.
+Finished epoch no. 20 on interval 7!
+wrote to Processed-outputs/output_1628261553_18060.txt!
+wrote to Processed-outputs/output_1628261571_18060.txt!
+wrote to Processed-outputs/output_1628261589_18050.txt!
+Currently 17 epochs with no improvement.
+Finished epoch no. 21 on interval 8!
+wrote to Processed-outputs/output_1628261910_18060.txt!
+wrote to Processed-outputs/output_1628261928_18060.txt!
+wrote to Processed-outputs/output_1628261946_18050.txt!
+wrote to Processed-outputs/output_1628261964_18050.txt!
+wrote to Processed-outputs/output_1628261982_18050.txt!
+wrote to Processed-outputs/output_1628262000_18050.txt!
+wrote to Processed-outputs/output_1628262018_18050.txt!
+wrote to Processed-outputs/output_1628262037_18050.txt!
+wrote to Processed-outputs/output_1628262055_18050.txt!
+wrote to Processed-outputs/output_1628262073_18050.txt!
+wrote to Processed-outputs/output_1628262091_18050.txt!
+wrote to Processed-outputs/output_1628262109_18050.txt!
+wrote to Processed-outputs/output_1628262127_18050.txt!
+wrote to Processed-outputs/output_1628262145_18050.txt!
+wrote to Processed-outputs/output_1628262163_18050.txt!
+wrote to Processed-outputs/output_1628262182_18050.txt!
+wrote to Processed-outputs/output_1628262200_18050.txt!
+wrote to Processed-outputs/output_1628262218_18050.txt!
+wrote to Processed-outputs/output_1628262236_18050.txt!
+wrote to Processed-outputs/output_1628262254_18050.txt!
+wrote to Processed-outputs/output_1628262272_18050.txt!
+wrote to Processed-outputs/output_1628262290_18050.txt!
+wrote to Processed-outputs/output_1628262309_18050.txt!
+wrote to Processed-outputs/output_1628262327_18050.txt!
+wrote to Processed-outputs/output_1628262345_18050.txt!
+wrote to Processed-outputs/output_1628262363_18050.txt!
+wrote to Processed-outputs/output_1628262381_18050.txt!
+wrote to Processed-outputs/output_1628262399_18050.txt!
+wrote to Processed-outputs/output_1628262417_18050.txt!
+wrote to Processed-outputs/output_1628262436_18050.txt!
+Currently 18 epochs with no improvement.
+Finished epoch no. 22 on interval 9!
+wrote to Processed-outputs/output_1628262450_18050.txt!
+wrote to Processed-outputs/output_1628262468_18050.txt!
+wrote to Processed-outputs/output_1628262486_18050.txt!
+wrote to Processed-outputs/output_1628262504_18050.txt!
+wrote to Processed-outputs/output_1628262522_18050.txt!
+wrote to Processed-outputs/output_1628262540_18050.txt!
+wrote to Processed-outputs/output_1628262559_18050.txt!
+wrote to Processed-outputs/output_1628262577_18050.txt!
+wrote to Processed-outputs/output_1628262595_18050.txt!
+wrote to Processed-outputs/output_1628262613_18050.txt!
+wrote to Processed-outputs/output_1628262631_18050.txt!
+wrote to Processed-outputs/output_1628262649_18050.txt!
+wrote to Processed-outputs/output_1628262667_18050.txt!
+wrote to Processed-outputs/output_1628262685_18050.txt!
+wrote to Processed-outputs/output_1628262704_18050.txt!
+wrote to Processed-outputs/output_1628262722_18050.txt!
+wrote to Processed-outputs/output_1628262740_18050.txt!
+wrote to Processed-outputs/output_1628262758_18050.txt!
+wrote to Processed-outputs/output_1628262776_18050.txt!
+wrote to Processed-outputs/output_1628262794_18050.txt!
+wrote to Processed-outputs/output_1628262812_18050.txt!
+wrote to Processed-outputs/output_1628262831_18050.txt!
+wrote to Processed-outputs/output_1628262849_18050.txt!
+wrote to Processed-outputs/output_1628262867_18050.txt!
+wrote to Processed-outputs/output_1628262885_18050.txt!
+wrote to Processed-outputs/output_1628262903_18050.txt!
+wrote to Processed-outputs/output_1628262921_18050.txt!
+wrote to Processed-outputs/output_1628262939_18050.txt!
+wrote to Processed-outputs/output_1628262958_18050.txt!
+wrote to Processed-outputs/output_1628262976_18050.txt!
+wrote to Processed-outputs/output_1628262994_18050.txt!
+Currently 19 epochs with no improvement.
+Finished epoch no. 23 on interval 10!
+wrote to Processed-outputs/output_1628263008_18050.txt!
+wrote to Processed-outputs/output_1628263026_18050.txt!
+wrote to Processed-outputs/output_1628263044_18050.txt!
+wrote to Processed-outputs/output_1628263062_18050.txt!
+wrote to Processed-outputs/output_1628263081_18050.txt!
+wrote to Processed-outputs/output_1628263099_18050.txt!
+wrote to Processed-outputs/output_1628263117_18050.txt!
+wrote to Processed-outputs/output_1628263135_18050.txt!
+wrote to Processed-outputs/output_1628263153_18050.txt!
+wrote to Processed-outputs/output_1628263171_18050.txt!
+wrote to Processed-outputs/output_1628263189_18050.txt!
+wrote to Processed-outputs/output_1628263207_18050.txt!
+wrote to Processed-outputs/output_1628263226_18050.txt!
+wrote to Processed-outputs/output_1628263244_18050.txt!
+wrote to Processed-outputs/output_1628263262_18050.txt!
+wrote to Processed-outputs/output_1628263280_18050.txt!
+wrote to Processed-outputs/output_1628263298_18050.txt!
+wrote to Processed-outputs/output_1628263316_18050.txt!
+wrote to Processed-outputs/output_1628263334_18050.txt!
+wrote to Processed-outputs/output_1628263353_18050.txt!
+wrote to Processed-outputs/output_1628263371_18050.txt!
+wrote to Processed-outputs/output_1628263389_18050.txt!
+wrote to Processed-outputs/output_1628263407_18050.txt!
+wrote to Processed-outputs/output_1628263425_18050.txt!
+wrote to Processed-outputs/output_1628263443_18050.txt!
+wrote to Processed-outputs/output_1628263461_18050.txt!
+wrote to Processed-outputs/output_1628263480_18050.txt!
+wrote to Processed-outputs/output_1628263498_18050.txt!
+wrote to Processed-outputs/output_1628263516_18050.txt!
+wrote to Processed-outputs/output_1628263534_18050.txt!
+wrote to Processed-outputs/output_1628263552_18050.txt!
+Currently 20 epochs with no improvement.
+Finished epoch no. 24 on interval 11!
+wrote to Processed-outputs/output_1628263566_18050.txt!
+wrote to Processed-outputs/output_1628263584_18050.txt!
+wrote to Processed-outputs/output_1628263603_18050.txt!
+wrote to Processed-outputs/output_1628263621_18050.txt!
+wrote to Processed-outputs/output_1628263639_18050.txt!
+wrote to Processed-outputs/output_1628263657_18050.txt!
+wrote to Processed-outputs/output_1628263675_18050.txt!
+wrote to Processed-outputs/output_1628263693_18050.txt!
+wrote to Processed-outputs/output_1628263711_18050.txt!
+wrote to Processed-outputs/output_1628263730_18050.txt!
+wrote to Processed-outputs/output_1628263748_18050.txt!
+wrote to Processed-outputs/output_1628263766_18050.txt!
+wrote to Processed-outputs/output_1628263784_18050.txt!
+wrote to Processed-outputs/output_1628263802_18050.txt!
+wrote to Processed-outputs/output_1628263820_18050.txt!
+wrote to Processed-outputs/output_1628263838_18050.txt!
+wrote to Processed-outputs/output_1628263856_18050.txt!
+wrote to Processed-outputs/output_1628263875_18050.txt!
+wrote to Processed-outputs/output_1628263893_18050.txt!
+wrote to Processed-outputs/output_1628263911_18050.txt!
+wrote to Processed-outputs/output_1628263929_18050.txt!
+wrote to Processed-outputs/output_1628263947_18050.txt!
+wrote to Processed-outputs/output_1628263965_18050.txt!
+wrote to Processed-outputs/output_1628263983_18050.txt!
+wrote to Processed-outputs/output_1628264002_18050.txt!
+wrote to Processed-outputs/output_1628264020_18050.txt!
+wrote to Processed-outputs/output_1628264038_18050.txt!
+wrote to Processed-outputs/output_1628264056_18050.txt!
+wrote to Processed-outputs/output_1628264074_18050.txt!
+wrote to Processed-outputs/output_1628264092_18050.txt!
+wrote to Processed-outputs/output_1628264111_18050.txt!
+Currently 21 epochs with no improvement.
+Finished epoch no. 25 on interval 12!
+wrote to Processed-outputs/output_1628264412_18050.txt!
+Currently 22 epochs with no improvement.
+Finished epoch no. 26 on interval 13!
+wrote to Processed-outputs/output_1628264791_18620.txt!
+wrote to Processed-outputs/output_1628264829_18130.txt!
+wrote to Processed-outputs/output_1628264847_18110.txt!
+wrote to Processed-outputs/output_1628264865_18100.txt!
+wrote to Processed-outputs/output_1628264883_18090.txt!
+wrote to Processed-outputs/output_1628264901_18080.txt!
+wrote to Processed-outputs/output_1628264920_18070.txt!
+wrote to Processed-outputs/output_1628264938_18060.txt!
+wrote to Processed-outputs/output_1628264956_18060.txt!
+wrote to Processed-outputs/output_1628264974_18060.txt!
+wrote to Processed-outputs/output_1628264992_18050.txt!
+Currently 23 epochs with no improvement.
+Finished epoch no. 27 on interval 14!
+wrote to Processed-outputs/output_1628265295_18870.txt!
+wrote to Processed-outputs/output_1628265314_18870.txt!
+wrote to Processed-outputs/output_1628265333_18850.txt!
+wrote to Processed-outputs/output_1628265352_18820.txt!
+wrote to Processed-outputs/output_1628265371_18820.txt!
+wrote to Processed-outputs/output_1628265486_18890.txt!
+wrote to Processed-outputs/output_1628265505_18890.txt!
+wrote to Processed-outputs/output_1628265562_18050.txt!
+wrote to Processed-outputs/output_1628265580_18050.txt!
+wrote to Processed-outputs/output_1628265638_18890.txt!
+Currently 24 epochs with no improvement.
+Finished epoch no. 28 on interval 15!
+wrote to Processed-outputs/output_1628265882_18050.txt!
+wrote to Processed-outputs/output_1628265900_18050.txt!
+wrote to Processed-outputs/output_1628265918_18050.txt!
+wrote to Processed-outputs/output_1628265936_18050.txt!
+wrote to Processed-outputs/output_1628265955_18050.txt!
+wrote to Processed-outputs/output_1628265973_18050.txt!
+wrote to Processed-outputs/output_1628265991_18050.txt!
+wrote to Processed-outputs/output_1628266009_18050.txt!
+wrote to Processed-outputs/output_1628266027_18050.txt!
+wrote to Processed-outputs/output_1628266045_18050.txt!
+wrote to Processed-outputs/output_1628266063_18050.txt!
+wrote to Processed-outputs/output_1628266081_18050.txt!
+wrote to Processed-outputs/output_1628266100_18050.txt!
+wrote to Processed-outputs/output_1628266118_18050.txt!
+wrote to Processed-outputs/output_1628266136_18050.txt!
+wrote to Processed-outputs/output_1628266154_18050.txt!
+wrote to Processed-outputs/output_1628266172_18050.txt!
+wrote to Processed-outputs/output_1628266190_18050.txt!
+wrote to Processed-outputs/output_1628266208_18050.txt!
+wrote to Processed-outputs/output_1628266227_18050.txt!
+wrote to Processed-outputs/output_1628266245_18050.txt!
+wrote to Processed-outputs/output_1628266263_18050.txt!
+wrote to Processed-outputs/output_1628266281_18050.txt!
+wrote to Processed-outputs/output_1628266299_18050.txt!
+wrote to Processed-outputs/output_1628266317_18050.txt!
+wrote to Processed-outputs/output_1628266335_18050.txt!
+wrote to Processed-outputs/output_1628266354_18050.txt!
+wrote to Processed-outputs/output_1628266372_18050.txt!
+wrote to Processed-outputs/output_1628266390_18050.txt!
+wrote to Processed-outputs/output_1628266408_18050.txt!
+wrote to Processed-outputs/output_1628266426_18050.txt!
+Currently 25 epochs with no improvement.
+Finished epoch no. 29 on interval 16!
+wrote to Processed-outputs/output_1628266440_18050.txt!
+wrote to Processed-outputs/output_1628266458_18050.txt!
+wrote to Processed-outputs/output_1628266477_18050.txt!
+wrote to Processed-outputs/output_1628266495_18050.txt!
+wrote to Processed-outputs/output_1628266513_18050.txt!
+wrote to Processed-outputs/output_1628266531_18050.txt!
+wrote to Processed-outputs/output_1628266549_18050.txt!
+wrote to Processed-outputs/output_1628266567_18050.txt!
+wrote to Processed-outputs/output_1628266585_18050.txt!
+wrote to Processed-outputs/output_1628266604_18050.txt!
+wrote to Processed-outputs/output_1628266622_18050.txt!
+wrote to Processed-outputs/output_1628266640_18050.txt!
+wrote to Processed-outputs/output_1628266658_18050.txt!
+wrote to Processed-outputs/output_1628266676_18050.txt!
+wrote to Processed-outputs/output_1628266694_18050.txt!
+wrote to Processed-outputs/output_1628266712_18050.txt!
+wrote to Processed-outputs/output_1628266731_18050.txt!
+wrote to Processed-outputs/output_1628266749_18050.txt!
+wrote to Processed-outputs/output_1628266767_18050.txt!
+wrote to Processed-outputs/output_1628266785_18050.txt!
+wrote to Processed-outputs/output_1628266803_18050.txt!
+wrote to Processed-outputs/output_1628266821_18050.txt!
+wrote to Processed-outputs/output_1628266839_18050.txt!
+wrote to Processed-outputs/output_1628266857_18050.txt!
+wrote to Processed-outputs/output_1628266876_18050.txt!
+wrote to Processed-outputs/output_1628266894_18050.txt!
+wrote to Processed-outputs/output_1628266912_18050.txt!
+wrote to Processed-outputs/output_1628266930_18050.txt!
+wrote to Processed-outputs/output_1628266948_18050.txt!
+wrote to Processed-outputs/output_1628266966_18050.txt!
+wrote to Processed-outputs/output_1628266984_18050.txt!
+Currently 26 epochs with no improvement.
+Finished epoch no. 30 on interval 17!
+wrote to Processed-outputs/output_1628266999_18050.txt!
+wrote to Processed-outputs/output_1628267017_18050.txt!
+wrote to Processed-outputs/output_1628267035_18050.txt!
+wrote to Processed-outputs/output_1628267053_18050.txt!
+wrote to Processed-outputs/output_1628267071_18050.txt!
+wrote to Processed-outputs/output_1628267089_18050.txt!
+wrote to Processed-outputs/output_1628267108_18050.txt!
+wrote to Processed-outputs/output_1628267126_18050.txt!
+wrote to Processed-outputs/output_1628267144_18050.txt!
+wrote to Processed-outputs/output_1628267162_18050.txt!
+wrote to Processed-outputs/output_1628267180_18050.txt!
+wrote to Processed-outputs/output_1628267198_18050.txt!
+wrote to Processed-outputs/output_1628267216_18050.txt!
+wrote to Processed-outputs/output_1628267235_18050.txt!
+wrote to Processed-outputs/output_1628267253_18050.txt!
+wrote to Processed-outputs/output_1628267271_18050.txt!
+wrote to Processed-outputs/output_1628267289_18050.txt!
+wrote to Processed-outputs/output_1628267307_18050.txt!
+wrote to Processed-outputs/output_1628267325_18050.txt!
+wrote to Processed-outputs/output_1628267343_18050.txt!
+wrote to Processed-outputs/output_1628267362_18050.txt!
+wrote to Processed-outputs/output_1628267380_18050.txt!
+wrote to Processed-outputs/output_1628267398_18050.txt!
+wrote to Processed-outputs/output_1628267416_18050.txt!
+wrote to Processed-outputs/output_1628267434_18050.txt!
+wrote to Processed-outputs/output_1628267452_18050.txt!
+wrote to Processed-outputs/output_1628267470_18050.txt!
+wrote to Processed-outputs/output_1628267488_18050.txt!
+wrote to Processed-outputs/output_1628267507_18050.txt!
+wrote to Processed-outputs/output_1628267525_18050.txt!
+wrote to Processed-outputs/output_1628267543_18050.txt!
+Currently 27 epochs with no improvement.
+Finished epoch no. 31 on interval 18!
+wrote to Processed-outputs/output_1628267557_18050.txt!
+wrote to Processed-outputs/output_1628267575_18050.txt!
+wrote to Processed-outputs/output_1628267593_18050.txt!
+wrote to Processed-outputs/output_1628267611_18050.txt!
+wrote to Processed-outputs/output_1628267630_18050.txt!
+wrote to Processed-outputs/output_1628267648_18050.txt!
+wrote to Processed-outputs/output_1628267666_18050.txt!
+wrote to Processed-outputs/output_1628267684_18050.txt!
+wrote to Processed-outputs/output_1628267702_18050.txt!
+wrote to Processed-outputs/output_1628267720_18050.txt!
+wrote to Processed-outputs/output_1628267738_18050.txt!
+wrote to Processed-outputs/output_1628267757_18050.txt!
+wrote to Processed-outputs/output_1628267775_18050.txt!
+wrote to Processed-outputs/output_1628267793_18050.txt!
+wrote to Processed-outputs/output_1628267811_18050.txt!
+wrote to Processed-outputs/output_1628267829_18050.txt!
+wrote to Processed-outputs/output_1628267847_18050.txt!
+wrote to Processed-outputs/output_1628267865_18050.txt!
+wrote to Processed-outputs/output_1628267883_18050.txt!
+wrote to Processed-outputs/output_1628267902_18050.txt!
+wrote to Processed-outputs/output_1628267920_18050.txt!
+wrote to Processed-outputs/output_1628267938_18050.txt!
+wrote to Processed-outputs/output_1628267956_18050.txt!
+wrote to Processed-outputs/output_1628267974_18050.txt!
+wrote to Processed-outputs/output_1628267992_18050.txt!
+wrote to Processed-outputs/output_1628268010_18050.txt!
+wrote to Processed-outputs/output_1628268029_18050.txt!
+wrote to Processed-outputs/output_1628268047_18050.txt!
+wrote to Processed-outputs/output_1628268065_18050.txt!
+wrote to Processed-outputs/output_1628268083_18050.txt!
+wrote to Processed-outputs/output_1628268101_18050.txt!
+Currently 28 epochs with no improvement.
+Finished epoch no. 32 on interval 19!
+wrote to Processed-outputs/output_1628268307_18060.txt!
+wrote to Processed-outputs/output_1628268344_18080.txt!
+wrote to Processed-outputs/output_1628268420_18070.txt!
+Currently 29 epochs with no improvement.
+Finished epoch no. 33 on interval 4!
+wrote to Processed-outputs/output_1628268992_18050.txt!
+Currently 30 epochs with no improvement.
+Finished epoch no. 34 on interval 5!
+wrote to Processed-outputs/output_1628269506_18060.txt!
+wrote to Processed-outputs/output_1628269524_18060.txt!
+wrote to Processed-outputs/output_1628269542_18060.txt!
+wrote to Processed-outputs/output_1628269560_18060.txt!
+wrote to Processed-outputs/output_1628269579_18060.txt!
+wrote to Processed-outputs/output_1628269597_18070.txt!
+wrote to Processed-outputs/output_1628269615_18070.txt!
+wrote to Processed-outputs/output_1628269633_18080.txt!
+wrote to Processed-outputs/output_1628269651_18080.txt!
+wrote to Processed-outputs/output_1628269670_18080.txt!
+wrote to Processed-outputs/output_1628269688_18090.txt!
+wrote to Processed-outputs/output_1628269706_18090.txt!
+Currently 31 epochs with no improvement.
+Finished epoch no. 35 on interval 6!
+wrote to Processed-outputs/output_1628270143_18050.txt!
+wrote to Processed-outputs/output_1628270161_18060.txt!
+wrote to Processed-outputs/output_1628270179_18060.txt!
+wrote to Processed-outputs/output_1628270198_18060.txt!
+wrote to Processed-outputs/output_1628270216_18060.txt!
+wrote to Processed-outputs/output_1628270234_18060.txt!
+wrote to Processed-outputs/output_1628270252_18060.txt!
+wrote to Processed-outputs/output_1628270270_18060.txt!
+wrote to Processed-outputs/output_1628270289_18060.txt!
+wrote to Processed-outputs/output_1628270307_18060.txt!
+wrote to Processed-outputs/output_1628270325_18060.txt!
+wrote to Processed-outputs/output_1628270343_18060.txt!
+wrote to Processed-outputs/output_1628270362_18060.txt!
+wrote to Processed-outputs/output_1628270380_18060.txt!
+wrote to Processed-outputs/output_1628270398_18060.txt!
+wrote to Processed-outputs/output_1628270416_18060.txt!
+wrote to Processed-outputs/output_1628270434_18060.txt!
+Currently 32 epochs with no improvement.
+Changed percentage increase to 0.5.
+Finished epoch no. 36 on interval 7!
+wrote to Processed-outputs/output_1628270698_18060.txt!
+wrote to Processed-outputs/output_1628270716_18060.txt!
+wrote to Processed-outputs/output_1628270735_18050.txt!
+Currently 33 epochs with no improvement.
+Finished epoch no. 37 on interval 8!
+wrote to Processed-outputs/output_1628271056_18060.txt!
+wrote to Processed-outputs/output_1628271074_18060.txt!
+wrote to Processed-outputs/output_1628271093_18050.txt!
+wrote to Processed-outputs/output_1628271111_18050.txt!
+wrote to Processed-outputs/output_1628271129_18050.txt!
+wrote to Processed-outputs/output_1628271147_18050.txt!
+wrote to Processed-outputs/output_1628271165_18050.txt!
+wrote to Processed-outputs/output_1628271184_18050.txt!
+wrote to Processed-outputs/output_1628271202_18050.txt!
+wrote to Processed-outputs/output_1628271220_18050.txt!
+wrote to Processed-outputs/output_1628271238_18050.txt!
+wrote to Processed-outputs/output_1628271256_18050.txt!
+wrote to Processed-outputs/output_1628271274_18050.txt!
+wrote to Processed-outputs/output_1628271292_18050.txt!
+wrote to Processed-outputs/output_1628271310_18050.txt!
+wrote to Processed-outputs/output_1628271328_18050.txt!
+wrote to Processed-outputs/output_1628271347_18050.txt!
+wrote to Processed-outputs/output_1628271365_18050.txt!
+wrote to Processed-outputs/output_1628271383_18050.txt!
+wrote to Processed-outputs/output_1628271401_18050.txt!
+wrote to Processed-outputs/output_1628271419_18050.txt!
+wrote to Processed-outputs/output_1628271437_18050.txt!
+wrote to Processed-outputs/output_1628271455_18050.txt!
+wrote to Processed-outputs/output_1628271474_18050.txt!
+wrote to Processed-outputs/output_1628271492_18050.txt!
+wrote to Processed-outputs/output_1628271510_18050.txt!
+wrote to Processed-outputs/output_1628271528_18050.txt!
+wrote to Processed-outputs/output_1628271546_18050.txt!
+wrote to Processed-outputs/output_1628271564_18050.txt!
+wrote to Processed-outputs/output_1628271583_18050.txt!
+Currently 34 epochs with no improvement.
+Finished epoch no. 38 on interval 9!
+wrote to Processed-outputs/output_1628271599_18050.txt!
+wrote to Processed-outputs/output_1628271617_18050.txt!
+wrote to Processed-outputs/output_1628271635_18050.txt!
+wrote to Processed-outputs/output_1628271654_18050.txt!
+wrote to Processed-outputs/output_1628271669_18050.txt!
+wrote to Processed-outputs/output_1628271687_18050.txt!
+wrote to Processed-outputs/output_1628271705_18050.txt!
+wrote to Processed-outputs/output_1628271723_18050.txt!
+wrote to Processed-outputs/output_1628271741_18050.txt!
+wrote to Processed-outputs/output_1628271758_18050.txt!
+wrote to Processed-outputs/output_1628271776_18050.txt!
+wrote to Processed-outputs/output_1628271794_18050.txt!
+wrote to Processed-outputs/output_1628271812_18050.txt!
+wrote to Processed-outputs/output_1628271830_18050.txt!
+wrote to Processed-outputs/output_1628271848_18050.txt!
+wrote to Processed-outputs/output_1628271865_18050.txt!
+wrote to Processed-outputs/output_1628271883_18050.txt!
+wrote to Processed-outputs/output_1628271901_18050.txt!
+wrote to Processed-outputs/output_1628271919_18050.txt!
+wrote to Processed-outputs/output_1628271937_18050.txt!
+wrote to Processed-outputs/output_1628271955_18050.txt!
+wrote to Processed-outputs/output_1628271973_18050.txt!
+wrote to Processed-outputs/output_1628271991_18050.txt!
+wrote to Processed-outputs/output_1628272009_18050.txt!
+wrote to Processed-outputs/output_1628272027_18050.txt!
+wrote to Processed-outputs/output_1628272045_18050.txt!
+wrote to Processed-outputs/output_1628272063_18050.txt!
+wrote to Processed-outputs/output_1628272081_18050.txt!
+wrote to Processed-outputs/output_1628272099_18050.txt!
+wrote to Processed-outputs/output_1628272117_18050.txt!
+wrote to Processed-outputs/output_1628272135_18050.txt!
+Currently 35 epochs with no improvement.
+Finished epoch no. 39 on interval 10!
+wrote to Processed-outputs/output_1628272149_18050.txt!
+wrote to Processed-outputs/output_1628272167_18050.txt!
+wrote to Processed-outputs/output_1628272185_18050.txt!
+wrote to Processed-outputs/output_1628272203_18050.txt!
+wrote to Processed-outputs/output_1628272221_18050.txt!
+wrote to Processed-outputs/output_1628272238_18050.txt!
+wrote to Processed-outputs/output_1628272256_18050.txt!
+wrote to Processed-outputs/output_1628272274_18050.txt!
+wrote to Processed-outputs/output_1628272292_18050.txt!
+wrote to Processed-outputs/output_1628272310_18050.txt!
+wrote to Processed-outputs/output_1628272328_18050.txt!
+wrote to Processed-outputs/output_1628272347_18050.txt!
+wrote to Processed-outputs/output_1628272365_18050.txt!
+wrote to Processed-outputs/output_1628272383_18050.txt!
+wrote to Processed-outputs/output_1628272401_18050.txt!
+wrote to Processed-outputs/output_1628272419_18050.txt!
+wrote to Processed-outputs/output_1628272437_18050.txt!
+wrote to Processed-outputs/output_1628272456_18050.txt!
+wrote to Processed-outputs/output_1628272474_18050.txt!
+wrote to Processed-outputs/output_1628272492_18050.txt!
+wrote to Processed-outputs/output_1628272510_18050.txt!
+wrote to Processed-outputs/output_1628272528_18050.txt!
+wrote to Processed-outputs/output_1628272546_18050.txt!
+wrote to Processed-outputs/output_1628272564_18050.txt!
+wrote to Processed-outputs/output_1628272583_18050.txt!
+wrote to Processed-outputs/output_1628272601_18050.txt!
+wrote to Processed-outputs/output_1628272619_18050.txt!
+wrote to Processed-outputs/output_1628272637_18050.txt!
+wrote to Processed-outputs/output_1628272655_18050.txt!
+wrote to Processed-outputs/output_1628272673_18050.txt!
+wrote to Processed-outputs/output_1628272691_18050.txt!
+Currently 36 epochs with no improvement.
+Finished epoch no. 40 on interval 11!
+wrote to Processed-outputs/output_1628272705_18050.txt!
+wrote to Processed-outputs/output_1628272724_18050.txt!
+wrote to Processed-outputs/output_1628272742_18050.txt!
+wrote to Processed-outputs/output_1628272760_18050.txt!
+wrote to Processed-outputs/output_1628272778_18050.txt!
+wrote to Processed-outputs/output_1628272796_18050.txt!
+wrote to Processed-outputs/output_1628272814_18050.txt!
+wrote to Processed-outputs/output_1628272832_18050.txt!
+wrote to Processed-outputs/output_1628272851_18050.txt!
+wrote to Processed-outputs/output_1628272869_18050.txt!
+wrote to Processed-outputs/output_1628272887_18050.txt!
+wrote to Processed-outputs/output_1628272905_18050.txt!
+wrote to Processed-outputs/output_1628272923_18050.txt!
+wrote to Processed-outputs/output_1628272941_18050.txt!
+wrote to Processed-outputs/output_1628272959_18050.txt!
+wrote to Processed-outputs/output_1628272978_18050.txt!
+wrote to Processed-outputs/output_1628272996_18050.txt!
+wrote to Processed-outputs/output_1628273014_18050.txt!
+wrote to Processed-outputs/output_1628273032_18050.txt!
+wrote to Processed-outputs/output_1628273050_18050.txt!
+wrote to Processed-outputs/output_1628273068_18050.txt!
+wrote to Processed-outputs/output_1628273086_18050.txt!
+wrote to Processed-outputs/output_1628273105_18050.txt!
+wrote to Processed-outputs/output_1628273123_18050.txt!
+wrote to Processed-outputs/output_1628273141_18050.txt!
+wrote to Processed-outputs/output_1628273159_18050.txt!
+wrote to Processed-outputs/output_1628273177_18050.txt!
+wrote to Processed-outputs/output_1628273195_18050.txt!
+wrote to Processed-outputs/output_1628273213_18050.txt!
+wrote to Processed-outputs/output_1628273232_18050.txt!
+wrote to Processed-outputs/output_1628273250_18050.txt!
+Currently 37 epochs with no improvement.
+Finished epoch no. 41 on interval 12!
+wrote to Processed-outputs/output_1628273551_18050.txt!
+Currently 38 epochs with no improvement.
+Finished epoch no. 42 on interval 13!
+wrote to Processed-outputs/output_1628273968_18210.txt!
+wrote to Processed-outputs/output_1628273986_18120.txt!
+wrote to Processed-outputs/output_1628274004_18110.txt!
+wrote to Processed-outputs/output_1628274023_18100.txt!
+wrote to Processed-outputs/output_1628274041_18090.txt!
+wrote to Processed-outputs/output_1628274059_18080.txt!
+wrote to Processed-outputs/output_1628274077_18070.txt!
+wrote to Processed-outputs/output_1628274095_18060.txt!
+wrote to Processed-outputs/output_1628274113_18060.txt!
+wrote to Processed-outputs/output_1628274131_18050.txt!
+Currently 39 epochs with no improvement.
+Finished epoch no. 43 on interval 14!
+wrote to Processed-outputs/output_1628274434_18890.txt!
+wrote to Processed-outputs/output_1628274453_18890.txt!
+PS C:\Users\Matei\Desktop\tm-ml-tas\trackmania-ml-tas-needs-testing\TMInterfaceClientPython-master>

@@ -209,7 +209,7 @@ class ML():
         self.CUTOFF_TIME = 19000
         self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
         self.intervals = self.make_intervals(20)
-        self.interval_bounds = (0, 20) #se lucreaza pe intervalele [.., ..)
+        self.interval_bounds = (4, 20) #se lucreaza pe intervalele [.., ..)
         #StarStadiumA5
 
         #pentru fiecare interval [l, r] ai o combinatie de coeficienti

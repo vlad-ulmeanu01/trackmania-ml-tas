@@ -52,17 +52,17 @@ def write_processed_output(g, sol, GAP_TIME):
 #!! setul (unordered_set) se initializeaza cu set()
 def get_hyperparams(hyperparams: set):
     hyperparams = copy.deepcopy(hyperparams)
-    fin = open("Configs/_CURRENT_MAP_NAME.txt")
+    fin = open("../Configs/_CURRENT_MAP_NAME.txt")
     if fin.closed:
-        print("Configs/_CURRENT_MAP_NAME.txt needed!")
+        print("../Configs/_CURRENT_MAP_NAME.txt needed!")
         assert(False)
 
     iname = fin.readline()
     fin.close()
 
-    fin = open("Configs/" + iname)
+    fin = open("../Configs/" + iname)
     if fin.closed:
-        print(f"Couldn't find {iname} in Configs/.")
+        print(f"Couldn't find {iname} in ../Configs/.")
         assert(False)
 
     print(f"Reading hyperparams from {iname}!")

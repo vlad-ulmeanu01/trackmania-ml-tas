@@ -4,6 +4,7 @@ import sys
 import signal
 import time
 import copy
+import decimal
 
 def read_processed_input(f: str):
     fin = open(f)
@@ -158,13 +159,13 @@ class MainClient(Client):
 
         pass
 
-    def on_simulation_begin(self, iface):
+    def on_simulation_begin(self, iface: TMInterface):
         pass
 
-    def on_simulation_step(self, iface, time: int):
+    def on_simulation_step(self, iface: TMInterface, time: int):
         pass
     
-    def on_simulation_end(self, iface, result: int):
+    def on_simulation_end(self, iface: TMInterface, result: int):
         pass
 
     def on_checkpoint_count_changed(self, iface, current: int, target: int):
@@ -185,6 +186,11 @@ class MainClient(Client):
 
     def on_laps_count_changed(self, iface, current: int):
         pass
+    
+    def compute_speed_for_sim(self, iface: TMInterface):
+        vx, vy, vz = iface.get_simulation_state().get_velocity()
+        decimal.getcontext().prec = 3
+        return float(decimal.Decimal(vx * vx + vy * vy + vz * vz).sqrt()) * 3.6
 
     def fitness_function (self, iface):
         score = 0

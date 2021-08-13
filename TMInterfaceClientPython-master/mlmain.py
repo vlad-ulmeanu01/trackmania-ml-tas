@@ -46,27 +46,55 @@ def write_processed_output(g, sol, GAP_TIME):
 
     fout.close()
 
+#primeste un set cu stringuri ce se doresc citite.
+#returneaza un htable cu valorile dorite.
+#ex: get_hyperparams({"CUTOFF_TIME", "HUMAN_TIME"}) => {"CUTOFF_TIME": "10000", "HUMAN_TIME": "9350"}
+#!! setul (unordered_set) se initializeaza cu set()
+def get_hyperparams(hyperparams: set):
+    hyperparams = copy.deepcopy(hyperparams)
+    fin = open("../Configs/_CURRENT_MAP_NAME.txt")
+    if fin.closed:
+        print("../Configs/_CURRENT_MAP_NAME.txt needed!")
+        assert(False)
+
+    iname = fin.readline()
+    fin.close()
+
+    fin = open("../Configs/" + iname)
+    if fin.closed:
+        print(f"Couldn't find {iname} in ../Configs/.")
+        assert(False)
+
+    print(f"Reading hyperparams from {iname}!")
+
+    config = {}
+    cnt_hparams_read, cnt_hparams_need = 0, len(hyperparams)
+    for line in fin.readlines():
+        name, val = line.split()
+        assert(name.find(' ') == -1 and val.find(' ') == -1)
+        if name in hyperparams:
+            cnt_hparams_read += 1
+            config[name] = val
+            hyperparams.remove(name)
+
+    if cnt_hparams_read != cnt_hparams_need:
+        print(f"(get_hyperparams) Error, wanted to read {cnt_hparams_need} vars, but only read {cnt_hparams_read}.")
+        print(f"Couldn't find the following: {hyperparams}.")
+        assert(False)
+
+    fin.close()
+    return config
+
+
 class MainClient(Client):
     def __init__(self):
         self.GAP_TIME = 10 #ms
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
         
-        '''
-        #A01
-        self.CUTOFF_TIME = 25000
-        self.HUMAN_TIME = 23720
-        #A01
-        '''
-        '''
-        #TAS_Training_Map_1
-        self.CUTOFF_TIME = 10000
-        self.HUMAN_TIME = 9310
-        #TAS_Training_Map_1
-        '''
-        #StarStadiumA5
-        self.CUTOFF_TIME = 19000
-        self.HUMAN_TIME = 18090
-        #StarStadiumA5
+        config = get_hyperparams({"CUTOFF_TIME", "HUMAN_TIME"})
+        self.CUTOFF_TIME = int(config["CUTOFF_TIME"])
+        self.HUMAN_TIME = int(config["HUMAN_TIME"])
+        print(f"MainClient __init__: CUTOFF_TIME {self.CUTOFF_TIME}, HUMAN_TIME {self.HUMAN_TIME}")
 
         self.processed_output_dir = "Processed-outputs/output_"
         
@@ -189,28 +217,23 @@ class ML():
         self.GAP_TIME = 10
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
 
-        '''
-        #A01
-        self.CUTOFF_TIME = 25000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 7, 7 + 15 #processed_inputs e o combinatie de doesnt_end + does_end; +1 pt lag dubios; input_0 e 2372, input_15 e tasbad care nu termina; input -7..-1 & 1 .. 7 sunt de la tasbad, restul de la 2372
-        self.intervals = self.make_intervals(50)
-        self.interval_bounds = (28, 41) #se lucreaza pe intervalele [.., ..)
-        #A01
-        '''
-        '''
-        #TAS_Training_Map_1
-        self.CUTOFF_TIME = 10000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
-        self.intervals = self.make_intervals(10)
-        self.interval_bounds = (0, 10) #se lucreaza pe intervalele [.., ..)
-        #TAS_Training_Map_1
-        '''
-        #StarStadiumA5
-        self.CUTOFF_TIME = 19000
-        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = 15, 15
-        self.intervals = self.make_intervals(20)
-        self.interval_bounds = (4, 20) #se lucreaza pe intervalele [.., ..)
-        #StarStadiumA5
+        config = get_hyperparams({"CUTOFF_TIME", "LEFT_SHIFTS", "RIGHT_SHIFTS", "INTERVAL_COUNT",
+                                  "INTERVAL_BOUND_LO", "INTERVAL_BOUND_HI", "PERCENTAGE_INCREASE",
+                                  "PERCENTAGE_INCREASE_PER_FIX"})
+
+        self.CUTOFF_TIME = int(config["CUTOFF_TIME"])
+        self.LEFT_SHIFTS, self.RIGHT_SHIFTS = int(config["LEFT_SHIFTS"]), int(config["RIGHT_SHIFTS"])
+
+        self.interval_count = int(config["INTERVAL_COUNT"])
+        self.intervals = self.make_intervals(self.interval_count)
+        self.interval_bounds = (int(config["INTERVAL_BOUND_LO"]), int(config["INTERVAL_BOUND_HI"]))
+        #se lucreaza pe intervalele [.., ..)
+
+        self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
+        self.percentage_increase = float(config["PERCENTAGE_INCREASE"])
+        self.percentage_increase_per_fix = float(config["PERCENTAGE_INCREASE_PER_FIX"])
+
+        print(f"ML __init__: CUTOFF_TIME {self.CUTOFF_TIME}, LEFT_SHIFTS {self.LEFT_SHIFTS}, RIGHT_SHIFTS {self.RIGHT_SHIFTS}, INTERVAL_COUNT {self.interval_count}, INTERVAL_BOUND_LO {self.interval_bounds[0]}, INTERVAL_BOUND_HI {self.interval_bounds[1]}, PERCENTAGE_INCREASE {self.percentage_increase}, PERCENTAGE_INCREASE_PER_FIX {self.percentage_increase_per_fix}")
 
         #pentru fiecare interval [l, r] ai o combinatie de coeficienti
         #self.intervals[i][0] = (l, r)
@@ -228,9 +251,6 @@ class ML():
         self.have_current_run = False
         self.current_run_score = 0
 
-        self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
-        self.percentage_increase = 0.3 #dc procentajul este 0.4 se intra in calcul cu el 0.7
-        self.percentage_increase_per_fix = 0.1 #se aduna la self.percentage_increase dupa ?? reprize fara +
         self.kept_change = 0.15 #cat din schimbare chiar este facuta (doar strat A)
 
         self.changed_percentages = [] #tine minte procentele schimbate bagate in stiva, folosite mai
@@ -429,7 +449,7 @@ class ML():
                         self.epochs_since_last_improvement += 1
                         print(f"Currently {self.epochs_since_last_improvement} epochs with no improvement.")
                         if self.epochs_since_last_improvement % self.max_epochs_no_improvement == 0:
-                            if self.percentage_increase < 1:
+                            if self.percentage_increase + self.percentage_increase_per_fix > 0 and self.percentage_increase + self.percentage_increase_per_fix < 1:
                                 self.percentage_increase += self.percentage_increase_per_fix
                                 print(f"Changed percentage increase to {self.percentage_increase}.")
                             else:

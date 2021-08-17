@@ -1,0 +1,679 @@
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Reading hyperparams from TAS_Training_Map_1.txt!
+MainClient __init__: CUTOFF_TIME 10000, HUMAN_TIME 9310
+Registered to TMInterface0
+Reading hyperparams from TAS_Training_Map_1.txt!
+ML __init__: CUTOFF_TIME 10000, LEFT_SHIFTS 15, RIGHT_SHIFTS 15, INTERVAL_COUNT 10, INTERVAL_BOUND_LO 0, INTERVAL_BOUND_HI 10, PERCENTAGE_INCREASE 0.3, PERCENTAGE_INCREASE_PER_FIX 0.1
+wrote to Processed-outputs/output_1629215363_1222723_9310.txt! (new score 211.68 vs old score None)
+All simulations finished?? You weren't supposed to see this you know
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Reading hyperparams from TAS_Training_Map_1.txt!
+MainClient __init__: CUTOFF_TIME 10000, HUMAN_TIME 9310
+Reading hyperparams from TAS_Training_Map_1.txt!
+ML __init__: CUTOFF_TIME 10000, LEFT_SHIFTS 15, RIGHT_SHIFTS 15, INTERVAL_COUNT 10, INTERVAL_BOUND_LO 0, INTERVAL_BOUND_HI 10, PERCENTAGE_INCREASE 0.3, PERCENTAGE_INCREASE_PER_FIX 0.1
+Registered to TMInterface0
+(on_simulation_step) remembered state!
+wrote to Processed-outputs/output_1629215838_4174507_9310.txt! (new score 211.68 vs old score None)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(on_simulation_step) remembered state!
+All simulations finished?? You weren't supposed to see this you know
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Reading hyperparams from TAS_Training_Map_1.txt!
+MainClient __init__: CUTOFF_TIME 10000, HUMAN_TIME 9310
+Registered to TMInterface0
+Reading hyperparams from TAS_Training_Map_1.txt!
+ML __init__: CUTOFF_TIME 10000, LEFT_SHIFTS 15, RIGHT_SHIFTS 15, INTERVAL_COUNT 10, INTERVAL_BOUND_LO 0, INTERVAL_BOUND_HI 10, PERCENTAGE_INCREASE 0.3, PERCENTAGE_INCREASE_PER_FIX 0.1
+(on_simulation_step) remembered state!
+wrote to Processed-outputs/output_1629215914_1019206_9310.txt! (new score 211.68 vs old score None)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+All simulations finished?? You weren't supposed to see this you know
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Reading hyperparams from TAS_Training_Map_1.txt!
+MainClient __init__: CUTOFF_TIME 10000, HUMAN_TIME 9310
+Reading hyperparams from TAS_Training_Map_1.txt!
+ML __init__: CUTOFF_TIME 10000, LEFT_SHIFTS 15, RIGHT_SHIFTS 15, INTERVAL_COUNT 10, INTERVAL_BOUND_LO 0, INTERVAL_BOUND_HI 10, PERCENTAGE_INCREASE 0.3, PERCENTAGE_INCREASE_PER_FIX 0.1
+Registered to TMInterface0
+(on_simulation_step) remembered state!
+wrote to Processed-outputs/output_1629216554_3934476_9310.txt! (new score 211.68 vs old score None)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 1 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 2 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 3 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 4 epochs with no improvement.
+Finished epoch no. 4 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 5 epochs with no improvement.
+Finished epoch no. 5 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 6 epochs with no improvement.
+Finished epoch no. 6 on interval 5!
+wrote to Processed-outputs/output_1629216590_1382344_9310.txt! (new score 212.04 vs old score 211.68)
+wrote to Processed-outputs/output_1629216590_648831_9310.txt! (new score 212.76 vs old score 212.04)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 6 on pos. -10 with grad. 1.079999999999984 (score 212.76, current run score 211.68); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].       
+Finished epoch no. 7 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 8 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 9 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 10 on interval 9!
+wrote to Processed-outputs/output_1629216610_8052227_9300.txt! (new score 2712.76 vs old score 212.76)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 0 on pos. -11 with grad. 2500.0 (score 2712.76, current run score 212.76); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].       
+Finished epoch no. 11 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 12 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 13 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 14 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 4 epochs with no improvement.
+Finished epoch no. 15 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 5 epochs with no improvement.
+Finished epoch no. 16 on interval 5!
+wrote to Processed-outputs/output_1629216643_7822695_9300.txt! (new score 2713.12 vs old score 2712.76)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 6 on pos. -7 with grad. 0.3599999999996726 (score 2713.12, current run score 2712.76); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.23076923076923073, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7692307692307692, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 17 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 18 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 19 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 20 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 4 epochs with no improvement.
+Finished epoch no. 21 on interval 0!
+wrote to Processed-outputs/output_1629216669_0121932_9290.txt! (new score 5212.76 vs old score 2713.12)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 1 on pos. -3 with grad. 2499.6400000000003 (score 5212.76, current run score 2713.12); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].       
+Finished epoch no. 22 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 23 on interval 2!
+wrote to Processed-outputs/output_1629216678_40108_9290.txt! (new score 5213.12 vs old score 5212.76)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 3 on pos. 15 with grad. 0.3599999999996726 (score 5213.12, current run score 5212.76); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3].       
+Finished epoch no. 24 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 25 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 26 on interval 5!
+wrote to Processed-outputs/output_1629216696_8951488_9290.txt! (new score 5213.48 vs old score 5213.12)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 6 on pos. -8 with grad. 0.3599999999996726 (score 5213.48, current run score 5213.12); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.17751479289940827, 0.0, 0.3, 0.2307692307692308, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.591715976331361, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 27 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 28 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 29 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 30 on interval 9!
+wrote to Processed-outputs/output_1629216716_2445502_9290.txt! (new score 5213.84 vs old score 5213.48)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 0 on pos. 11 with grad. 0.3600000000005821 (score 5213.84, current run score 5213.48); unnormalized new perc. 0.3!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.23076923076923078, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7692307692307694, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 31 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 32 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 33 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 34 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 4 epochs with no improvement.
+Finished epoch no. 35 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 5 epochs with no improvement.
+Finished epoch no. 36 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 6 epochs with no improvement.
+Finished epoch no. 37 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 7 epochs with no improvement.
+Finished epoch no. 38 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 8 epochs with no improvement.
+Finished epoch no. 39 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 9 epochs with no improvement.
+Finished epoch no. 40 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 10 epochs with no improvement.
+Changed percentage increase to 0.4.
+Finished epoch no. 41 on interval 0!
+wrote to Processed-outputs/output_1629216775_7572634_9280.txt! (new score 7713.84 vs old score 5213.84)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Improved interval no. 1 on pos. 5 with grad. 2500.0 (score 7713.84, current run score 5213.84); unnormalized new perc. 0.4!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23076923076923078, 0.0, 0.0, 0.7692307692307694, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Finished epoch no. 42 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 1 epochs with no improvement.
+Finished epoch no. 43 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 2 epochs with no improvement.
+Finished epoch no. 44 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 3 epochs with no improvement.
+Finished epoch no. 45 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 4 epochs with no improvement.
+Finished epoch no. 46 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 5 epochs with no improvement.
+Finished epoch no. 47 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 6 epochs with no improvement.
+Finished epoch no. 48 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 7 epochs with no improvement.
+Finished epoch no. 49 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 8 epochs with no improvement.
+Finished epoch no. 50 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 9 epochs with no improvement.
+Finished epoch no. 51 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 10 epochs with no improvement.
+Changed percentage increase to 0.5.
+Finished epoch no. 52 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 11 epochs with no improvement.
+Finished epoch no. 53 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 12 epochs with no improvement.
+Finished epoch no. 54 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 13 epochs with no improvement.
+Finished epoch no. 55 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 14 epochs with no improvement.
+Finished epoch no. 56 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 15 epochs with no improvement.
+Finished epoch no. 57 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 16 epochs with no improvement.
+Finished epoch no. 58 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 17 epochs with no improvement.
+Finished epoch no. 59 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 18 epochs with no improvement.
+Finished epoch no. 60 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 19 epochs with no improvement.
+Finished epoch no. 61 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 20 epochs with no improvement.
+Changed percentage increase to 0.6.
+Finished epoch no. 62 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 21 epochs with no improvement.
+Finished epoch no. 63 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 22 epochs with no improvement.
+Finished epoch no. 64 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 23 epochs with no improvement.
+Finished epoch no. 65 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 24 epochs with no improvement.
+Finished epoch no. 66 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 25 epochs with no improvement.
+Finished epoch no. 67 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 26 epochs with no improvement.
+Finished epoch no. 68 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 27 epochs with no improvement.
+Finished epoch no. 69 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 28 epochs with no improvement.
+Finished epoch no. 70 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 29 epochs with no improvement.
+Finished epoch no. 71 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 30 epochs with no improvement.
+Changed percentage increase to 0.7.
+Finished epoch no. 72 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 31 epochs with no improvement.
+Finished epoch no. 73 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 32 epochs with no improvement.
+Finished epoch no. 74 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 33 epochs with no improvement.
+Finished epoch no. 75 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 34 epochs with no improvement.
+Finished epoch no. 76 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 35 epochs with no improvement.
+Finished epoch no. 77 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 36 epochs with no improvement.
+Finished epoch no. 78 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 37 epochs with no improvement.
+Finished epoch no. 79 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 38 epochs with no improvement.
+Finished epoch no. 80 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 39 epochs with no improvement.
+Finished epoch no. 81 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 40 epochs with no improvement.
+Changed percentage increase to 0.7999999999999999.
+Finished epoch no. 82 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 41 epochs with no improvement.
+Finished epoch no. 83 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 42 epochs with no improvement.
+Finished epoch no. 84 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 43 epochs with no improvement.
+Finished epoch no. 85 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 44 epochs with no improvement.
+Finished epoch no. 86 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 45 epochs with no improvement.
+Finished epoch no. 87 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 46 epochs with no improvement.
+Finished epoch no. 88 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 47 epochs with no improvement.
+Finished epoch no. 89 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 48 epochs with no improvement.
+Finished epoch no. 90 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 49 epochs with no improvement.
+Finished epoch no. 91 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 50 epochs with no improvement.
+Changed percentage increase to 0.8999999999999999.
+Finished epoch no. 92 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 51 epochs with no improvement.
+Finished epoch no. 93 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 52 epochs with no improvement.
+Finished epoch no. 94 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 53 epochs with no improvement.
+Finished epoch no. 95 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 54 epochs with no improvement.
+Finished epoch no. 96 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 55 epochs with no improvement.
+Finished epoch no. 97 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 56 epochs with no improvement.
+Finished epoch no. 98 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 57 epochs with no improvement.
+Finished epoch no. 99 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 58 epochs with no improvement.
+Finished epoch no. 100 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 59 epochs with no improvement.
+Finished epoch no. 101 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 60 epochs with no improvement.
+Changed percentage increase to 0.9999999999999999.
+Finished epoch no. 102 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 61 epochs with no improvement.
+Finished epoch no. 103 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 62 epochs with no improvement.
+Finished epoch no. 104 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 63 epochs with no improvement.
+Finished epoch no. 105 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 64 epochs with no improvement.
+Finished epoch no. 106 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 65 epochs with no improvement.
+Finished epoch no. 107 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 66 epochs with no improvement.
+Finished epoch no. 108 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 67 epochs with no improvement.
+Finished epoch no. 109 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 68 epochs with no improvement.
+Finished epoch no. 110 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 69 epochs with no improvement.
+Finished epoch no. 111 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Currently 70 epochs with no improvement.
+Changed to strat A.
+Finished epoch no. 112 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 113 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 114 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 115 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 116 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 117 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 118 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 119 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 120 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 121 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+wrote to Processed-outputs/output_1629217151_0609949_9270.txt! (new score 10213.48 vs old score 7713.84)
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 122 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 123 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 124 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 125 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 126 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 127 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 128 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 129 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 130 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 131 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 132 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 133 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 134 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 135 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 136 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 137 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 138 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 139 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 140 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 141 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 142 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 143 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 144 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 145 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 146 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 147 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 148 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 149 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 150 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 151 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 152 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 153 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 154 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 155 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 156 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 157 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 158 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 159 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 160 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 161 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 162 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 163 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 164 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 165 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 166 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 167 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 168 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 169 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 170 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 171 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 172 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 173 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 174 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 175 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 176 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 177 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 178 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 179 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 180 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 181 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 182 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 183 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 184 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 185 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 186 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 187 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 188 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 189 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 190 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 191 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 192 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 193 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 194 on interval 3!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 195 on interval 4!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 196 on interval 5!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 197 on interval 6!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 198 on interval 7!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 199 on interval 8!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 200 on interval 9!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 201 on interval 0!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 202 on interval 1!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+Finished epoch no. 203 on interval 2!
+(process_input_stack) should_client_work = False, is_client_redoing = True!
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master>

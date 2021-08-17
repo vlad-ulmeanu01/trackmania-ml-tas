@@ -138,6 +138,11 @@ class MainClient(Client):
 
         if self.last_time_in_sim_step == -10:
             self.remembered_state = iface.get_simulation_state()
+            #print("(on_simulation_step) remembered state!")
+
+        if self.last_time_in_sim_step >= self.CUTOFF_TIME:
+            self.on_checkpoint_count_changed(iface, -1, -1)
+            #trebuie sa fortez terminarea cursei.. jocul se asteapta sa valideze ceva ce a terminat cursa
 
         if self.did_race_finish:
             #intotdeauna repet ultimul EventBufferData pana cand este modificat in on_checkpoint_count_changed
@@ -214,6 +219,7 @@ class MainClient(Client):
         if self.input_stack_index < 0:
             self.should_client_work = False
             self.is_client_redoing = True
+            #print("(process_input_stack) should_client_work = False, is_client_redoing = True!")
 
     def empty_stack (self):
         self.input_stack = []

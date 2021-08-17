@@ -1,3 +1,4 @@
+from tminterface.structs import Event
 from tminterface.interface import TMInterface
 from tminterface.client import Client
 import sys
@@ -5,6 +6,7 @@ import signal
 import time
 import copy
 import decimal
+import operator
 
 def read_processed_input(f: str):
     fin = open(f)
@@ -91,24 +93,25 @@ class MainClient(Client):
     def __init__(self):
         self.GAP_TIME = 10 #ms
         self.IND_STEER, self.IND_PUSH_UP, self.IND_PUSH_DOWN = 0, 1, 2
-        
+
         config = get_hyperparams({"CUTOFF_TIME", "HUMAN_TIME"})
         self.CUTOFF_TIME = int(config["CUTOFF_TIME"])
         self.HUMAN_TIME = int(config["HUMAN_TIME"])
         print(f"MainClient __init__: CUTOFF_TIME {self.CUTOFF_TIME}, HUMAN_TIME {self.HUMAN_TIME}")
 
         self.processed_output_dir = "Processed-outputs/output_"
-        
-        self.last_time_in_run_step = 0
-        self.last_speed_in_run_step = 0
-        self.time_to_remember_state, self.remembered_state = (-1100, -500), None
+
+        self.last_time_in_sim_step = 0
+        self.remembered_state = None
         self.did_race_finish = False
+        self.best_fitness_score, self.current_fitness_score = None, None
 
         #acest client este un fel de cutie neagra care trebuie sa primeasca niste inputuri, sa le ruleze
         #si sa returneze scorurile pentru inputuri
-        #cand nu are nimic de rulat (i.e. self.should_client_work == False), clientul nu face nimic
+        #cand nu are nimic de rulat (i.e. self.is_client_redoing == True), clientul nu face nimic
         #cand primeste >= 1 inputuri, da reset la cursa, calculeaza pana le face pe toate etc
-        self.should_client_work = False #variabila care indica ralanti pentru simulari
+        self.should_client_work = False #variabila care indica DACA AR trebui sa ruleze clientul (ie e ceva in stiva)
+        self.is_client_redoing = True #variabila care indica ralanti pentru simulari
         self.input_stack = [] #stiva cu [inputuri ce se doresc a fi rulate, scorul inputului dupa rulare]
         self.input_stack_index = -1 #indica care input trebuie rulat acum.
 
@@ -124,78 +127,75 @@ class MainClient(Client):
         pass
 
     def on_run_step(self, iface: TMInterface, time: int):
-        if not self.should_client_work:
-            return
-
-        self.last_time_in_run_step = time
-        self.last_speed_in_run_step = iface.get_simulation_state().get_display_speed()
-
-        if self.did_race_finish or time >= self.CUTOFF_TIME:
-            self.did_race_finish = False
-
-            if time >= self.CUTOFF_TIME:
-                self.process_input_stack(iface)
-
-            iface.rewind_to_state(self.remembered_state)
-            return
-
-        if time >= self.time_to_remember_state[0] and time <= self.time_to_remember_state[1] and self.remembered_state == None:
-            self.remembered_state = iface.get_simulation_state()
-            print(f"Remembered state at {time}!")
-
-        tmp_before = 0 #[0, self.GAP_TIME) ok
-        if time < -tmp_before or time >= self.CUTOFF_TIME:
-            return
-
-        prepared_act_index = (time + tmp_before) // self.GAP_TIME
-
-        if prepared_act_index >= self.CUTOFF_TIME // self.GAP_TIME:
-            return
-
-
-        iface.set_input_state(up = self.input_stack[self.input_stack_index][0][self.IND_PUSH_UP][prepared_act_index],
-                              down = self.input_stack[self.input_stack_index][0][self.IND_PUSH_DOWN][prepared_act_index],
-                              steer = self.input_stack[self.input_stack_index][0][self.IND_STEER][prepared_act_index])
-
         pass
 
     def on_simulation_begin(self, iface: TMInterface):
-        pass
+        iface.remove_state_validation()
+        self.did_race_finish = False
 
     def on_simulation_step(self, iface: TMInterface, time: int):
-        pass
-    
-    def on_simulation_end(self, iface: TMInterface, result: int):
+        self.last_time_in_sim_step = time - 2610
+
+        if self.last_time_in_sim_step == -10:
+            self.remembered_state = iface.get_simulation_state()
+
+        if self.did_race_finish:
+            #intotdeauna repet ultimul EventBufferData pana cand este modificat in on_checkpoint_count_changed
+            #daca am ajuns aici sigur am trecut prin on_checkpoint_count_changed si am facut modificarile
+            #la buffer daca trebuiau facute.
+            iface.rewind_to_state(self.remembered_state)
+            self.did_race_finish = False
+
         pass
 
-    def on_checkpoint_count_changed(self, iface, current: int, target: int):
+    def on_simulation_end(self, iface: TMInterface, result: int):
+        print("All simulations finished?? You weren't supposed to see this you know")
+
+    def on_checkpoint_count_changed(self, iface: TMInterface, current: int, target: int):
         if current < target:
             return
 
         self.did_race_finish = True
         iface.prevent_simulation_finish()
 
-        oname = self.processed_output_dir + str(int(time.time())) + "_" + str(self.last_time_in_run_step) + ".txt"
-        write_processed_output(oname, self.input_stack[self.input_stack_index][0], self.GAP_TIME)
+        if not self.is_client_redoing:
+            self.current_fitness_score = self.fitness_function(iface)
 
-        print("wrote to " + oname + "!")
+            if self.best_fitness_score == None or self.best_fitness_score < self.current_fitness_score:
+                oname = self.processed_output_dir + str(time.time()).replace('.', '_') + "_" + str(self.last_time_in_sim_step) + ".txt"
+                write_processed_output(oname, self.input_stack[self.input_stack_index][0], self.GAP_TIME)
 
-        self.process_input_stack(iface)
+                print(f"wrote to {oname}! (new score {self.current_fitness_score} vs old score {self.best_fitness_score})")
+                self.best_fitness_score = self.current_fitness_score
+
+            self.process_input_stack(iface)
+
+        #daca nu am intrat in iful de mai sus, nu am avut ce sa rulez pentru un timp, asa ca am rulat ultima
+        #chestie din nou.
+        #(self.is_client_redoing, self.should_client_work) in ((False, True), (True, False), (True, True))
+
+        #self.is_client_redoing, self.should_client_work sunt actualizate in self.process_input_stack mai sus
+        #daca e cazul
+        if self.should_client_work:
+            #inseamna ca (optional mai) am ceva in stiva
+            self.is_client_redoing = False
+            self.write_input_array_to_EventBufferData(iface, self.input_stack[self.input_stack_index][0])
+            pass
 
         pass
 
     def on_laps_count_changed(self, iface, current: int):
         pass
-    
+
     def compute_speed_for_sim(self, iface: TMInterface):
         vx, vy, vz = iface.get_simulation_state().get_velocity()
         decimal.getcontext().prec = 3
-        return float(decimal.Decimal(vx * vx + vy * vy + vz * vz).sqrt()) * 3.6
+        return round(float(decimal.Decimal(vx * vx + vy * vy + vz * vz).sqrt()) * 3.6, 3)
 
-    def fitness_function (self, iface):
+    def fitness_function (self, iface: TMInterface):
         score = 0
-        score += 250 * (self.HUMAN_TIME - self.last_time_in_run_step)
-        score += self.last_speed_in_run_step
+        score += 250 * (self.HUMAN_TIME - self.last_time_in_sim_step)
+        score += self.compute_speed_for_sim(iface)
 
         return score
 
@@ -206,16 +206,69 @@ class MainClient(Client):
             self.should_client_work = True
 
     #se apeleaza la sfarsitul unei simulari
-    def process_input_stack (self, iface):
-        self.input_stack[self.input_stack_index][1] = self.fitness_function(iface)
+    #(la sfarsitul on_checkpoint_count_changed, trb actualizat self.current_fitness_score)
+    #!! aici trb sa apelezi write_input_array_to_EventBufferData (daca mai ai ceva in stiva)
+    def process_input_stack (self, iface: TMInterface):
+        self.input_stack[self.input_stack_index][1] = self.current_fitness_score
         self.input_stack_index -= 1
         if self.input_stack_index < 0:
             self.should_client_work = False
+            self.is_client_redoing = True
 
     def empty_stack (self):
         self.input_stack = []
         self.input_stack_index = -1
         pass
+
+    def debug_print_EventBufferData(self, iface: TMInterface):
+        print(f"Printing Event Buffer Data")
+
+        ebd = iface.get_event_buffer()
+
+        print(f"ebd.events_duration: {ebd.events_duration}")
+        print(f"ebd.control_names: {ebd.control_names}")
+        print(f"len(ebd.events): {len(ebd.events)}")
+        print(f"type(ebd.events[-1]): {type(ebd.events[-1])}")
+
+        ebd.control_names[0] = "buffer_end"
+        for ev in ebd.events:
+            print(f"time {ev.time - 100010} opcode {ev.name_index} ({ebd.control_names[ev.name_index]}) value {ev.analog_value} bvalue {ev.binary_value}")
+
+        pass
+
+    def write_input_array_to_EventBufferData(self, iface: TMInterface, input_array: list):
+        ebd = copy.deepcopy(iface.get_event_buffer())
+        ebd.events_duration = self.CUTOFF_TIME
+        ebd.control_names[0] = "buffer_end"
+
+        def make_event(event_type: int, time: int, value_type: str, value: int) -> Event:
+            ev = Event(100010 + time, 0)
+            ev.name_index = event_type
+            if value_type == "binary":
+                ev.binary_value = value
+            elif value_type == "analog":
+                ev.analog_value = value
+            else:
+                print(f"(make_event) no such value_type as {value_type}!")
+                assert(False)
+            return ev
+
+        ebd.events = []
+        ebd.events.append(make_event(5, -2590, "binary", 0)) #"Respawn"
+        ebd.events.append(make_event(4, -10, "binary", 1)) #"_FakeIsRaceRunning"
+        ebd.events.append(make_event(0, self.CUTOFF_TIME, "binary", 1)) #"buffer_end"
+
+        #steer, push_up, push_down events
+        for arr, event_type, value_type in ((input_array[self.IND_STEER], 1, "analog"),
+                                            (input_array[self.IND_PUSH_UP], 2, "binary"),
+                                            (input_array[self.IND_PUSH_DOWN], 3, "binary")):
+            ebd.events.append(make_event(event_type, 0, value_type, arr[0]))
+            for i in range(1, len(arr)):
+                if arr[i] != arr[i-1]:
+                    ebd.events.append(make_event(event_type, i * self.GAP_TIME, value_type, arr[i]))
+
+        ebd.events.sort(key = operator.attrgetter("time"), reverse = True)
+        iface.set_event_buffer(ebd)
 
 
 class ML():

@@ -247,7 +247,10 @@ class MainClient(Client):
     def write_input_array_to_EventBufferData(self, iface: TMInterface, input_array: list):
         ebd = copy.deepcopy(iface.get_event_buffer())
         ebd.events_duration = self.CUTOFF_TIME
-        ebd.control_names[0] = "buffer_end"
+
+        rev_control_names = {}
+        for x in ebd.control_names:
+            rev_control_names[ebd.control_names[x]] = x
 
         def make_event(event_type: int, time: int, value_type: str, value: int) -> Event:
             ev = Event(100010 + time, 0)
@@ -262,13 +265,13 @@ class MainClient(Client):
             return ev
 
         ebd.events = []
-        ebd.events.append(make_event(4, -10, "binary", 1)) #"_FakeIsRaceRunning"
+        ebd.events.append(make_event(rev_control_names["_FakeIsRaceRunning"], -10, "binary", 1))
         ebd.events.append(make_event(0, self.CUTOFF_TIME, "binary", 1)) #"buffer_end"
 
         #steer, push_up, push_down events
-        for arr, event_type, value_type in ((input_array[self.IND_STEER], 1, "analog"),
-                                            (input_array[self.IND_PUSH_UP], 2, "binary"),
-                                            (input_array[self.IND_PUSH_DOWN], 3, "binary")):
+        for arr, event_type, value_type in ((input_array[self.IND_STEER], rev_control_names["Steer"], "analog"),
+                                            (input_array[self.IND_PUSH_UP], rev_control_names["Accelerate"], "binary"),
+                                            (input_array[self.IND_PUSH_DOWN], rev_control_names["Brake"], "binary")):
             ebd.events.append(make_event(event_type, 0, value_type, arr[0]))
             for i in range(1, len(arr)):
                 if arr[i] != arr[i-1]:

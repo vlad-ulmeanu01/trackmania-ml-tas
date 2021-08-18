@@ -136,11 +136,8 @@ class MainClient(Client):
     def on_simulation_step(self, iface: TMInterface, time: int):
         self.last_time_in_sim_step = time - 2610
 
-        #print(f"(on_simulation_step) time: {self.last_time_in_sim_step}")
-
-        if self.last_time_in_sim_step == -self.GAP_TIME:
+        if self.remembered_state == None and self.last_time_in_sim_step == -self.GAP_TIME:
             self.remembered_state = iface.get_simulation_state()
-            #print("(on_simulation_step) remembered state!")
 
         if self.last_time_in_sim_step >= self.CUTOFF_TIME:
             self.on_checkpoint_count_changed(iface, -1, -1)
@@ -159,8 +156,8 @@ class MainClient(Client):
         print("All simulations finished?? You weren't supposed to see this you know")
 
     def on_checkpoint_count_changed(self, iface: TMInterface, current: int, target: int):
-        print(f"(on_checkpoint_count_changed) current {current} target {target} time {self.last_time_in_sim_step}")
-        
+        #print(f"(on_checkpoint_count_changed) current {current} target {target} time {self.last_time_in_sim_step}")
+
         if current < target:
             return
 
@@ -186,7 +183,7 @@ class MainClient(Client):
         #self.is_client_redoing, self.should_client_work sunt actualizate in self.process_input_stack mai sus
         #daca e cazul
         if self.should_client_work:
-            print(f"(on_checkpoint_count_changed) in self.should_client_work if")
+            #print(f"(on_checkpoint_count_changed) in self.should_client_work if")
             #inseamna ca (optional mai) am ceva in stiva
             self.is_client_redoing = False
             self.write_input_array_to_EventBufferData(iface, self.input_stack[self.input_stack_index][0])
@@ -265,7 +262,6 @@ class MainClient(Client):
             return ev
 
         ebd.events = []
-        ebd.events.append(make_event(5, -2590, "binary", 0)) #"Respawn"
         ebd.events.append(make_event(4, -10, "binary", 1)) #"_FakeIsRaceRunning"
         ebd.events.append(make_event(0, self.CUTOFF_TIME, "binary", 1)) #"buffer_end"
 

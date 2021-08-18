@@ -301,6 +301,7 @@ class ML():
         self.curr_itv = self.interval_bounds[0] #indexul intervalului pe care se lucreaza momentan
         self.percentage_increase = float(config["PERCENTAGE_INCREASE"])
         self.percentage_increase_per_fix = float(config["PERCENTAGE_INCREASE_PER_FIX"])
+        self.original_percentage_increase = float(config["PERCENTAGE_INCREASE"]) #vr sa resetez la original dupa improvement
 
         print(f"ML __init__: CUTOFF_TIME {self.CUTOFF_TIME}, LEFT_SHIFTS {self.LEFT_SHIFTS}, RIGHT_SHIFTS {self.RIGHT_SHIFTS}, INTERVAL_COUNT {self.interval_count}, INTERVAL_BOUND_LO {self.interval_bounds[0]}, INTERVAL_BOUND_HI {self.interval_bounds[1]}, PERCENTAGE_INCREASE {self.percentage_increase}, PERCENTAGE_INCREASE_PER_FIX {self.percentage_increase_per_fix}")
 
@@ -533,6 +534,10 @@ class ML():
                         self.current_run_score = scores[best_improvement[0] + self.LEFT_SHIFTS]
                         #actualizez aici scorul
                         self.epochs_since_last_improvement = 0
+
+                        #trec inapoi la original
+                        self.percentage_increase = self.original_percentage_increase
+                        print(f"Reset self.percentage_increase back to {self.original_percentage_increase}.")
                     pass
                 else:
                     print(f"No known strat named {self.strat}!")

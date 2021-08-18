@@ -185,11 +185,11 @@ def process_path(path, write_func):
 
     if not ghost:
         return
-    
+
     print_inputs(ghost, write_func)
 
 def main():
-    #apel: python generate_input_file.py Replays/
+    #apel: python generate_input_file.py Replays/selected
     if len(sys.argv) < 2:
         print('No provided file!')
         quit()

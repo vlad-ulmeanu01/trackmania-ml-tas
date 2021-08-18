@@ -1,0 +1,2016 @@
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master> python mlmain.py
+Connecting to TMInterface0...
+Reading hyperparams from TMUF_D1.txt!
+MainClient __init__: CUTOFF_TIME 38000, HUMAN_TIME 37280
+Registered to TMInterface0
+Reading hyperparams from TMUF_D1.txt!
+ML __init__: CUTOFF_TIME 38000, LEFT_SHIFTS 15, RIGHT_SHIFTS 15, INTERVAL_COUNT 38, INTERVAL_BOUND_LO 0, INTERVAL_BOUND_HI 38, PERCENTAGE_INCREASE 0.1, PERCENTAGE_INCREASE_PER_FIX 0.1
+wrote to Processed-outputs/output_1629283831_6314523_37280.txt! (new score 421.2 vs old score None)
+Currently 1 epochs with no improvement.
+Finished epoch no. 1 on interval 0!
+Currently 2 epochs with no improvement.
+Finished epoch no. 2 on interval 1!
+Currently 3 epochs with no improvement.
+Finished epoch no. 3 on interval 2!
+Currently 4 epochs with no improvement.
+Finished epoch no. 4 on interval 3!
+Currently 5 epochs with no improvement.
+Finished epoch no. 5 on interval 4!
+Currently 6 epochs with no improvement.
+Finished epoch no. 6 on interval 5!
+Currently 7 epochs with no improvement.
+Finished epoch no. 7 on interval 6!
+Currently 8 epochs with no improvement.
+Finished epoch no. 8 on interval 7!
+Currently 9 epochs with no improvement.
+Finished epoch no. 9 on interval 8!
+Currently 10 epochs with no improvement.
+Finished epoch no. 10 on interval 9!
+Currently 11 epochs with no improvement.
+Finished epoch no. 11 on interval 10!
+Currently 12 epochs with no improvement.
+Finished epoch no. 12 on interval 11!
+Currently 13 epochs with no improvement.
+Finished epoch no. 13 on interval 12!
+Currently 14 epochs with no improvement.
+Finished epoch no. 14 on interval 13!
+Currently 15 epochs with no improvement.
+Finished epoch no. 15 on interval 14!
+Currently 16 epochs with no improvement.
+Finished epoch no. 16 on interval 15!
+Currently 17 epochs with no improvement.
+Finished epoch no. 17 on interval 16!
+Currently 18 epochs with no improvement.
+Finished epoch no. 18 on interval 17!
+Currently 19 epochs with no improvement.
+Finished epoch no. 19 on interval 18!
+Currently 20 epochs with no improvement.
+Finished epoch no. 20 on interval 19!
+Currently 21 epochs with no improvement.
+Finished epoch no. 21 on interval 20!
+Currently 22 epochs with no improvement.
+Finished epoch no. 22 on interval 21!
+Currently 23 epochs with no improvement.
+Finished epoch no. 23 on interval 22!
+wrote to Processed-outputs/output_1629284253_0697732_37270.txt! (new score 2921.2 vs old score 421.2)
+Improved interval no. 23 on pos. 7 with grad. 2500.0 (score 2921.2, current run score 421.2); unnormalized new perc. 0.1!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Reset self.percentage_increase back to 0.1.
+Finished epoch no. 24 on interval 23!
+Currently 1 epochs with no improvement.
+Finished epoch no. 25 on interval 24!
+Currently 2 epochs with no improvement.
+Finished epoch no. 26 on interval 25!
+Currently 3 epochs with no improvement.
+Finished epoch no. 27 on interval 26!
+Currently 4 epochs with no improvement.
+Finished epoch no. 28 on interval 27!
+Currently 5 epochs with no improvement.
+Finished epoch no. 29 on interval 28!
+Currently 6 epochs with no improvement.
+Finished epoch no. 30 on interval 29!
+Currently 7 epochs with no improvement.
+Finished epoch no. 31 on interval 30!
+Currently 8 epochs with no improvement.
+Finished epoch no. 32 on interval 31!
+Currently 9 epochs with no improvement.
+Finished epoch no. 33 on interval 32!
+wrote to Processed-outputs/output_1629284461_8643572_37260.txt! (new score 5421.2 vs old score 2921.2)
+Improved interval no. 33 on pos. -8 with grad. 2500.0 (score 5421.2, current run score 2921.2); unnormalized new perc. 0.1!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Reset self.percentage_increase back to 0.1.
+Finished epoch no. 34 on interval 33!
+Currently 1 epochs with no improvement.
+Finished epoch no. 35 on interval 34!
+Currently 2 epochs with no improvement.
+Finished epoch no. 36 on interval 35!
+Currently 3 epochs with no improvement.
+Finished epoch no. 37 on interval 36!
+Currently 4 epochs with no improvement.
+Finished epoch no. 38 on interval 37!
+Currently 5 epochs with no improvement.
+Finished epoch no. 39 on interval 0!
+Currently 6 epochs with no improvement.
+Finished epoch no. 40 on interval 1!
+Currently 7 epochs with no improvement.
+Finished epoch no. 41 on interval 2!
+Currently 8 epochs with no improvement.
+Finished epoch no. 42 on interval 3!
+Currently 9 epochs with no improvement.
+Finished epoch no. 43 on interval 4!
+Currently 10 epochs with no improvement.
+Finished epoch no. 44 on interval 5!
+Currently 11 epochs with no improvement.
+Finished epoch no. 45 on interval 6!
+Currently 12 epochs with no improvement.
+Finished epoch no. 46 on interval 7!
+Currently 13 epochs with no improvement.
+Finished epoch no. 47 on interval 8!
+Currently 14 epochs with no improvement.
+Finished epoch no. 48 on interval 9!
+Currently 15 epochs with no improvement.
+Finished epoch no. 49 on interval 10!
+Currently 16 epochs with no improvement.
+Finished epoch no. 50 on interval 11!
+Currently 17 epochs with no improvement.
+Finished epoch no. 51 on interval 12!
+Currently 18 epochs with no improvement.
+Finished epoch no. 52 on interval 13!
+Currently 19 epochs with no improvement.
+Finished epoch no. 53 on interval 14!
+Currently 20 epochs with no improvement.
+Finished epoch no. 54 on interval 15!
+Currently 21 epochs with no improvement.
+Finished epoch no. 55 on interval 16!
+Currently 22 epochs with no improvement.
+Finished epoch no. 56 on interval 17!
+Currently 23 epochs with no improvement.
+Finished epoch no. 57 on interval 18!
+Currently 24 epochs with no improvement.
+Finished epoch no. 58 on interval 19!
+Currently 25 epochs with no improvement.
+Finished epoch no. 59 on interval 20!
+Currently 26 epochs with no improvement.
+Finished epoch no. 60 on interval 21!
+Currently 27 epochs with no improvement.
+Finished epoch no. 61 on interval 22!
+Currently 28 epochs with no improvement.
+Finished epoch no. 62 on interval 23!
+Currently 29 epochs with no improvement.
+Finished epoch no. 63 on interval 24!
+Currently 30 epochs with no improvement.
+Finished epoch no. 64 on interval 25!
+Currently 31 epochs with no improvement.
+Finished epoch no. 65 on interval 26!
+Currently 32 epochs with no improvement.
+Finished epoch no. 66 on interval 27!
+Currently 33 epochs with no improvement.
+Finished epoch no. 67 on interval 28!
+Currently 34 epochs with no improvement.
+Finished epoch no. 68 on interval 29!
+Currently 35 epochs with no improvement.
+Finished epoch no. 69 on interval 30!
+Currently 36 epochs with no improvement.
+Finished epoch no. 70 on interval 31!
+Currently 37 epochs with no improvement.
+Finished epoch no. 71 on interval 32!
+Currently 38 epochs with no improvement.
+Changed percentage increase to 0.2.
+Finished epoch no. 72 on interval 33!
+Currently 39 epochs with no improvement.
+Finished epoch no. 73 on interval 34!
+Currently 40 epochs with no improvement.
+Finished epoch no. 74 on interval 35!
+Currently 41 epochs with no improvement.
+Finished epoch no. 75 on interval 36!
+Currently 42 epochs with no improvement.
+Finished epoch no. 76 on interval 37!
+Currently 43 epochs with no improvement.
+Finished epoch no. 77 on interval 0!
+Currently 44 epochs with no improvement.
+Finished epoch no. 78 on interval 1!
+Currently 45 epochs with no improvement.
+Finished epoch no. 79 on interval 2!
+Currently 46 epochs with no improvement.
+Finished epoch no. 80 on interval 3!
+Currently 47 epochs with no improvement.
+Finished epoch no. 81 on interval 4!
+Currently 48 epochs with no improvement.
+Finished epoch no. 82 on interval 5!
+Currently 49 epochs with no improvement.
+Finished epoch no. 83 on interval 6!
+Currently 50 epochs with no improvement.
+Finished epoch no. 84 on interval 7!
+Currently 51 epochs with no improvement.
+Finished epoch no. 85 on interval 8!
+Currently 52 epochs with no improvement.
+Finished epoch no. 86 on interval 9!
+Currently 53 epochs with no improvement.
+Finished epoch no. 87 on interval 10!
+Currently 54 epochs with no improvement.
+Finished epoch no. 88 on interval 11!
+Currently 55 epochs with no improvement.
+Finished epoch no. 89 on interval 12!
+Currently 56 epochs with no improvement.
+Finished epoch no. 90 on interval 13!
+Currently 57 epochs with no improvement.
+Finished epoch no. 91 on interval 14!
+Currently 58 epochs with no improvement.
+Finished epoch no. 92 on interval 15!
+Currently 59 epochs with no improvement.
+Finished epoch no. 93 on interval 16!
+Currently 60 epochs with no improvement.
+Finished epoch no. 94 on interval 17!
+Currently 61 epochs with no improvement.
+Finished epoch no. 95 on interval 18!
+Currently 62 epochs with no improvement.
+Finished epoch no. 96 on interval 19!
+Currently 63 epochs with no improvement.
+Finished epoch no. 97 on interval 20!
+Currently 64 epochs with no improvement.
+Finished epoch no. 98 on interval 21!
+Currently 65 epochs with no improvement.
+Finished epoch no. 99 on interval 22!
+Currently 66 epochs with no improvement.
+Finished epoch no. 100 on interval 23!
+Currently 67 epochs with no improvement.
+Finished epoch no. 101 on interval 24!
+Currently 68 epochs with no improvement.
+Finished epoch no. 102 on interval 25!
+Currently 69 epochs with no improvement.
+Finished epoch no. 103 on interval 26!
+Currently 70 epochs with no improvement.
+Finished epoch no. 104 on interval 27!
+Currently 71 epochs with no improvement.
+Finished epoch no. 105 on interval 28!
+Currently 72 epochs with no improvement.
+Finished epoch no. 106 on interval 29!
+Currently 73 epochs with no improvement.
+Finished epoch no. 107 on interval 30!
+Currently 74 epochs with no improvement.
+Finished epoch no. 108 on interval 31!
+Currently 75 epochs with no improvement.
+Finished epoch no. 109 on interval 32!
+wrote to Processed-outputs/output_1629285940_5483806_37260.txt! (new score 5424.8 vs old score 5421.2)
+Improved interval no. 33 on pos. -9 with grad. 3.600000000000364 (score 5424.8, current run score 5421.2); unnormalized new perc. 0.2!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.09090909090909091, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9090909090909091, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Reset self.percentage_increase back to 0.1.
+Finished epoch no. 110 on interval 33!
+Currently 1 epochs with no improvement.
+Finished epoch no. 111 on interval 34!
+Currently 2 epochs with no improvement.
+Finished epoch no. 112 on interval 35!
+wrote to Processed-outputs/output_1629285996_6770666_37250.txt! (new score 7921.2 vs old score 5424.8)
+Improved interval no. 36 on pos. 9 with grad. 2496.3999999999996 (score 7921.2, current run score 5424.8); unnormalized new perc. 0.1!
+Now local_perc is [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Reset self.percentage_increase back to 0.1.
+Finished epoch no. 113 on interval 36!
+Currently 1 epochs with no improvement.
+Finished epoch no. 114 on interval 37!
+Currently 2 epochs with no improvement.
+Finished epoch no. 115 on interval 0!
+Currently 3 epochs with no improvement.
+Finished epoch no. 116 on interval 1!
+Currently 4 epochs with no improvement.
+Finished epoch no. 117 on interval 2!
+Currently 5 epochs with no improvement.
+Finished epoch no. 118 on interval 3!
+Currently 6 epochs with no improvement.
+Finished epoch no. 119 on interval 4!
+Currently 7 epochs with no improvement.
+Finished epoch no. 120 on interval 5!
+Currently 8 epochs with no improvement.
+Finished epoch no. 121 on interval 6!
+Currently 9 epochs with no improvement.
+Finished epoch no. 122 on interval 7!
+Currently 10 epochs with no improvement.
+Finished epoch no. 123 on interval 8!
+Currently 11 epochs with no improvement.
+Finished epoch no. 124 on interval 9!
+Currently 12 epochs with no improvement.
+Finished epoch no. 125 on interval 10!
+Currently 13 epochs with no improvement.
+Finished epoch no. 126 on interval 11!
+Currently 14 epochs with no improvement.
+Finished epoch no. 127 on interval 12!
+Currently 15 epochs with no improvement.
+Finished epoch no. 128 on interval 13!
+Currently 16 epochs with no improvement.
+Finished epoch no. 129 on interval 14!
+Currently 17 epochs with no improvement.
+Finished epoch no. 130 on interval 15!
+Currently 18 epochs with no improvement.
+Finished epoch no. 131 on interval 16!
+Currently 19 epochs with no improvement.
+Finished epoch no. 132 on interval 17!
+Currently 20 epochs with no improvement.
+Finished epoch no. 133 on interval 18!
+Currently 21 epochs with no improvement.
+Finished epoch no. 134 on interval 19!
+Currently 22 epochs with no improvement.
+Finished epoch no. 135 on interval 20!
+Currently 23 epochs with no improvement.
+Finished epoch no. 136 on interval 21!
+Currently 24 epochs with no improvement.
+Finished epoch no. 137 on interval 22!
+Currently 25 epochs with no improvement.
+Finished epoch no. 138 on interval 23!
+Currently 26 epochs with no improvement.
+Finished epoch no. 139 on interval 24!
+Currently 27 epochs with no improvement.
+Finished epoch no. 140 on interval 25!
+Currently 28 epochs with no improvement.
+Finished epoch no. 141 on interval 26!
+Currently 29 epochs with no improvement.
+Finished epoch no. 142 on interval 27!
+Currently 30 epochs with no improvement.
+Finished epoch no. 143 on interval 28!
+Currently 31 epochs with no improvement.
+Finished epoch no. 144 on interval 29!
+Currently 32 epochs with no improvement.
+Finished epoch no. 145 on interval 30!
+Currently 33 epochs with no improvement.
+Finished epoch no. 146 on interval 31!
+Currently 34 epochs with no improvement.
+Finished epoch no. 147 on interval 32!
+Currently 35 epochs with no improvement.
+Finished epoch no. 148 on interval 33!
+Currently 36 epochs with no improvement.
+Finished epoch no. 149 on interval 34!
+Currently 37 epochs with no improvement.
+Finished epoch no. 150 on interval 35!
+wrote to Processed-outputs/output_1629286742_8532195_37250.txt! (new score 7924.8 vs old score 7921.2)
+Improved interval no. 36 on pos. -14 with grad. 3.600000000000364 (score 7924.8, current run score 7921.2); unnormalized new perc. 0.1!
+Now local_perc is [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9090909090909091, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.09090909090909091, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0].
+Reset self.percentage_increase back to 0.1.
+Finished epoch no. 151 on interval 36!
+Currently 1 epochs with no improvement.
+Finished epoch no. 152 on interval 37!
+Currently 2 epochs with no improvement.
+Finished epoch no. 153 on interval 0!
+Currently 3 epochs with no improvement.
+Finished epoch no. 154 on interval 1!
+Currently 4 epochs with no improvement.
+Finished epoch no. 155 on interval 2!
+Currently 5 epochs with no improvement.
+Finished epoch no. 156 on interval 3!
+Currently 6 epochs with no improvement.
+Finished epoch no. 157 on interval 4!
+Currently 7 epochs with no improvement.
+Finished epoch no. 158 on interval 5!
+Currently 8 epochs with no improvement.
+Finished epoch no. 159 on interval 6!
+Currently 9 epochs with no improvement.
+Finished epoch no. 160 on interval 7!
+Currently 10 epochs with no improvement.
+Finished epoch no. 161 on interval 8!
+Currently 11 epochs with no improvement.
+Finished epoch no. 162 on interval 9!
+Currently 12 epochs with no improvement.
+Finished epoch no. 163 on interval 10!
+Currently 13 epochs with no improvement.
+Finished epoch no. 164 on interval 11!
+Currently 14 epochs with no improvement.
+Finished epoch no. 165 on interval 12!
+Currently 15 epochs with no improvement.
+Finished epoch no. 166 on interval 13!
+Currently 16 epochs with no improvement.
+Finished epoch no. 167 on interval 14!
+Currently 17 epochs with no improvement.
+Finished epoch no. 168 on interval 15!
+Currently 18 epochs with no improvement.
+Finished epoch no. 169 on interval 16!
+Currently 19 epochs with no improvement.
+Finished epoch no. 170 on interval 17!
+Currently 20 epochs with no improvement.
+Finished epoch no. 171 on interval 18!
+Currently 21 epochs with no improvement.
+Finished epoch no. 172 on interval 19!
+Currently 22 epochs with no improvement.
+Finished epoch no. 173 on interval 20!
+Currently 23 epochs with no improvement.
+Finished epoch no. 174 on interval 21!
+Currently 24 epochs with no improvement.
+Finished epoch no. 175 on interval 22!
+Currently 25 epochs with no improvement.
+Finished epoch no. 176 on interval 23!
+Currently 26 epochs with no improvement.
+Finished epoch no. 177 on interval 24!
+Currently 27 epochs with no improvement.
+Finished epoch no. 178 on interval 25!
+Currently 28 epochs with no improvement.
+Finished epoch no. 179 on interval 26!
+Currently 29 epochs with no improvement.
+Finished epoch no. 180 on interval 27!
+Currently 30 epochs with no improvement.
+Finished epoch no. 181 on interval 28!
+Currently 31 epochs with no improvement.
+Finished epoch no. 182 on interval 29!
+Currently 32 epochs with no improvement.
+Finished epoch no. 183 on interval 30!
+Currently 33 epochs with no improvement.
+Finished epoch no. 184 on interval 31!
+Currently 34 epochs with no improvement.
+Finished epoch no. 185 on interval 32!
+Currently 35 epochs with no improvement.
+Finished epoch no. 186 on interval 33!
+Currently 36 epochs with no improvement.
+Finished epoch no. 187 on interval 34!
+Currently 37 epochs with no improvement.
+Finished epoch no. 188 on interval 35!
+Currently 38 epochs with no improvement.
+Changed percentage increase to 0.2.
+Finished epoch no. 189 on interval 36!
+Currently 39 epochs with no improvement.
+Finished epoch no. 190 on interval 37!
+Currently 40 epochs with no improvement.
+Finished epoch no. 191 on interval 0!
+Currently 41 epochs with no improvement.
+Finished epoch no. 192 on interval 1!
+Currently 42 epochs with no improvement.
+Finished epoch no. 193 on interval 2!
+Currently 43 epochs with no improvement.
+Finished epoch no. 194 on interval 3!
+Currently 44 epochs with no improvement.
+Finished epoch no. 195 on interval 4!
+Currently 45 epochs with no improvement.
+Finished epoch no. 196 on interval 5!
+Currently 46 epochs with no improvement.
+Finished epoch no. 197 on interval 6!
+Currently 47 epochs with no improvement.
+Finished epoch no. 198 on interval 7!
+Currently 48 epochs with no improvement.
+Finished epoch no. 199 on interval 8!
+Currently 49 epochs with no improvement.
+Finished epoch no. 200 on interval 9!
+Currently 50 epochs with no improvement.
+Finished epoch no. 201 on interval 10!
+Currently 51 epochs with no improvement.
+Finished epoch no. 202 on interval 11!
+Currently 52 epochs with no improvement.
+Finished epoch no. 203 on interval 12!
+Currently 53 epochs with no improvement.
+Finished epoch no. 204 on interval 13!
+Currently 54 epochs with no improvement.
+Finished epoch no. 205 on interval 14!
+Currently 55 epochs with no improvement.
+Finished epoch no. 206 on interval 15!
+Currently 56 epochs with no improvement.
+Finished epoch no. 207 on interval 16!
+Currently 57 epochs with no improvement.
+Finished epoch no. 208 on interval 17!
+Currently 58 epochs with no improvement.
+Finished epoch no. 209 on interval 18!
+Currently 59 epochs with no improvement.
+Finished epoch no. 210 on interval 19!
+Currently 60 epochs with no improvement.
+Finished epoch no. 211 on interval 20!
+Currently 61 epochs with no improvement.
+Finished epoch no. 212 on interval 21!
+Currently 62 epochs with no improvement.
+Finished epoch no. 213 on interval 22!
+Currently 63 epochs with no improvement.
+Finished epoch no. 214 on interval 23!
+Currently 64 epochs with no improvement.
+Finished epoch no. 215 on interval 24!
+Currently 65 epochs with no improvement.
+Finished epoch no. 216 on interval 25!
+Currently 66 epochs with no improvement.
+Finished epoch no. 217 on interval 26!
+Currently 67 epochs with no improvement.
+Finished epoch no. 218 on interval 27!
+Currently 68 epochs with no improvement.
+Finished epoch no. 219 on interval 28!
+Currently 69 epochs with no improvement.
+Finished epoch no. 220 on interval 29!
+Currently 70 epochs with no improvement.
+Finished epoch no. 221 on interval 30!
+Currently 71 epochs with no improvement.
+Finished epoch no. 222 on interval 31!
+Currently 72 epochs with no improvement.
+Finished epoch no. 223 on interval 32!
+Currently 73 epochs with no improvement.
+Finished epoch no. 224 on interval 33!
+Currently 74 epochs with no improvement.
+Finished epoch no. 225 on interval 34!
+Currently 75 epochs with no improvement.
+Finished epoch no. 226 on interval 35!
+Currently 76 epochs with no improvement.
+Changed percentage increase to 0.30000000000000004.
+Finished epoch no. 227 on interval 36!
+Currently 77 epochs with no improvement.
+Finished epoch no. 228 on interval 37!
+Currently 78 epochs with no improvement.
+Finished epoch no. 229 on interval 0!
+Currently 79 epochs with no improvement.
+Finished epoch no. 230 on interval 1!
+Currently 80 epochs with no improvement.
+Finished epoch no. 231 on interval 2!
+Currently 81 epochs with no improvement.
+Finished epoch no. 232 on interval 3!
+Currently 82 epochs with no improvement.
+Finished epoch no. 233 on interval 4!
+Currently 83 epochs with no improvement.
+Finished epoch no. 234 on interval 5!
+Currently 84 epochs with no improvement.
+Finished epoch no. 235 on interval 6!
+Currently 85 epochs with no improvement.
+Finished epoch no. 236 on interval 7!
+Currently 86 epochs with no improvement.
+Finished epoch no. 237 on interval 8!
+Currently 87 epochs with no improvement.
+Finished epoch no. 238 on interval 9!
+Currently 88 epochs with no improvement.
+Finished epoch no. 239 on interval 10!
+Currently 89 epochs with no improvement.
+Finished epoch no. 240 on interval 11!
+Currently 90 epochs with no improvement.
+Finished epoch no. 241 on interval 12!
+Currently 91 epochs with no improvement.
+Finished epoch no. 242 on interval 13!
+Currently 92 epochs with no improvement.
+Finished epoch no. 243 on interval 14!
+Currently 93 epochs with no improvement.
+Finished epoch no. 244 on interval 15!
+Currently 94 epochs with no improvement.
+Finished epoch no. 245 on interval 16!
+Currently 95 epochs with no improvement.
+Finished epoch no. 246 on interval 17!
+Currently 96 epochs with no improvement.
+Finished epoch no. 247 on interval 18!
+Currently 97 epochs with no improvement.
+Finished epoch no. 248 on interval 19!
+Currently 98 epochs with no improvement.
+Finished epoch no. 249 on interval 20!
+Currently 99 epochs with no improvement.
+Finished epoch no. 250 on interval 21!
+Currently 100 epochs with no improvement.
+Finished epoch no. 251 on interval 22!
+Currently 101 epochs with no improvement.
+Finished epoch no. 252 on interval 23!
+Currently 102 epochs with no improvement.
+Finished epoch no. 253 on interval 24!
+Currently 103 epochs with no improvement.
+Finished epoch no. 254 on interval 25!
+Currently 104 epochs with no improvement.
+Finished epoch no. 255 on interval 26!
+Currently 105 epochs with no improvement.
+Finished epoch no. 256 on interval 27!
+Currently 106 epochs with no improvement.
+Finished epoch no. 257 on interval 28!
+Currently 107 epochs with no improvement.
+Finished epoch no. 258 on interval 29!
+Currently 108 epochs with no improvement.
+Finished epoch no. 259 on interval 30!
+Currently 109 epochs with no improvement.
+Finished epoch no. 260 on interval 31!
+Currently 110 epochs with no improvement.
+Finished epoch no. 261 on interval 32!
+Currently 111 epochs with no improvement.
+Finished epoch no. 262 on interval 33!
+Currently 112 epochs with no improvement.
+Finished epoch no. 263 on interval 34!
+Currently 113 epochs with no improvement.
+Finished epoch no. 264 on interval 35!
+Currently 114 epochs with no improvement.
+Changed percentage increase to 0.4.
+Finished epoch no. 265 on interval 36!
+Currently 115 epochs with no improvement.
+Finished epoch no. 266 on interval 37!
+Currently 116 epochs with no improvement.
+Finished epoch no. 267 on interval 0!
+Currently 117 epochs with no improvement.
+Finished epoch no. 268 on interval 1!
+Currently 118 epochs with no improvement.
+Finished epoch no. 269 on interval 2!
+Currently 119 epochs with no improvement.
+Finished epoch no. 270 on interval 3!
+Currently 120 epochs with no improvement.
+Finished epoch no. 271 on interval 4!
+Currently 121 epochs with no improvement.
+Finished epoch no. 272 on interval 5!
+Currently 122 epochs with no improvement.
+Finished epoch no. 273 on interval 6!
+Currently 123 epochs with no improvement.
+Finished epoch no. 274 on interval 7!
+Currently 124 epochs with no improvement.
+Finished epoch no. 275 on interval 8!
+Currently 125 epochs with no improvement.
+Finished epoch no. 276 on interval 9!
+Currently 126 epochs with no improvement.
+Finished epoch no. 277 on interval 10!
+Currently 127 epochs with no improvement.
+Finished epoch no. 278 on interval 11!
+Currently 128 epochs with no improvement.
+Finished epoch no. 279 on interval 12!
+Currently 129 epochs with no improvement.
+Finished epoch no. 280 on interval 13!
+Currently 130 epochs with no improvement.
+Finished epoch no. 281 on interval 14!
+Currently 131 epochs with no improvement.
+Finished epoch no. 282 on interval 15!
+Currently 132 epochs with no improvement.
+Finished epoch no. 283 on interval 16!
+Currently 133 epochs with no improvement.
+Finished epoch no. 284 on interval 17!
+Currently 134 epochs with no improvement.
+Finished epoch no. 285 on interval 18!
+Currently 135 epochs with no improvement.
+Finished epoch no. 286 on interval 19!
+Currently 136 epochs with no improvement.
+Finished epoch no. 287 on interval 20!
+Currently 137 epochs with no improvement.
+Finished epoch no. 288 on interval 21!
+Currently 138 epochs with no improvement.
+Finished epoch no. 289 on interval 22!
+Currently 139 epochs with no improvement.
+Finished epoch no. 290 on interval 23!
+Currently 140 epochs with no improvement.
+Finished epoch no. 291 on interval 24!
+Currently 141 epochs with no improvement.
+Finished epoch no. 292 on interval 25!
+Currently 142 epochs with no improvement.
+Finished epoch no. 293 on interval 26!
+Currently 143 epochs with no improvement.
+Finished epoch no. 294 on interval 27!
+Currently 144 epochs with no improvement.
+Finished epoch no. 295 on interval 28!
+Currently 145 epochs with no improvement.
+Finished epoch no. 296 on interval 29!
+Currently 146 epochs with no improvement.
+Finished epoch no. 297 on interval 30!
+Currently 147 epochs with no improvement.
+Finished epoch no. 298 on interval 31!
+Currently 148 epochs with no improvement.
+Finished epoch no. 299 on interval 32!
+Currently 149 epochs with no improvement.
+Finished epoch no. 300 on interval 33!
+Currently 150 epochs with no improvement.
+Finished epoch no. 301 on interval 34!
+Currently 151 epochs with no improvement.
+Finished epoch no. 302 on interval 35!
+Currently 152 epochs with no improvement.
+Changed percentage increase to 0.5.
+Finished epoch no. 303 on interval 36!
+Currently 153 epochs with no improvement.
+Finished epoch no. 304 on interval 37!
+Currently 154 epochs with no improvement.
+Finished epoch no. 305 on interval 0!
+Currently 155 epochs with no improvement.
+Finished epoch no. 306 on interval 1!
+Currently 156 epochs with no improvement.
+Finished epoch no. 307 on interval 2!
+Currently 157 epochs with no improvement.
+Finished epoch no. 308 on interval 3!
+Currently 158 epochs with no improvement.
+Finished epoch no. 309 on interval 4!
+Currently 159 epochs with no improvement.
+Finished epoch no. 310 on interval 5!
+Currently 160 epochs with no improvement.
+Finished epoch no. 311 on interval 6!
+Currently 161 epochs with no improvement.
+Finished epoch no. 312 on interval 7!
+Currently 162 epochs with no improvement.
+Finished epoch no. 313 on interval 8!
+Currently 163 epochs with no improvement.
+Finished epoch no. 314 on interval 9!
+Currently 164 epochs with no improvement.
+Finished epoch no. 315 on interval 10!
+Currently 165 epochs with no improvement.
+Finished epoch no. 316 on interval 11!
+Currently 166 epochs with no improvement.
+Finished epoch no. 317 on interval 12!
+Currently 167 epochs with no improvement.
+Finished epoch no. 318 on interval 13!
+Currently 168 epochs with no improvement.
+Finished epoch no. 319 on interval 14!
+Currently 169 epochs with no improvement.
+Finished epoch no. 320 on interval 15!
+Currently 170 epochs with no improvement.
+Finished epoch no. 321 on interval 16!
+Currently 171 epochs with no improvement.
+Finished epoch no. 322 on interval 17!
+Currently 172 epochs with no improvement.
+Finished epoch no. 323 on interval 18!
+Currently 173 epochs with no improvement.
+Finished epoch no. 324 on interval 19!
+Currently 174 epochs with no improvement.
+Finished epoch no. 325 on interval 20!
+Currently 175 epochs with no improvement.
+Finished epoch no. 326 on interval 21!
+Currently 176 epochs with no improvement.
+Finished epoch no. 327 on interval 22!
+Currently 177 epochs with no improvement.
+Finished epoch no. 328 on interval 23!
+Currently 178 epochs with no improvement.
+Finished epoch no. 329 on interval 24!
+Currently 179 epochs with no improvement.
+Finished epoch no. 330 on interval 25!
+Currently 180 epochs with no improvement.
+Finished epoch no. 331 on interval 26!
+Currently 181 epochs with no improvement.
+Finished epoch no. 332 on interval 27!
+Currently 182 epochs with no improvement.
+Finished epoch no. 333 on interval 28!
+Currently 183 epochs with no improvement.
+Finished epoch no. 334 on interval 29!
+Currently 184 epochs with no improvement.
+Finished epoch no. 335 on interval 30!
+Currently 185 epochs with no improvement.
+Finished epoch no. 336 on interval 31!
+Currently 186 epochs with no improvement.
+Finished epoch no. 337 on interval 32!
+Currently 187 epochs with no improvement.
+Finished epoch no. 338 on interval 33!
+Currently 188 epochs with no improvement.
+Finished epoch no. 339 on interval 34!
+Currently 189 epochs with no improvement.
+Finished epoch no. 340 on interval 35!
+Currently 190 epochs with no improvement.
+Changed percentage increase to 0.6.
+Finished epoch no. 341 on interval 36!
+Currently 191 epochs with no improvement.
+Finished epoch no. 342 on interval 37!
+Currently 192 epochs with no improvement.
+Finished epoch no. 343 on interval 0!
+Currently 193 epochs with no improvement.
+Finished epoch no. 344 on interval 1!
+Currently 194 epochs with no improvement.
+Finished epoch no. 345 on interval 2!
+Currently 195 epochs with no improvement.
+Finished epoch no. 346 on interval 3!
+Currently 196 epochs with no improvement.
+Finished epoch no. 347 on interval 4!
+Currently 197 epochs with no improvement.
+Finished epoch no. 348 on interval 5!
+Currently 198 epochs with no improvement.
+Finished epoch no. 349 on interval 6!
+Currently 199 epochs with no improvement.
+Finished epoch no. 350 on interval 7!
+Currently 200 epochs with no improvement.
+Finished epoch no. 351 on interval 8!
+Currently 201 epochs with no improvement.
+Finished epoch no. 352 on interval 9!
+Currently 202 epochs with no improvement.
+Finished epoch no. 353 on interval 10!
+Currently 203 epochs with no improvement.
+Finished epoch no. 354 on interval 11!
+Currently 204 epochs with no improvement.
+Finished epoch no. 355 on interval 12!
+Currently 205 epochs with no improvement.
+Finished epoch no. 356 on interval 13!
+Currently 206 epochs with no improvement.
+Finished epoch no. 357 on interval 14!
+Currently 207 epochs with no improvement.
+Finished epoch no. 358 on interval 15!
+Currently 208 epochs with no improvement.
+Finished epoch no. 359 on interval 16!
+Currently 209 epochs with no improvement.
+Finished epoch no. 360 on interval 17!
+Currently 210 epochs with no improvement.
+Finished epoch no. 361 on interval 18!
+Currently 211 epochs with no improvement.
+Finished epoch no. 362 on interval 19!
+Currently 212 epochs with no improvement.
+Finished epoch no. 363 on interval 20!
+Currently 213 epochs with no improvement.
+Finished epoch no. 364 on interval 21!
+Currently 214 epochs with no improvement.
+Finished epoch no. 365 on interval 22!
+Currently 215 epochs with no improvement.
+Finished epoch no. 366 on interval 23!
+Currently 216 epochs with no improvement.
+Finished epoch no. 367 on interval 24!
+Currently 217 epochs with no improvement.
+Finished epoch no. 368 on interval 25!
+Currently 218 epochs with no improvement.
+Finished epoch no. 369 on interval 26!
+Currently 219 epochs with no improvement.
+Finished epoch no. 370 on interval 27!
+Currently 220 epochs with no improvement.
+Finished epoch no. 371 on interval 28!
+Currently 221 epochs with no improvement.
+Finished epoch no. 372 on interval 29!
+Currently 222 epochs with no improvement.
+Finished epoch no. 373 on interval 30!
+Currently 223 epochs with no improvement.
+Finished epoch no. 374 on interval 31!
+Currently 224 epochs with no improvement.
+Finished epoch no. 375 on interval 32!
+Currently 225 epochs with no improvement.
+Finished epoch no. 376 on interval 33!
+Currently 226 epochs with no improvement.
+Finished epoch no. 377 on interval 34!
+Currently 227 epochs with no improvement.
+Finished epoch no. 378 on interval 35!
+Currently 228 epochs with no improvement.
+Changed percentage increase to 0.7.
+Finished epoch no. 379 on interval 36!
+Currently 229 epochs with no improvement.
+Finished epoch no. 380 on interval 37!
+Currently 230 epochs with no improvement.
+Finished epoch no. 381 on interval 0!
+Currently 231 epochs with no improvement.
+Finished epoch no. 382 on interval 1!
+Currently 232 epochs with no improvement.
+Finished epoch no. 383 on interval 2!
+Currently 233 epochs with no improvement.
+Finished epoch no. 384 on interval 3!
+Currently 234 epochs with no improvement.
+Finished epoch no. 385 on interval 4!
+Currently 235 epochs with no improvement.
+Finished epoch no. 386 on interval 5!
+Currently 236 epochs with no improvement.
+Finished epoch no. 387 on interval 6!
+Currently 237 epochs with no improvement.
+Finished epoch no. 388 on interval 7!
+Currently 238 epochs with no improvement.
+Finished epoch no. 389 on interval 8!
+Currently 239 epochs with no improvement.
+Finished epoch no. 390 on interval 9!
+Currently 240 epochs with no improvement.
+Finished epoch no. 391 on interval 10!
+Currently 241 epochs with no improvement.
+Finished epoch no. 392 on interval 11!
+Currently 242 epochs with no improvement.
+Finished epoch no. 393 on interval 12!
+Currently 243 epochs with no improvement.
+Finished epoch no. 394 on interval 13!
+Currently 244 epochs with no improvement.
+Finished epoch no. 395 on interval 14!
+Currently 245 epochs with no improvement.
+Finished epoch no. 396 on interval 15!
+Currently 246 epochs with no improvement.
+Finished epoch no. 397 on interval 16!
+Currently 247 epochs with no improvement.
+Finished epoch no. 398 on interval 17!
+Currently 248 epochs with no improvement.
+Finished epoch no. 399 on interval 18!
+Currently 249 epochs with no improvement.
+Finished epoch no. 400 on interval 19!
+Currently 250 epochs with no improvement.
+Finished epoch no. 401 on interval 20!
+Currently 251 epochs with no improvement.
+Finished epoch no. 402 on interval 21!
+Currently 252 epochs with no improvement.
+Finished epoch no. 403 on interval 22!
+Currently 253 epochs with no improvement.
+Finished epoch no. 404 on interval 23!
+Currently 254 epochs with no improvement.
+Finished epoch no. 405 on interval 24!
+Currently 255 epochs with no improvement.
+Finished epoch no. 406 on interval 25!
+Currently 256 epochs with no improvement.
+Finished epoch no. 407 on interval 26!
+Currently 257 epochs with no improvement.
+Finished epoch no. 408 on interval 27!
+Currently 258 epochs with no improvement.
+Finished epoch no. 409 on interval 28!
+Currently 259 epochs with no improvement.
+Finished epoch no. 410 on interval 29!
+Currently 260 epochs with no improvement.
+Finished epoch no. 411 on interval 30!
+Currently 261 epochs with no improvement.
+Finished epoch no. 412 on interval 31!
+Currently 262 epochs with no improvement.
+Finished epoch no. 413 on interval 32!
+Currently 263 epochs with no improvement.
+Finished epoch no. 414 on interval 33!
+Currently 264 epochs with no improvement.
+Finished epoch no. 415 on interval 34!
+Currently 265 epochs with no improvement.
+Finished epoch no. 416 on interval 35!
+Currently 266 epochs with no improvement.
+Changed percentage increase to 0.7999999999999999.
+Finished epoch no. 417 on interval 36!
+Currently 267 epochs with no improvement.
+Finished epoch no. 418 on interval 37!
+Currently 268 epochs with no improvement.
+Finished epoch no. 419 on interval 0!
+Currently 269 epochs with no improvement.
+Finished epoch no. 420 on interval 1!
+Currently 270 epochs with no improvement.
+Finished epoch no. 421 on interval 2!
+Currently 271 epochs with no improvement.
+Finished epoch no. 422 on interval 3!
+Currently 272 epochs with no improvement.
+Finished epoch no. 423 on interval 4!
+Currently 273 epochs with no improvement.
+Finished epoch no. 424 on interval 5!
+Currently 274 epochs with no improvement.
+Finished epoch no. 425 on interval 6!
+Currently 275 epochs with no improvement.
+Finished epoch no. 426 on interval 7!
+Currently 276 epochs with no improvement.
+Finished epoch no. 427 on interval 8!
+Currently 277 epochs with no improvement.
+Finished epoch no. 428 on interval 9!
+Currently 278 epochs with no improvement.
+Finished epoch no. 429 on interval 10!
+Currently 279 epochs with no improvement.
+Finished epoch no. 430 on interval 11!
+Currently 280 epochs with no improvement.
+Finished epoch no. 431 on interval 12!
+Currently 281 epochs with no improvement.
+Finished epoch no. 432 on interval 13!
+Currently 282 epochs with no improvement.
+Finished epoch no. 433 on interval 14!
+Currently 283 epochs with no improvement.
+Finished epoch no. 434 on interval 15!
+Currently 284 epochs with no improvement.
+Finished epoch no. 435 on interval 16!
+Currently 285 epochs with no improvement.
+Finished epoch no. 436 on interval 17!
+Currently 286 epochs with no improvement.
+Finished epoch no. 437 on interval 18!
+Currently 287 epochs with no improvement.
+Finished epoch no. 438 on interval 19!
+Currently 288 epochs with no improvement.
+Finished epoch no. 439 on interval 20!
+Currently 289 epochs with no improvement.
+Finished epoch no. 440 on interval 21!
+Currently 290 epochs with no improvement.
+Finished epoch no. 441 on interval 22!
+Currently 291 epochs with no improvement.
+Finished epoch no. 442 on interval 23!
+Currently 292 epochs with no improvement.
+Finished epoch no. 443 on interval 24!
+Currently 293 epochs with no improvement.
+Finished epoch no. 444 on interval 25!
+Currently 294 epochs with no improvement.
+Finished epoch no. 445 on interval 26!
+Currently 295 epochs with no improvement.
+Finished epoch no. 446 on interval 27!
+Currently 296 epochs with no improvement.
+Finished epoch no. 447 on interval 28!
+Currently 297 epochs with no improvement.
+Finished epoch no. 448 on interval 29!
+Currently 298 epochs with no improvement.
+Finished epoch no. 449 on interval 30!
+Currently 299 epochs with no improvement.
+Finished epoch no. 450 on interval 31!
+Currently 300 epochs with no improvement.
+Finished epoch no. 451 on interval 32!
+Currently 301 epochs with no improvement.
+Finished epoch no. 452 on interval 33!
+Currently 302 epochs with no improvement.
+Finished epoch no. 453 on interval 34!
+Currently 303 epochs with no improvement.
+Finished epoch no. 454 on interval 35!
+Currently 304 epochs with no improvement.
+Changed percentage increase to 0.8999999999999999.
+Finished epoch no. 455 on interval 36!
+Currently 305 epochs with no improvement.
+Finished epoch no. 456 on interval 37!
+Currently 306 epochs with no improvement.
+Finished epoch no. 457 on interval 0!
+Currently 307 epochs with no improvement.
+Finished epoch no. 458 on interval 1!
+Currently 308 epochs with no improvement.
+Finished epoch no. 459 on interval 2!
+Currently 309 epochs with no improvement.
+Finished epoch no. 460 on interval 3!
+Currently 310 epochs with no improvement.
+Finished epoch no. 461 on interval 4!
+Currently 311 epochs with no improvement.
+Finished epoch no. 462 on interval 5!
+Currently 312 epochs with no improvement.
+Finished epoch no. 463 on interval 6!
+Currently 313 epochs with no improvement.
+Finished epoch no. 464 on interval 7!
+Currently 314 epochs with no improvement.
+Finished epoch no. 465 on interval 8!
+Currently 315 epochs with no improvement.
+Finished epoch no. 466 on interval 9!
+Currently 316 epochs with no improvement.
+Finished epoch no. 467 on interval 10!
+Currently 317 epochs with no improvement.
+Finished epoch no. 468 on interval 11!
+Currently 318 epochs with no improvement.
+Finished epoch no. 469 on interval 12!
+Currently 319 epochs with no improvement.
+Finished epoch no. 470 on interval 13!
+Currently 320 epochs with no improvement.
+Finished epoch no. 471 on interval 14!
+Currently 321 epochs with no improvement.
+Finished epoch no. 472 on interval 15!
+Currently 322 epochs with no improvement.
+Finished epoch no. 473 on interval 16!
+Currently 323 epochs with no improvement.
+Finished epoch no. 474 on interval 17!
+Currently 324 epochs with no improvement.
+Finished epoch no. 475 on interval 18!
+Currently 325 epochs with no improvement.
+Finished epoch no. 476 on interval 19!
+Currently 326 epochs with no improvement.
+Finished epoch no. 477 on interval 20!
+Currently 327 epochs with no improvement.
+Finished epoch no. 478 on interval 21!
+Currently 328 epochs with no improvement.
+Finished epoch no. 479 on interval 22!
+Currently 329 epochs with no improvement.
+Finished epoch no. 480 on interval 23!
+Currently 330 epochs with no improvement.
+Finished epoch no. 481 on interval 24!
+Currently 331 epochs with no improvement.
+Finished epoch no. 482 on interval 25!
+Currently 332 epochs with no improvement.
+Finished epoch no. 483 on interval 26!
+Currently 333 epochs with no improvement.
+Finished epoch no. 484 on interval 27!
+Currently 334 epochs with no improvement.
+Finished epoch no. 485 on interval 28!
+Currently 335 epochs with no improvement.
+Finished epoch no. 486 on interval 29!
+Currently 336 epochs with no improvement.
+Finished epoch no. 487 on interval 30!
+Currently 337 epochs with no improvement.
+Finished epoch no. 488 on interval 31!
+Currently 338 epochs with no improvement.
+Finished epoch no. 489 on interval 32!
+Currently 339 epochs with no improvement.
+Finished epoch no. 490 on interval 33!
+Currently 340 epochs with no improvement.
+Finished epoch no. 491 on interval 34!
+Currently 341 epochs with no improvement.
+Finished epoch no. 492 on interval 35!
+Currently 342 epochs with no improvement.
+Changed percentage increase to 0.9999999999999999.
+Finished epoch no. 493 on interval 36!
+Currently 343 epochs with no improvement.
+Finished epoch no. 494 on interval 37!
+Currently 344 epochs with no improvement.
+Finished epoch no. 495 on interval 0!
+Currently 345 epochs with no improvement.
+Finished epoch no. 496 on interval 1!
+Currently 346 epochs with no improvement.
+Finished epoch no. 497 on interval 2!
+Currently 347 epochs with no improvement.
+Finished epoch no. 498 on interval 3!
+Currently 348 epochs with no improvement.
+Finished epoch no. 499 on interval 4!
+Currently 349 epochs with no improvement.
+Finished epoch no. 500 on interval 5!
+Currently 350 epochs with no improvement.
+Finished epoch no. 501 on interval 6!
+Currently 351 epochs with no improvement.
+Finished epoch no. 502 on interval 7!
+Currently 352 epochs with no improvement.
+Finished epoch no. 503 on interval 8!
+Currently 353 epochs with no improvement.
+Finished epoch no. 504 on interval 9!
+Currently 354 epochs with no improvement.
+Finished epoch no. 505 on interval 10!
+Currently 355 epochs with no improvement.
+Finished epoch no. 506 on interval 11!
+Currently 356 epochs with no improvement.
+Finished epoch no. 507 on interval 12!
+Currently 357 epochs with no improvement.
+Finished epoch no. 508 on interval 13!
+Currently 358 epochs with no improvement.
+Finished epoch no. 509 on interval 14!
+Currently 359 epochs with no improvement.
+Finished epoch no. 510 on interval 15!
+Currently 360 epochs with no improvement.
+Finished epoch no. 511 on interval 16!
+Currently 361 epochs with no improvement.
+Finished epoch no. 512 on interval 17!
+Currently 362 epochs with no improvement.
+Finished epoch no. 513 on interval 18!
+Currently 363 epochs with no improvement.
+Finished epoch no. 514 on interval 19!
+Currently 364 epochs with no improvement.
+Finished epoch no. 515 on interval 20!
+Currently 365 epochs with no improvement.
+Finished epoch no. 516 on interval 21!
+Currently 366 epochs with no improvement.
+Finished epoch no. 517 on interval 22!
+Currently 367 epochs with no improvement.
+Finished epoch no. 518 on interval 23!
+Currently 368 epochs with no improvement.
+Finished epoch no. 519 on interval 24!
+Currently 369 epochs with no improvement.
+Finished epoch no. 520 on interval 25!
+Currently 370 epochs with no improvement.
+Finished epoch no. 521 on interval 26!
+Currently 371 epochs with no improvement.
+Finished epoch no. 522 on interval 27!
+Currently 372 epochs with no improvement.
+Finished epoch no. 523 on interval 28!
+Currently 373 epochs with no improvement.
+Finished epoch no. 524 on interval 29!
+Currently 374 epochs with no improvement.
+Finished epoch no. 525 on interval 30!
+Currently 375 epochs with no improvement.
+Finished epoch no. 526 on interval 31!
+Currently 376 epochs with no improvement.
+Finished epoch no. 527 on interval 32!
+Currently 377 epochs with no improvement.
+Finished epoch no. 528 on interval 33!
+Currently 378 epochs with no improvement.
+Finished epoch no. 529 on interval 34!
+Currently 379 epochs with no improvement.
+Finished epoch no. 530 on interval 35!
+Currently 380 epochs with no improvement.
+Changed to strat A.
+Finished epoch no. 531 on interval 36!
+Finished epoch no. 532 on interval 37!
+Finished epoch no. 533 on interval 0!
+Finished epoch no. 534 on interval 1!
+Finished epoch no. 535 on interval 2!
+Finished epoch no. 536 on interval 3!
+Finished epoch no. 537 on interval 4!
+Finished epoch no. 538 on interval 5!
+Finished epoch no. 539 on interval 6!
+Finished epoch no. 540 on interval 7!
+Finished epoch no. 541 on interval 8!
+Finished epoch no. 542 on interval 9!
+Finished epoch no. 543 on interval 10!
+Finished epoch no. 544 on interval 11!
+Finished epoch no. 545 on interval 12!
+Finished epoch no. 546 on interval 13!
+Finished epoch no. 547 on interval 14!
+Finished epoch no. 548 on interval 15!
+Finished epoch no. 549 on interval 16!
+Finished epoch no. 550 on interval 17!
+Finished epoch no. 551 on interval 18!
+Finished epoch no. 552 on interval 19!
+Finished epoch no. 553 on interval 20!
+Finished epoch no. 554 on interval 21!
+Finished epoch no. 555 on interval 22!
+Finished epoch no. 556 on interval 23!
+Finished epoch no. 557 on interval 24!
+Finished epoch no. 558 on interval 25!
+Finished epoch no. 559 on interval 26!
+Finished epoch no. 560 on interval 27!
+Finished epoch no. 561 on interval 28!
+Finished epoch no. 562 on interval 29!
+Finished epoch no. 563 on interval 30!
+Finished epoch no. 564 on interval 31!
+Finished epoch no. 565 on interval 32!
+Finished epoch no. 566 on interval 33!
+Finished epoch no. 567 on interval 34!
+Finished epoch no. 568 on interval 35!
+Finished epoch no. 569 on interval 36!
+Finished epoch no. 570 on interval 37!
+Finished epoch no. 571 on interval 0!
+Finished epoch no. 572 on interval 1!
+Finished epoch no. 573 on interval 2!
+Finished epoch no. 574 on interval 3!
+Finished epoch no. 575 on interval 4!
+Finished epoch no. 576 on interval 5!
+Finished epoch no. 577 on interval 6!
+Finished epoch no. 578 on interval 7!
+Finished epoch no. 579 on interval 8!
+Finished epoch no. 580 on interval 9!
+Finished epoch no. 581 on interval 10!
+Finished epoch no. 582 on interval 11!
+Finished epoch no. 583 on interval 12!
+Finished epoch no. 584 on interval 13!
+Finished epoch no. 585 on interval 14!
+Finished epoch no. 586 on interval 15!
+Finished epoch no. 587 on interval 16!
+Finished epoch no. 588 on interval 17!
+Finished epoch no. 589 on interval 18!
+Finished epoch no. 590 on interval 19!
+Finished epoch no. 591 on interval 20!
+Finished epoch no. 592 on interval 21!
+Finished epoch no. 593 on interval 22!
+Finished epoch no. 594 on interval 23!
+Finished epoch no. 595 on interval 24!
+Finished epoch no. 596 on interval 25!
+Finished epoch no. 597 on interval 26!
+Finished epoch no. 598 on interval 27!
+Finished epoch no. 599 on interval 28!
+Finished epoch no. 600 on interval 29!
+Finished epoch no. 601 on interval 30!
+Finished epoch no. 602 on interval 31!
+Finished epoch no. 603 on interval 32!
+Finished epoch no. 604 on interval 33!
+Finished epoch no. 605 on interval 34!
+Finished epoch no. 606 on interval 35!
+Finished epoch no. 607 on interval 36!
+Finished epoch no. 608 on interval 37!
+Finished epoch no. 609 on interval 0!
+Finished epoch no. 610 on interval 1!
+Finished epoch no. 611 on interval 2!
+Finished epoch no. 612 on interval 3!
+Finished epoch no. 613 on interval 4!
+Finished epoch no. 614 on interval 5!
+Finished epoch no. 615 on interval 6!
+Finished epoch no. 616 on interval 7!
+Finished epoch no. 617 on interval 8!
+Finished epoch no. 618 on interval 9!
+Finished epoch no. 619 on interval 10!
+Finished epoch no. 620 on interval 11!
+Finished epoch no. 621 on interval 12!
+Finished epoch no. 622 on interval 13!
+Finished epoch no. 623 on interval 14!
+Finished epoch no. 624 on interval 15!
+Finished epoch no. 625 on interval 16!
+Finished epoch no. 626 on interval 17!
+Finished epoch no. 627 on interval 18!
+Finished epoch no. 628 on interval 19!
+Finished epoch no. 629 on interval 20!
+Finished epoch no. 630 on interval 21!
+Finished epoch no. 631 on interval 22!
+Finished epoch no. 632 on interval 23!
+Finished epoch no. 633 on interval 24!
+Finished epoch no. 634 on interval 25!
+Finished epoch no. 635 on interval 26!
+Finished epoch no. 636 on interval 27!
+Finished epoch no. 637 on interval 28!
+Finished epoch no. 638 on interval 29!
+Finished epoch no. 639 on interval 30!
+Finished epoch no. 640 on interval 31!
+Finished epoch no. 641 on interval 32!
+Finished epoch no. 642 on interval 33!
+Finished epoch no. 643 on interval 34!
+Finished epoch no. 644 on interval 35!
+Finished epoch no. 645 on interval 36!
+Finished epoch no. 646 on interval 37!
+Finished epoch no. 647 on interval 0!
+Finished epoch no. 648 on interval 1!
+Finished epoch no. 649 on interval 2!
+Finished epoch no. 650 on interval 3!
+Finished epoch no. 651 on interval 4!
+Finished epoch no. 652 on interval 5!
+Finished epoch no. 653 on interval 6!
+Finished epoch no. 654 on interval 7!
+Finished epoch no. 655 on interval 8!
+Finished epoch no. 656 on interval 9!
+Finished epoch no. 657 on interval 10!
+Finished epoch no. 658 on interval 11!
+Finished epoch no. 659 on interval 12!
+Finished epoch no. 660 on interval 13!
+Finished epoch no. 661 on interval 14!
+Finished epoch no. 662 on interval 15!
+Finished epoch no. 663 on interval 16!
+Finished epoch no. 664 on interval 17!
+Finished epoch no. 665 on interval 18!
+Finished epoch no. 666 on interval 19!
+Finished epoch no. 667 on interval 20!
+Finished epoch no. 668 on interval 21!
+Finished epoch no. 669 on interval 22!
+Finished epoch no. 670 on interval 23!
+Finished epoch no. 671 on interval 24!
+Finished epoch no. 672 on interval 25!
+Finished epoch no. 673 on interval 26!
+Finished epoch no. 674 on interval 27!
+Finished epoch no. 675 on interval 28!
+Finished epoch no. 676 on interval 29!
+Finished epoch no. 677 on interval 30!
+Finished epoch no. 678 on interval 31!
+Finished epoch no. 679 on interval 32!
+Finished epoch no. 680 on interval 33!
+Finished epoch no. 681 on interval 34!
+Finished epoch no. 682 on interval 35!
+Finished epoch no. 683 on interval 36!
+Finished epoch no. 684 on interval 37!
+Finished epoch no. 685 on interval 0!
+Finished epoch no. 686 on interval 1!
+Finished epoch no. 687 on interval 2!
+Finished epoch no. 688 on interval 3!
+Finished epoch no. 689 on interval 4!
+Finished epoch no. 690 on interval 5!
+Finished epoch no. 691 on interval 6!
+Finished epoch no. 692 on interval 7!
+Finished epoch no. 693 on interval 8!
+Finished epoch no. 694 on interval 9!
+Finished epoch no. 695 on interval 10!
+Finished epoch no. 696 on interval 11!
+Finished epoch no. 697 on interval 12!
+Finished epoch no. 698 on interval 13!
+Finished epoch no. 699 on interval 14!
+Finished epoch no. 700 on interval 15!
+Finished epoch no. 701 on interval 16!
+Finished epoch no. 702 on interval 17!
+Finished epoch no. 703 on interval 18!
+Finished epoch no. 704 on interval 19!
+Finished epoch no. 705 on interval 20!
+Finished epoch no. 706 on interval 21!
+Finished epoch no. 707 on interval 22!
+Finished epoch no. 708 on interval 23!
+Finished epoch no. 709 on interval 24!
+Finished epoch no. 710 on interval 25!
+Finished epoch no. 711 on interval 26!
+Finished epoch no. 712 on interval 27!
+Finished epoch no. 713 on interval 28!
+Finished epoch no. 714 on interval 29!
+Finished epoch no. 715 on interval 30!
+Finished epoch no. 716 on interval 31!
+Finished epoch no. 717 on interval 32!
+Finished epoch no. 718 on interval 33!
+Finished epoch no. 719 on interval 34!
+Finished epoch no. 720 on interval 35!
+Finished epoch no. 721 on interval 36!
+Finished epoch no. 722 on interval 37!
+Finished epoch no. 723 on interval 0!
+Finished epoch no. 724 on interval 1!
+Finished epoch no. 725 on interval 2!
+Finished epoch no. 726 on interval 3!
+Finished epoch no. 727 on interval 4!
+Finished epoch no. 728 on interval 5!
+Finished epoch no. 729 on interval 6!
+Finished epoch no. 730 on interval 7!
+Finished epoch no. 731 on interval 8!
+Finished epoch no. 732 on interval 9!
+Finished epoch no. 733 on interval 10!
+Finished epoch no. 734 on interval 11!
+Finished epoch no. 735 on interval 12!
+Finished epoch no. 736 on interval 13!
+Finished epoch no. 737 on interval 14!
+Finished epoch no. 738 on interval 15!
+Finished epoch no. 739 on interval 16!
+Finished epoch no. 740 on interval 17!
+Finished epoch no. 741 on interval 18!
+Finished epoch no. 742 on interval 19!
+Finished epoch no. 743 on interval 20!
+Finished epoch no. 744 on interval 21!
+Finished epoch no. 745 on interval 22!
+Finished epoch no. 746 on interval 23!
+Finished epoch no. 747 on interval 24!
+Finished epoch no. 748 on interval 25!
+Finished epoch no. 749 on interval 26!
+Finished epoch no. 750 on interval 27!
+Finished epoch no. 751 on interval 28!
+Finished epoch no. 752 on interval 29!
+Finished epoch no. 753 on interval 30!
+Finished epoch no. 754 on interval 31!
+Finished epoch no. 755 on interval 32!
+Finished epoch no. 756 on interval 33!
+Finished epoch no. 757 on interval 34!
+Finished epoch no. 758 on interval 35!
+Finished epoch no. 759 on interval 36!
+Finished epoch no. 760 on interval 37!
+Finished epoch no. 761 on interval 0!
+Finished epoch no. 762 on interval 1!
+Finished epoch no. 763 on interval 2!
+Finished epoch no. 764 on interval 3!
+Finished epoch no. 765 on interval 4!
+Finished epoch no. 766 on interval 5!
+Finished epoch no. 767 on interval 6!
+Finished epoch no. 768 on interval 7!
+Finished epoch no. 769 on interval 8!
+Finished epoch no. 770 on interval 9!
+Finished epoch no. 771 on interval 10!
+Finished epoch no. 772 on interval 11!
+Finished epoch no. 773 on interval 12!
+Finished epoch no. 774 on interval 13!
+Finished epoch no. 775 on interval 14!
+Finished epoch no. 776 on interval 15!
+Finished epoch no. 777 on interval 16!
+Finished epoch no. 778 on interval 17!
+Finished epoch no. 779 on interval 18!
+Finished epoch no. 780 on interval 19!
+Finished epoch no. 781 on interval 20!
+Finished epoch no. 782 on interval 21!
+Finished epoch no. 783 on interval 22!
+Finished epoch no. 784 on interval 23!
+Finished epoch no. 785 on interval 24!
+Finished epoch no. 786 on interval 25!
+Finished epoch no. 787 on interval 26!
+Finished epoch no. 788 on interval 27!
+Finished epoch no. 789 on interval 28!
+Finished epoch no. 790 on interval 29!
+Finished epoch no. 791 on interval 30!
+Finished epoch no. 792 on interval 31!
+Finished epoch no. 793 on interval 32!
+Finished epoch no. 794 on interval 33!
+Finished epoch no. 795 on interval 34!
+Finished epoch no. 796 on interval 35!
+Finished epoch no. 797 on interval 36!
+Finished epoch no. 798 on interval 37!
+Finished epoch no. 799 on interval 0!
+Finished epoch no. 800 on interval 1!
+Finished epoch no. 801 on interval 2!
+Finished epoch no. 802 on interval 3!
+Finished epoch no. 803 on interval 4!
+Finished epoch no. 804 on interval 5!
+Finished epoch no. 805 on interval 6!
+Finished epoch no. 806 on interval 7!
+Finished epoch no. 807 on interval 8!
+Finished epoch no. 808 on interval 9!
+Finished epoch no. 809 on interval 10!
+Finished epoch no. 810 on interval 11!
+Finished epoch no. 811 on interval 12!
+Finished epoch no. 812 on interval 13!
+Finished epoch no. 813 on interval 14!
+Finished epoch no. 814 on interval 15!
+Finished epoch no. 815 on interval 16!
+Finished epoch no. 816 on interval 17!
+Finished epoch no. 817 on interval 18!
+Finished epoch no. 818 on interval 19!
+Finished epoch no. 819 on interval 20!
+Finished epoch no. 820 on interval 21!
+Finished epoch no. 821 on interval 22!
+Finished epoch no. 822 on interval 23!
+Finished epoch no. 823 on interval 24!
+Finished epoch no. 824 on interval 25!
+Finished epoch no. 825 on interval 26!
+Finished epoch no. 826 on interval 27!
+Finished epoch no. 827 on interval 28!
+Finished epoch no. 828 on interval 29!
+Finished epoch no. 829 on interval 30!
+Finished epoch no. 830 on interval 31!
+Finished epoch no. 831 on interval 32!
+Finished epoch no. 832 on interval 33!
+Finished epoch no. 833 on interval 34!
+Finished epoch no. 834 on interval 35!
+Finished epoch no. 835 on interval 36!
+Finished epoch no. 836 on interval 37!
+Finished epoch no. 837 on interval 0!
+Finished epoch no. 838 on interval 1!
+Finished epoch no. 839 on interval 2!
+Finished epoch no. 840 on interval 3!
+Finished epoch no. 841 on interval 4!
+Finished epoch no. 842 on interval 5!
+Finished epoch no. 843 on interval 6!
+Finished epoch no. 844 on interval 7!
+Finished epoch no. 845 on interval 8!
+Finished epoch no. 846 on interval 9!
+Finished epoch no. 847 on interval 10!
+Finished epoch no. 848 on interval 11!
+Finished epoch no. 849 on interval 12!
+Finished epoch no. 850 on interval 13!
+Finished epoch no. 851 on interval 14!
+Finished epoch no. 852 on interval 15!
+Finished epoch no. 853 on interval 16!
+Finished epoch no. 854 on interval 17!
+Finished epoch no. 855 on interval 18!
+Finished epoch no. 856 on interval 19!
+Finished epoch no. 857 on interval 20!
+Finished epoch no. 858 on interval 21!
+Finished epoch no. 859 on interval 22!
+Finished epoch no. 860 on interval 23!
+Finished epoch no. 861 on interval 24!
+Finished epoch no. 862 on interval 25!
+Finished epoch no. 863 on interval 26!
+Finished epoch no. 864 on interval 27!
+Finished epoch no. 865 on interval 28!
+Finished epoch no. 866 on interval 29!
+Finished epoch no. 867 on interval 30!
+Finished epoch no. 868 on interval 31!
+Finished epoch no. 869 on interval 32!
+Finished epoch no. 870 on interval 33!
+Finished epoch no. 871 on interval 34!
+Finished epoch no. 872 on interval 35!
+Finished epoch no. 873 on interval 36!
+Finished epoch no. 874 on interval 37!
+Finished epoch no. 875 on interval 0!
+Finished epoch no. 876 on interval 1!
+Finished epoch no. 877 on interval 2!
+Finished epoch no. 878 on interval 3!
+Finished epoch no. 879 on interval 4!
+Finished epoch no. 880 on interval 5!
+Finished epoch no. 881 on interval 6!
+Finished epoch no. 882 on interval 7!
+Finished epoch no. 883 on interval 8!
+Finished epoch no. 884 on interval 9!
+Finished epoch no. 885 on interval 10!
+Finished epoch no. 886 on interval 11!
+Finished epoch no. 887 on interval 12!
+Finished epoch no. 888 on interval 13!
+Finished epoch no. 889 on interval 14!
+Finished epoch no. 890 on interval 15!
+Finished epoch no. 891 on interval 16!
+Finished epoch no. 892 on interval 17!
+Finished epoch no. 893 on interval 18!
+Finished epoch no. 894 on interval 19!
+Finished epoch no. 895 on interval 20!
+Finished epoch no. 896 on interval 21!
+Finished epoch no. 897 on interval 22!
+Finished epoch no. 898 on interval 23!
+Finished epoch no. 899 on interval 24!
+Finished epoch no. 900 on interval 25!
+Finished epoch no. 901 on interval 26!
+Finished epoch no. 902 on interval 27!
+Finished epoch no. 903 on interval 28!
+Finished epoch no. 904 on interval 29!
+Finished epoch no. 905 on interval 30!
+Finished epoch no. 906 on interval 31!
+Finished epoch no. 907 on interval 32!
+Finished epoch no. 908 on interval 33!
+Finished epoch no. 909 on interval 34!
+Finished epoch no. 910 on interval 35!
+Finished epoch no. 911 on interval 36!
+Finished epoch no. 912 on interval 37!
+Finished epoch no. 913 on interval 0!
+Finished epoch no. 914 on interval 1!
+Finished epoch no. 915 on interval 2!
+Finished epoch no. 916 on interval 3!
+Finished epoch no. 917 on interval 4!
+Finished epoch no. 918 on interval 5!
+Finished epoch no. 919 on interval 6!
+Finished epoch no. 920 on interval 7!
+Finished epoch no. 921 on interval 8!
+Finished epoch no. 922 on interval 9!
+Finished epoch no. 923 on interval 10!
+Finished epoch no. 924 on interval 11!
+Finished epoch no. 925 on interval 12!
+Finished epoch no. 926 on interval 13!
+Finished epoch no. 927 on interval 14!
+Finished epoch no. 928 on interval 15!
+Finished epoch no. 929 on interval 16!
+Finished epoch no. 930 on interval 17!
+Finished epoch no. 931 on interval 18!
+Finished epoch no. 932 on interval 19!
+Finished epoch no. 933 on interval 20!
+Finished epoch no. 934 on interval 21!
+Finished epoch no. 935 on interval 22!
+Finished epoch no. 936 on interval 23!
+Finished epoch no. 937 on interval 24!
+Finished epoch no. 938 on interval 25!
+Finished epoch no. 939 on interval 26!
+Finished epoch no. 940 on interval 27!
+Finished epoch no. 941 on interval 28!
+Finished epoch no. 942 on interval 29!
+Finished epoch no. 943 on interval 30!
+Finished epoch no. 944 on interval 31!
+Finished epoch no. 945 on interval 32!
+Finished epoch no. 946 on interval 33!
+Finished epoch no. 947 on interval 34!
+Finished epoch no. 948 on interval 35!
+Finished epoch no. 949 on interval 36!
+Finished epoch no. 950 on interval 37!
+Finished epoch no. 951 on interval 0!
+Finished epoch no. 952 on interval 1!
+Finished epoch no. 953 on interval 2!
+Finished epoch no. 954 on interval 3!
+Finished epoch no. 955 on interval 4!
+Finished epoch no. 956 on interval 5!
+Finished epoch no. 957 on interval 6!
+Finished epoch no. 958 on interval 7!
+Finished epoch no. 959 on interval 8!
+Finished epoch no. 960 on interval 9!
+Finished epoch no. 961 on interval 10!
+Finished epoch no. 962 on interval 11!
+Finished epoch no. 963 on interval 12!
+Finished epoch no. 964 on interval 13!
+Finished epoch no. 965 on interval 14!
+Finished epoch no. 966 on interval 15!
+Finished epoch no. 967 on interval 16!
+Finished epoch no. 968 on interval 17!
+Finished epoch no. 969 on interval 18!
+Finished epoch no. 970 on interval 19!
+Finished epoch no. 971 on interval 20!
+Finished epoch no. 972 on interval 21!
+Finished epoch no. 973 on interval 22!
+Finished epoch no. 974 on interval 23!
+Finished epoch no. 975 on interval 24!
+Finished epoch no. 976 on interval 25!
+Finished epoch no. 977 on interval 26!
+Finished epoch no. 978 on interval 27!
+Finished epoch no. 979 on interval 28!
+Finished epoch no. 980 on interval 29!
+Finished epoch no. 981 on interval 30!
+Finished epoch no. 982 on interval 31!
+Finished epoch no. 983 on interval 32!
+Finished epoch no. 984 on interval 33!
+Finished epoch no. 985 on interval 34!
+Finished epoch no. 986 on interval 35!
+Finished epoch no. 987 on interval 36!
+Finished epoch no. 988 on interval 37!
+Finished epoch no. 989 on interval 0!
+Finished epoch no. 990 on interval 1!
+Finished epoch no. 991 on interval 2!
+Finished epoch no. 992 on interval 3!
+Finished epoch no. 993 on interval 4!
+Finished epoch no. 994 on interval 5!
+Finished epoch no. 995 on interval 6!
+Finished epoch no. 996 on interval 7!
+Finished epoch no. 997 on interval 8!
+Finished epoch no. 998 on interval 9!
+Finished epoch no. 999 on interval 10!
+Finished epoch no. 1000 on interval 11!
+Finished epoch no. 1001 on interval 12!
+Finished epoch no. 1002 on interval 13!
+Finished epoch no. 1003 on interval 14!
+Finished epoch no. 1004 on interval 15!
+Finished epoch no. 1005 on interval 16!
+Finished epoch no. 1006 on interval 17!
+Finished epoch no. 1007 on interval 18!
+Finished epoch no. 1008 on interval 19!
+Finished epoch no. 1009 on interval 20!
+Finished epoch no. 1010 on interval 21!
+Finished epoch no. 1011 on interval 22!
+Finished epoch no. 1012 on interval 23!
+Finished epoch no. 1013 on interval 24!
+Finished epoch no. 1014 on interval 25!
+Finished epoch no. 1015 on interval 26!
+Finished epoch no. 1016 on interval 27!
+Finished epoch no. 1017 on interval 28!
+Finished epoch no. 1018 on interval 29!
+Finished epoch no. 1019 on interval 30!
+Finished epoch no. 1020 on interval 31!
+Finished epoch no. 1021 on interval 32!
+Finished epoch no. 1022 on interval 33!
+Finished epoch no. 1023 on interval 34!
+Finished epoch no. 1024 on interval 35!
+Finished epoch no. 1025 on interval 36!
+Finished epoch no. 1026 on interval 37!
+Finished epoch no. 1027 on interval 0!
+Finished epoch no. 1028 on interval 1!
+Finished epoch no. 1029 on interval 2!
+Finished epoch no. 1030 on interval 3!
+Finished epoch no. 1031 on interval 4!
+Finished epoch no. 1032 on interval 5!
+Finished epoch no. 1033 on interval 6!
+Finished epoch no. 1034 on interval 7!
+Finished epoch no. 1035 on interval 8!
+Finished epoch no. 1036 on interval 9!
+Finished epoch no. 1037 on interval 10!
+Finished epoch no. 1038 on interval 11!
+Finished epoch no. 1039 on interval 12!
+Finished epoch no. 1040 on interval 13!
+Finished epoch no. 1041 on interval 14!
+Finished epoch no. 1042 on interval 15!
+Finished epoch no. 1043 on interval 16!
+Finished epoch no. 1044 on interval 17!
+Finished epoch no. 1045 on interval 18!
+Finished epoch no. 1046 on interval 19!
+Finished epoch no. 1047 on interval 20!
+Finished epoch no. 1048 on interval 21!
+Finished epoch no. 1049 on interval 22!
+Finished epoch no. 1050 on interval 23!
+Finished epoch no. 1051 on interval 24!
+Finished epoch no. 1052 on interval 25!
+Finished epoch no. 1053 on interval 26!
+Finished epoch no. 1054 on interval 27!
+Finished epoch no. 1055 on interval 28!
+Finished epoch no. 1056 on interval 29!
+Finished epoch no. 1057 on interval 30!
+Finished epoch no. 1058 on interval 31!
+Finished epoch no. 1059 on interval 32!
+Finished epoch no. 1060 on interval 33!
+Finished epoch no. 1061 on interval 34!
+Finished epoch no. 1062 on interval 35!
+Finished epoch no. 1063 on interval 36!
+Finished epoch no. 1064 on interval 37!
+Finished epoch no. 1065 on interval 0!
+Finished epoch no. 1066 on interval 1!
+Finished epoch no. 1067 on interval 2!
+Finished epoch no. 1068 on interval 3!
+Finished epoch no. 1069 on interval 4!
+Finished epoch no. 1070 on interval 5!
+Finished epoch no. 1071 on interval 6!
+Finished epoch no. 1072 on interval 7!
+Finished epoch no. 1073 on interval 8!
+Finished epoch no. 1074 on interval 9!
+Finished epoch no. 1075 on interval 10!
+Finished epoch no. 1076 on interval 11!
+Finished epoch no. 1077 on interval 12!
+Finished epoch no. 1078 on interval 13!
+Finished epoch no. 1079 on interval 14!
+Finished epoch no. 1080 on interval 15!
+Finished epoch no. 1081 on interval 16!
+Finished epoch no. 1082 on interval 17!
+Finished epoch no. 1083 on interval 18!
+Finished epoch no. 1084 on interval 19!
+Finished epoch no. 1085 on interval 20!
+Finished epoch no. 1086 on interval 21!
+Finished epoch no. 1087 on interval 22!
+Finished epoch no. 1088 on interval 23!
+Finished epoch no. 1089 on interval 24!
+Finished epoch no. 1090 on interval 25!
+Finished epoch no. 1091 on interval 26!
+Finished epoch no. 1092 on interval 27!
+Finished epoch no. 1093 on interval 28!
+Finished epoch no. 1094 on interval 29!
+Finished epoch no. 1095 on interval 30!
+Finished epoch no. 1096 on interval 31!
+Finished epoch no. 1097 on interval 32!
+Finished epoch no. 1098 on interval 33!
+Finished epoch no. 1099 on interval 34!
+Finished epoch no. 1100 on interval 35!
+Finished epoch no. 1101 on interval 36!
+Finished epoch no. 1102 on interval 37!
+Finished epoch no. 1103 on interval 0!
+Finished epoch no. 1104 on interval 1!
+Finished epoch no. 1105 on interval 2!
+Finished epoch no. 1106 on interval 3!
+Finished epoch no. 1107 on interval 4!
+Finished epoch no. 1108 on interval 5!
+Finished epoch no. 1109 on interval 6!
+Finished epoch no. 1110 on interval 7!
+Finished epoch no. 1111 on interval 8!
+Finished epoch no. 1112 on interval 9!
+Finished epoch no. 1113 on interval 10!
+Finished epoch no. 1114 on interval 11!
+Finished epoch no. 1115 on interval 12!
+Finished epoch no. 1116 on interval 13!
+Finished epoch no. 1117 on interval 14!
+Finished epoch no. 1118 on interval 15!
+Finished epoch no. 1119 on interval 16!
+Finished epoch no. 1120 on interval 17!
+Finished epoch no. 1121 on interval 18!
+Finished epoch no. 1122 on interval 19!
+Finished epoch no. 1123 on interval 20!
+Finished epoch no. 1124 on interval 21!
+Finished epoch no. 1125 on interval 22!
+Finished epoch no. 1126 on interval 23!
+Finished epoch no. 1127 on interval 24!
+Finished epoch no. 1128 on interval 25!
+Finished epoch no. 1129 on interval 26!
+Finished epoch no. 1130 on interval 27!
+Finished epoch no. 1131 on interval 28!
+Finished epoch no. 1132 on interval 29!
+Finished epoch no. 1133 on interval 30!
+Finished epoch no. 1134 on interval 31!
+Finished epoch no. 1135 on interval 32!
+Finished epoch no. 1136 on interval 33!
+Finished epoch no. 1137 on interval 34!
+Finished epoch no. 1138 on interval 35!
+Finished epoch no. 1139 on interval 36!
+Finished epoch no. 1140 on interval 37!
+Finished epoch no. 1141 on interval 0!
+Finished epoch no. 1142 on interval 1!
+Finished epoch no. 1143 on interval 2!
+Finished epoch no. 1144 on interval 3!
+Finished epoch no. 1145 on interval 4!
+Finished epoch no. 1146 on interval 5!
+Finished epoch no. 1147 on interval 6!
+Finished epoch no. 1148 on interval 7!
+Finished epoch no. 1149 on interval 8!
+Finished epoch no. 1150 on interval 9!
+Finished epoch no. 1151 on interval 10!
+Finished epoch no. 1152 on interval 11!
+Finished epoch no. 1153 on interval 12!
+Finished epoch no. 1154 on interval 13!
+Finished epoch no. 1155 on interval 14!
+Finished epoch no. 1156 on interval 15!
+Finished epoch no. 1157 on interval 16!
+Finished epoch no. 1158 on interval 17!
+Finished epoch no. 1159 on interval 18!
+Finished epoch no. 1160 on interval 19!
+Finished epoch no. 1161 on interval 20!
+Finished epoch no. 1162 on interval 21!
+Finished epoch no. 1163 on interval 22!
+Finished epoch no. 1164 on interval 23!
+Finished epoch no. 1165 on interval 24!
+Finished epoch no. 1166 on interval 25!
+Finished epoch no. 1167 on interval 26!
+Finished epoch no. 1168 on interval 27!
+Finished epoch no. 1169 on interval 28!
+Finished epoch no. 1170 on interval 29!
+Finished epoch no. 1171 on interval 30!
+Finished epoch no. 1172 on interval 31!
+Finished epoch no. 1173 on interval 32!
+Finished epoch no. 1174 on interval 33!
+Finished epoch no. 1175 on interval 34!
+Finished epoch no. 1176 on interval 35!
+Finished epoch no. 1177 on interval 36!
+Finished epoch no. 1178 on interval 37!
+Finished epoch no. 1179 on interval 0!
+Finished epoch no. 1180 on interval 1!
+Finished epoch no. 1181 on interval 2!
+Finished epoch no. 1182 on interval 3!
+Finished epoch no. 1183 on interval 4!
+Finished epoch no. 1184 on interval 5!
+Finished epoch no. 1185 on interval 6!
+Finished epoch no. 1186 on interval 7!
+Finished epoch no. 1187 on interval 8!
+Finished epoch no. 1188 on interval 9!
+Finished epoch no. 1189 on interval 10!
+Finished epoch no. 1190 on interval 11!
+Finished epoch no. 1191 on interval 12!
+Finished epoch no. 1192 on interval 13!
+Finished epoch no. 1193 on interval 14!
+Finished epoch no. 1194 on interval 15!
+Finished epoch no. 1195 on interval 16!
+Finished epoch no. 1196 on interval 17!
+Finished epoch no. 1197 on interval 18!
+Finished epoch no. 1198 on interval 19!
+Finished epoch no. 1199 on interval 20!
+Finished epoch no. 1200 on interval 21!
+Finished epoch no. 1201 on interval 22!
+Finished epoch no. 1202 on interval 23!
+Finished epoch no. 1203 on interval 24!
+Finished epoch no. 1204 on interval 25!
+Finished epoch no. 1205 on interval 26!
+Finished epoch no. 1206 on interval 27!
+Finished epoch no. 1207 on interval 28!
+Finished epoch no. 1208 on interval 29!
+Finished epoch no. 1209 on interval 30!
+Finished epoch no. 1210 on interval 31!
+Finished epoch no. 1211 on interval 32!
+Finished epoch no. 1212 on interval 33!
+Finished epoch no. 1213 on interval 34!
+Finished epoch no. 1214 on interval 35!
+Finished epoch no. 1215 on interval 36!
+Finished epoch no. 1216 on interval 37!
+Finished epoch no. 1217 on interval 0!
+Finished epoch no. 1218 on interval 1!
+Finished epoch no. 1219 on interval 2!
+Finished epoch no. 1220 on interval 3!
+Finished epoch no. 1221 on interval 4!
+Finished epoch no. 1222 on interval 5!
+Finished epoch no. 1223 on interval 6!
+Finished epoch no. 1224 on interval 7!
+Finished epoch no. 1225 on interval 8!
+Finished epoch no. 1226 on interval 9!
+Finished epoch no. 1227 on interval 10!
+Finished epoch no. 1228 on interval 11!
+Finished epoch no. 1229 on interval 12!
+Finished epoch no. 1230 on interval 13!
+Finished epoch no. 1231 on interval 14!
+Finished epoch no. 1232 on interval 15!
+Finished epoch no. 1233 on interval 16!
+Finished epoch no. 1234 on interval 17!
+Finished epoch no. 1235 on interval 18!
+Finished epoch no. 1236 on interval 19!
+Finished epoch no. 1237 on interval 20!
+Finished epoch no. 1238 on interval 21!
+Finished epoch no. 1239 on interval 22!
+Finished epoch no. 1240 on interval 23!
+Finished epoch no. 1241 on interval 24!
+Finished epoch no. 1242 on interval 25!
+Finished epoch no. 1243 on interval 26!
+Finished epoch no. 1244 on interval 27!
+Finished epoch no. 1245 on interval 28!
+Finished epoch no. 1246 on interval 29!
+Finished epoch no. 1247 on interval 30!
+Finished epoch no. 1248 on interval 31!
+Finished epoch no. 1249 on interval 32!
+Finished epoch no. 1250 on interval 33!
+Finished epoch no. 1251 on interval 34!
+Finished epoch no. 1252 on interval 35!
+Finished epoch no. 1253 on interval 36!
+Finished epoch no. 1254 on interval 37!
+Finished epoch no. 1255 on interval 0!
+Finished epoch no. 1256 on interval 1!
+Finished epoch no. 1257 on interval 2!
+Finished epoch no. 1258 on interval 3!
+Finished epoch no. 1259 on interval 4!
+Finished epoch no. 1260 on interval 5!
+Finished epoch no. 1261 on interval 6!
+Finished epoch no. 1262 on interval 7!
+Finished epoch no. 1263 on interval 8!
+Finished epoch no. 1264 on interval 9!
+Finished epoch no. 1265 on interval 10!
+Finished epoch no. 1266 on interval 11!
+Finished epoch no. 1267 on interval 12!
+Finished epoch no. 1268 on interval 13!
+Finished epoch no. 1269 on interval 14!
+Finished epoch no. 1270 on interval 15!
+Finished epoch no. 1271 on interval 16!
+Finished epoch no. 1272 on interval 17!
+Finished epoch no. 1273 on interval 18!
+Finished epoch no. 1274 on interval 19!
+Finished epoch no. 1275 on interval 20!
+Finished epoch no. 1276 on interval 21!
+Finished epoch no. 1277 on interval 22!
+Finished epoch no. 1278 on interval 23!
+Finished epoch no. 1279 on interval 24!
+Finished epoch no. 1280 on interval 25!
+Finished epoch no. 1281 on interval 26!
+Finished epoch no. 1282 on interval 27!
+Finished epoch no. 1283 on interval 28!
+Finished epoch no. 1284 on interval 29!
+Finished epoch no. 1285 on interval 30!
+Finished epoch no. 1286 on interval 31!
+Finished epoch no. 1287 on interval 32!
+Finished epoch no. 1288 on interval 33!
+Finished epoch no. 1289 on interval 34!
+Finished epoch no. 1290 on interval 35!
+Finished epoch no. 1291 on interval 36!
+Finished epoch no. 1292 on interval 37!
+Finished epoch no. 1293 on interval 0!
+Finished epoch no. 1294 on interval 1!
+Finished epoch no. 1295 on interval 2!
+Finished epoch no. 1296 on interval 3!
+Finished epoch no. 1297 on interval 4!
+Finished epoch no. 1298 on interval 5!
+Finished epoch no. 1299 on interval 6!
+Finished epoch no. 1300 on interval 7!
+Finished epoch no. 1301 on interval 8!
+Finished epoch no. 1302 on interval 9!
+Finished epoch no. 1303 on interval 10!
+Finished epoch no. 1304 on interval 11!
+Finished epoch no. 1305 on interval 12!
+Finished epoch no. 1306 on interval 13!
+Finished epoch no. 1307 on interval 14!
+Finished epoch no. 1308 on interval 15!
+Finished epoch no. 1309 on interval 16!
+Finished epoch no. 1310 on interval 17!
+Finished epoch no. 1311 on interval 18!
+Finished epoch no. 1312 on interval 19!
+Finished epoch no. 1313 on interval 20!
+Finished epoch no. 1314 on interval 21!
+Finished epoch no. 1315 on interval 22!
+Finished epoch no. 1316 on interval 23!
+Finished epoch no. 1317 on interval 24!
+Finished epoch no. 1318 on interval 25!
+Finished epoch no. 1319 on interval 26!
+Finished epoch no. 1320 on interval 27!
+Finished epoch no. 1321 on interval 28!
+Finished epoch no. 1322 on interval 29!
+Finished epoch no. 1323 on interval 30!
+Finished epoch no. 1324 on interval 31!
+Finished epoch no. 1325 on interval 32!
+Finished epoch no. 1326 on interval 33!
+Finished epoch no. 1327 on interval 34!
+Finished epoch no. 1328 on interval 35!
+Finished epoch no. 1329 on interval 36!
+Finished epoch no. 1330 on interval 37!
+Finished epoch no. 1331 on interval 0!
+Finished epoch no. 1332 on interval 1!
+Finished epoch no. 1333 on interval 2!
+Finished epoch no. 1334 on interval 3!
+Finished epoch no. 1335 on interval 4!
+Finished epoch no. 1336 on interval 5!
+Finished epoch no. 1337 on interval 6!
+Finished epoch no. 1338 on interval 7!
+Finished epoch no. 1339 on interval 8!
+Finished epoch no. 1340 on interval 9!
+Finished epoch no. 1341 on interval 10!
+Finished epoch no. 1342 on interval 11!
+Finished epoch no. 1343 on interval 12!
+Finished epoch no. 1344 on interval 13!
+Finished epoch no. 1345 on interval 14!
+Finished epoch no. 1346 on interval 15!
+Finished epoch no. 1347 on interval 16!
+Finished epoch no. 1348 on interval 17!
+Finished epoch no. 1349 on interval 18!
+Finished epoch no. 1350 on interval 19!
+Finished epoch no. 1351 on interval 20!
+Finished epoch no. 1352 on interval 21!
+Finished epoch no. 1353 on interval 22!
+Finished epoch no. 1354 on interval 23!
+Finished epoch no. 1355 on interval 24!
+Finished epoch no. 1356 on interval 25!
+Finished epoch no. 1357 on interval 26!
+Finished epoch no. 1358 on interval 27!
+Finished epoch no. 1359 on interval 28!
+Finished epoch no. 1360 on interval 29!
+Finished epoch no. 1361 on interval 30!
+Finished epoch no. 1362 on interval 31!
+Finished epoch no. 1363 on interval 32!
+Finished epoch no. 1364 on interval 33!
+Finished epoch no. 1365 on interval 34!
+Finished epoch no. 1366 on interval 35!
+Finished epoch no. 1367 on interval 36!
+Finished epoch no. 1368 on interval 37!
+Finished epoch no. 1369 on interval 0!
+Finished epoch no. 1370 on interval 1!
+Finished epoch no. 1371 on interval 2!
+Finished epoch no. 1372 on interval 3!
+Finished epoch no. 1373 on interval 4!
+Finished epoch no. 1374 on interval 5!
+Finished epoch no. 1375 on interval 6!
+Finished epoch no. 1376 on interval 7!
+Finished epoch no. 1377 on interval 8!
+Finished epoch no. 1378 on interval 9!
+Finished epoch no. 1379 on interval 10!
+Finished epoch no. 1380 on interval 11!
+Finished epoch no. 1381 on interval 12!
+Finished epoch no. 1382 on interval 13!
+Finished epoch no. 1383 on interval 14!
+Finished epoch no. 1384 on interval 15!
+Finished epoch no. 1385 on interval 16!
+Finished epoch no. 1386 on interval 17!
+Finished epoch no. 1387 on interval 18!
+Finished epoch no. 1388 on interval 19!
+Finished epoch no. 1389 on interval 20!
+Finished epoch no. 1390 on interval 21!
+Finished epoch no. 1391 on interval 22!
+Finished epoch no. 1392 on interval 23!
+Finished epoch no. 1393 on interval 24!
+Finished epoch no. 1394 on interval 25!
+Finished epoch no. 1395 on interval 26!
+Finished epoch no. 1396 on interval 27!
+Finished epoch no. 1397 on interval 28!
+Finished epoch no. 1398 on interval 29!
+Finished epoch no. 1399 on interval 30!
+Finished epoch no. 1400 on interval 31!
+Finished epoch no. 1401 on interval 32!
+Finished epoch no. 1402 on interval 33!
+Finished epoch no. 1403 on interval 34!
+Finished epoch no. 1404 on interval 35!
+Finished epoch no. 1405 on interval 36!
+Finished epoch no. 1406 on interval 37!
+Finished epoch no. 1407 on interval 0!
+Finished epoch no. 1408 on interval 1!
+Finished epoch no. 1409 on interval 2!
+Finished epoch no. 1410 on interval 3!
+Finished epoch no. 1411 on interval 4!
+Finished epoch no. 1412 on interval 5!
+Finished epoch no. 1413 on interval 6!
+Finished epoch no. 1414 on interval 7!
+Finished epoch no. 1415 on interval 8!
+Finished epoch no. 1416 on interval 9!
+Finished epoch no. 1417 on interval 10!
+Finished epoch no. 1418 on interval 11!
+Finished epoch no. 1419 on interval 12!
+Finished epoch no. 1420 on interval 13!
+Finished epoch no. 1421 on interval 14!
+Finished epoch no. 1422 on interval 15!
+Finished epoch no. 1423 on interval 16!
+Finished epoch no. 1424 on interval 17!
+Finished epoch no. 1425 on interval 18!
+Finished epoch no. 1426 on interval 19!
+Finished epoch no. 1427 on interval 20!
+Finished epoch no. 1428 on interval 21!
+Finished epoch no. 1429 on interval 22!
+Finished epoch no. 1430 on interval 23!
+Finished epoch no. 1431 on interval 24!
+Finished epoch no. 1432 on interval 25!
+Finished epoch no. 1433 on interval 26!
+Finished epoch no. 1434 on interval 27!
+Finished epoch no. 1435 on interval 28!
+Finished epoch no. 1436 on interval 29!
+Finished epoch no. 1437 on interval 30!
+Finished epoch no. 1438 on interval 31!
+Finished epoch no. 1439 on interval 32!
+Finished epoch no. 1440 on interval 33!
+Finished epoch no. 1441 on interval 34!
+Finished epoch no. 1442 on interval 35!
+Finished epoch no. 1443 on interval 36!
+Finished epoch no. 1444 on interval 37!
+Finished epoch no. 1445 on interval 0!
+Finished epoch no. 1446 on interval 1!
+Finished epoch no. 1447 on interval 2!
+Finished epoch no. 1448 on interval 3!
+Finished epoch no. 1449 on interval 4!
+Finished epoch no. 1450 on interval 5!
+PS C:\Users\Matei\Documents\GitHub\trackmania-ml-tas\TMInterfaceClientPython-master>

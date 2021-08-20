@@ -7,3 +7,6 @@ Has optimizations on:
 * (06.08.2021) StarStadiumA05 (-0.04 from plastorex)
 * (17.08.2021) TASTrainingMap1 (-0.02 from last time)
 * (18.08.2021) TMUF Stadium D01 (-0.03 from racehans)
+* (19.08.2021) TMUF Stadium D02 (-0.02 from racehans)
+* (19.08.2021) TMUF Stadium D03 (-0.01 from kYOSHI!)
+* (20.08.2021) TMUF Stadium D04 (-0.05 from racehans)

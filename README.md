@@ -10,3 +10,5 @@ Has optimizations on:
 * (19.08.2021) TMUF Stadium D02 (-0.02 from racehans)
 * (19.08.2021) TMUF Stadium D03 (-0.01 from kYOSHI!)
 * (20.08.2021) TMUF Stadium D04 (-0.05 from racehans)
+
+Latest video: https://youtu.be/cPqk33EvqLU
